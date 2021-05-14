@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="AccesMBR.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilitaire.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">
