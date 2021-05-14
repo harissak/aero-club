@@ -71,9 +71,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UI\L1_UI.csproj">
+    <ProjectReference Include="..\UI\UI.csproj">
       <Project>{7ff1fff2-8b98-4381-ab56-5670d861f041}</Project>
-      <Name>L1_UI</Name>
+      <Name>UI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
