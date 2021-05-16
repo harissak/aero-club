@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
+using Dapper;
 
 namespace DAL
 {
@@ -11,11 +12,11 @@ namespace DAL
     {
         static public List<MBR> SelectMbr(string start_name)
         {
-            List<MBR> retval;
+            List<MBR> retval= new List<MBR>();
 
-            ///////////////////restart here//////////////////////
+           
 
-            return retval;
+            return retval; 
         }
     }
 }

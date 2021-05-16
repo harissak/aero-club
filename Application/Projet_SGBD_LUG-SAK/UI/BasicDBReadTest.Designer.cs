@@ -37,16 +37,19 @@ namespace UI
             // 
             // TB_MBR
             // 
-            this.TB_MBR.Location = new System.Drawing.Point(12, 12);
+            this.TB_MBR.Location = new System.Drawing.Point(16, 15);
+            this.TB_MBR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TB_MBR.Name = "TB_MBR";
-            this.TB_MBR.Size = new System.Drawing.Size(188, 20);
+            this.TB_MBR.Size = new System.Drawing.Size(249, 22);
             this.TB_MBR.TabIndex = 0;
+            this.TB_MBR.TextChanged += new System.EventHandler(this.TB_MBR_TextChanged);
             // 
             // BUT_Member
             // 
-            this.BUT_Member.Location = new System.Drawing.Point(241, 8);
+            this.BUT_Member.Location = new System.Drawing.Point(321, 10);
+            this.BUT_Member.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BUT_Member.Name = "BUT_Member";
-            this.BUT_Member.Size = new System.Drawing.Size(75, 23);
+            this.BUT_Member.Size = new System.Drawing.Size(100, 28);
             this.BUT_Member.TabIndex = 1;
             this.BUT_Member.Text = "Load";
             this.BUT_Member.UseVisualStyleBackColor = true;
@@ -55,19 +58,22 @@ namespace UI
             // DGV_MBR
             // 
             this.DGV_MBR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_MBR.Location = new System.Drawing.Point(12, 38);
+            this.DGV_MBR.Location = new System.Drawing.Point(16, 47);
+            this.DGV_MBR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DGV_MBR.Name = "DGV_MBR";
-            this.DGV_MBR.Size = new System.Drawing.Size(776, 400);
+            this.DGV_MBR.RowHeadersWidth = 51;
+            this.DGV_MBR.Size = new System.Drawing.Size(1035, 492);
             this.DGV_MBR.TabIndex = 2;
             // 
             // BasicDBReadTest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.DGV_MBR);
             this.Controls.Add(this.BUT_Member);
             this.Controls.Add(this.TB_MBR);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "BasicDBReadTest";
             this.Text = "BasicDBReadTest";
             ((System.ComponentModel.ISupportInitialize)(this.DGV_MBR)).EndInit();

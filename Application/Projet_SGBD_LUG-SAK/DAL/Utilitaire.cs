@@ -13,8 +13,13 @@ namespace DAL
         public static IDbConnection ConnectionToLocalServer()
         {
             //add in comment the connection to your locale machine you wish to save here
-            //lpt flo: new SqlConnection(@"Data source=laptop-rud1s1fu\sqlexpress; Initial catalog=Projet_SGBD_LUG-SAK; Integrated Security =True");
-            return new SqlConnection(@"Data source=laptop-rud1s1fu\sqlexpress; Initial catalog=Projet_SGBD_LUG-SAK; Integrated Security =True");
+
+
+            //lpt flo: new SqlConnection(@"Data source=laptop-rud1s1fu\sqlexpress; Initial catalog=Projet_SGBD_LUG-SAK; Integrated Security =True"); 
+
+            return new SqlConnection(@"Data Source=DESKTOP-PR1OB8V\SQLEXPRESS;Initial Catalog=ULM_SGBD_LUG-SAK;Integrated Security=True");
+            
+           
         }
     }
 }

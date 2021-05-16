@@ -22,7 +22,12 @@ namespace UI
 
         private void BUT_Member_Click(object sender, EventArgs e)
         {
-           this.DGV_MBR.DataSource = BL.ServMBR.Read_MBR_BY_START_NAME(BUT_Member.Text);
+           this.DGV_MBR.DataSource = BL.ServMBR.Read_MBR_BY_START_NAME(TB_MBR.Text);
+        }
+
+        private void TB_MBR_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
