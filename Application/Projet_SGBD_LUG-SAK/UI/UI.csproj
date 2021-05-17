@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AiroplaneForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AiroplaneForm.Designer.cs">
+      <DependentUpon>AiroplaneForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BasicDBReadTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,7 +61,36 @@
     <Compile Include="Main_menu.Designer.cs">
       <DependentUpon>Main_menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManualForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManualForm.Designer.cs">
+      <DependentUpon>ManualForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MembersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MembersForm.Designer.cs">
+      <DependentUpon>MembersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReservationsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReservationsForm.Designer.cs">
+      <DependentUpon>ReservationsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BL\BL.csproj">
@@ -68,9 +103,47 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AiroplaneForm.resx">
+      <DependentUpon>AiroplaneForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BasicDBReadTest.resx">
       <DependentUpon>BasicDBReadTest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Main_menu.resx">
+      <DependentUpon>Main_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManualForm.resx">
+      <DependentUpon>ManualForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MembersForm.resx">
+      <DependentUpon>MembersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReservationsForm.resx">
+      <DependentUpon>ReservationsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\members2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\airplane1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guide1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book12.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
