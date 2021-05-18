@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BL;
 using DTO;
 
 
@@ -22,10 +21,15 @@ namespace UI
 
         private void BUT_Member_Click(object sender, EventArgs e)
         {
-           this.DGV_MBR.DataSource = BL.ServMBR.Read_MBR_BY_START_NAME(TB_MBR.Text);
+          // this.DGV_MBR.DataSource = BL.ServMBR.Read_MBR_BY_START_NAME(TB_MBR.Text);
         }
 
         private void TB_MBR_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DGV_MBR_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

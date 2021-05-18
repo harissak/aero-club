@@ -110,5 +110,10 @@ namespace UI
         {
 
         }
+
+        private void Main_menu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -59,7 +59,7 @@ namespace UI
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(240, 754);
+            this.panelMenu.Size = new System.Drawing.Size(240, 854);
             this.panelMenu.TabIndex = 0;
             // 
             // btnManual
@@ -211,20 +211,21 @@ namespace UI
             this.panelHomeScreen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelHomeScreen.Location = new System.Drawing.Point(240, 85);
             this.panelHomeScreen.Name = "panelHomeScreen";
-            this.panelHomeScreen.Size = new System.Drawing.Size(934, 669);
+            this.panelHomeScreen.Size = new System.Drawing.Size(934, 769);
             this.panelHomeScreen.TabIndex = 2;
             // 
             // Main_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1174, 754);
+            this.ClientSize = new System.Drawing.Size(1174, 854);
             this.Controls.Add(this.panelHomeScreen);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.MinimumSize = new System.Drawing.Size(1050, 600);
             this.Name = "Main_menu";
             this.Text = "Main_menu";
+            this.Load += new System.EventHandler(this.Main_menu_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelHome.ResumeLayout(false);
             this.panelHome.PerformLayout();

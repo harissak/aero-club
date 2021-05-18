@@ -38,7 +38,7 @@ namespace UI
             // TB_MBR
             // 
             this.TB_MBR.Location = new System.Drawing.Point(16, 15);
-            this.TB_MBR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TB_MBR.Margin = new System.Windows.Forms.Padding(4);
             this.TB_MBR.Name = "TB_MBR";
             this.TB_MBR.Size = new System.Drawing.Size(249, 22);
             this.TB_MBR.TabIndex = 0;
@@ -47,7 +47,7 @@ namespace UI
             // BUT_Member
             // 
             this.BUT_Member.Location = new System.Drawing.Point(321, 10);
-            this.BUT_Member.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BUT_Member.Margin = new System.Windows.Forms.Padding(4);
             this.BUT_Member.Name = "BUT_Member";
             this.BUT_Member.Size = new System.Drawing.Size(100, 28);
             this.BUT_Member.TabIndex = 1;
@@ -59,11 +59,12 @@ namespace UI
             // 
             this.DGV_MBR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_MBR.Location = new System.Drawing.Point(16, 47);
-            this.DGV_MBR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DGV_MBR.Margin = new System.Windows.Forms.Padding(4);
             this.DGV_MBR.Name = "DGV_MBR";
             this.DGV_MBR.RowHeadersWidth = 51;
             this.DGV_MBR.Size = new System.Drawing.Size(1035, 492);
             this.DGV_MBR.TabIndex = 2;
+            this.DGV_MBR.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_MBR_CellContentClick);
             // 
             // BasicDBReadTest
             // 
@@ -73,7 +74,7 @@ namespace UI
             this.Controls.Add(this.DGV_MBR);
             this.Controls.Add(this.BUT_Member);
             this.Controls.Add(this.TB_MBR);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BasicDBReadTest";
             this.Text = "BasicDBReadTest";
             ((System.ComponentModel.ISupportInitialize)(this.DGV_MBR)).EndInit();
