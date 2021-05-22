@@ -14,9 +14,6 @@ namespace DAL
         static public List<MBR> SelectMbr(string start_name)
         {
             List<MBR> retval= new List<MBR>();
-
-           
-
             return retval; 
         }
 
