@@ -15,7 +15,7 @@ namespace BL
             return DAL.AccesMBR.Read_MBR_BY_START_NAME(memberName);
         }
 
-        public static List<MBR> search_member_by_ID(int memberID)
+        public static MBR search_member_by_ID(int memberID)
         {
             return DAL.AccesMBR.Read_MBR_BY_ID(memberID);
         }
@@ -25,5 +25,27 @@ namespace BL
             return DAL.AccesMBR.Add_new_member(mbr);
         }
 
+        public static int Delete_member(int MBR_ID)
+        {
+            int retval = 0;
+
+            //TO ADD: CHECK IF MBR HAS OPEN RESERVATION -FLO-
+
+            retval = DAL.AccesMBR.Delete_MBR(MBR_ID);
+
+            return retval;
+        }
+
+        public static int Update_member(MBR mbr)
+        {
+            //TO ADD: can't remove pilot if there is a running config -FLO-
+            int retval = 0;
+            MBR current = DAL.AccesMBR.Read_MBR_BY_ID(mbr.Mbr_ID);
+
+            if (current != null)
+                retval = DAL.AccesMBR.Update_MBR(current);
+
+            return retval;
+        }
     }
 }
