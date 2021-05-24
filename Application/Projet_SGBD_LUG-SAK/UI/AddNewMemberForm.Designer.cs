@@ -57,9 +57,11 @@ namespace UI
             this.cb_Ins_Sex = new MetroFramework.Controls.MetroComboBox();
             this.cb_Ins_Pilot = new MetroFramework.Controls.MetroComboBox();
             this.cb_Ins_Admin = new MetroFramework.Controls.MetroComboBox();
-            this.cb_Ins_Cottisation = new MetroFramework.Controls.MetroComboBox();
             this.dt_Ins_Naissance = new MetroFramework.Controls.MetroDateTime();
             this.btnSave = new MetroFramework.Controls.MetroButton();
+            this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
+            this.tb_Ins_ID = new MetroFramework.Controls.MetroTextBox();
+            this.dt_Ins_cot_val = new MetroFramework.Controls.MetroDateTime();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -70,7 +72,6 @@ namespace UI
             this.metroLabel1.Size = new System.Drawing.Size(43, 20);
             this.metroLabel1.TabIndex = 0;
             this.metroLabel1.Text = "Nom:";
-            this.metroLabel1.Click += new System.EventHandler(this.metroLabel1_Click);
             // 
             // metroLabel2
             // 
@@ -98,7 +99,6 @@ namespace UI
             this.metroLabel4.Size = new System.Drawing.Size(125, 20);
             this.metroLabel4.TabIndex = 3;
             this.metroLabel4.Text = "Date de naissance:";
-            this.metroLabel4.Click += new System.EventHandler(this.metroLabel4_Click);
             // 
             // metroLabel5
             // 
@@ -229,7 +229,6 @@ namespace UI
             this.tb_Ins_Nom.UseSelectable = true;
             this.tb_Ins_Nom.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tb_Ins_Nom.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.tb_Ins_Nom.Click += new System.EventHandler(this.metroTextBox1_Click);
             // 
             // tb_Ins_Prènom
             // 
@@ -515,7 +514,7 @@ namespace UI
             this.cb_Ins_Sex.FormattingEnabled = true;
             this.cb_Ins_Sex.ItemHeight = 24;
             this.cb_Ins_Sex.Items.AddRange(new object[] {
-            "H",
+            "M",
             "F"});
             this.cb_Ins_Sex.Location = new System.Drawing.Point(310, 163);
             this.cb_Ins_Sex.Name = "cb_Ins_Sex";
@@ -549,19 +548,6 @@ namespace UI
             this.cb_Ins_Admin.TabIndex = 27;
             this.cb_Ins_Admin.UseSelectable = true;
             // 
-            // cb_Ins_Cottisation
-            // 
-            this.cb_Ins_Cottisation.FormattingEnabled = true;
-            this.cb_Ins_Cottisation.ItemHeight = 24;
-            this.cb_Ins_Cottisation.Items.AddRange(new object[] {
-            "OUI",
-            "NON"});
-            this.cb_Ins_Cottisation.Location = new System.Drawing.Point(310, 597);
-            this.cb_Ins_Cottisation.Name = "cb_Ins_Cottisation";
-            this.cb_Ins_Cottisation.Size = new System.Drawing.Size(121, 30);
-            this.cb_Ins_Cottisation.TabIndex = 28;
-            this.cb_Ins_Cottisation.UseSelectable = true;
-            // 
             // dt_Ins_Naissance
             // 
             this.dt_Ins_Naissance.Location = new System.Drawing.Point(310, 200);
@@ -580,14 +566,66 @@ namespace UI
             this.btnSave.UseSelectable = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // metroLabel16
+            // 
+            this.metroLabel16.AutoSize = true;
+            this.metroLabel16.Location = new System.Drawing.Point(24, 60);
+            this.metroLabel16.Name = "metroLabel16";
+            this.metroLabel16.Size = new System.Drawing.Size(25, 20);
+            this.metroLabel16.TabIndex = 31;
+            this.metroLabel16.Text = "ID:";
+            this.metroLabel16.Click += new System.EventHandler(this.metroLabel16_Click);
+            // 
+            // tb_Ins_ID
+            // 
+            // 
+            // 
+            // 
+            this.tb_Ins_ID.CustomButton.Image = null;
+            this.tb_Ins_ID.CustomButton.Location = new System.Drawing.Point(43, 1);
+            this.tb_Ins_ID.CustomButton.Name = "";
+            this.tb_Ins_ID.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tb_Ins_ID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tb_Ins_ID.CustomButton.TabIndex = 1;
+            this.tb_Ins_ID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tb_Ins_ID.CustomButton.UseSelectable = true;
+            this.tb_Ins_ID.CustomButton.Visible = false;
+            this.tb_Ins_ID.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.tb_Ins_ID.Lines = new string[0];
+            this.tb_Ins_ID.Location = new System.Drawing.Point(310, 57);
+            this.tb_Ins_ID.MaxLength = 32767;
+            this.tb_Ins_ID.Name = "tb_Ins_ID";
+            this.tb_Ins_ID.PasswordChar = '\0';
+            this.tb_Ins_ID.ReadOnly = true;
+            this.tb_Ins_ID.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tb_Ins_ID.SelectedText = "";
+            this.tb_Ins_ID.SelectionLength = 0;
+            this.tb_Ins_ID.SelectionStart = 0;
+            this.tb_Ins_ID.ShortcutsEnabled = true;
+            this.tb_Ins_ID.Size = new System.Drawing.Size(65, 23);
+            this.tb_Ins_ID.TabIndex = 32;
+            this.tb_Ins_ID.UseSelectable = true;
+            this.tb_Ins_ID.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tb_Ins_ID.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // dt_Ins_cot_val
+            // 
+            this.dt_Ins_cot_val.Location = new System.Drawing.Point(310, 597);
+            this.dt_Ins_cot_val.MinimumSize = new System.Drawing.Size(0, 30);
+            this.dt_Ins_cot_val.Name = "dt_Ins_cot_val";
+            this.dt_Ins_cot_val.Size = new System.Drawing.Size(200, 30);
+            this.dt_Ins_cot_val.TabIndex = 33;
+            // 
             // AddNewMemberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(655, 803);
+            this.Controls.Add(this.dt_Ins_cot_val);
+            this.Controls.Add(this.tb_Ins_ID);
+            this.Controls.Add(this.metroLabel16);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dt_Ins_Naissance);
-            this.Controls.Add(this.cb_Ins_Cottisation);
             this.Controls.Add(this.cb_Ins_Admin);
             this.Controls.Add(this.cb_Ins_Pilot);
             this.Controls.Add(this.cb_Ins_Sex);
@@ -622,7 +660,6 @@ namespace UI
             this.MinimumSize = new System.Drawing.Size(655, 803);
             this.Name = "AddNewMemberForm";
             this.Text = "Add new member";
-            this.Load += new System.EventHandler(this.AddNewMemberForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -658,8 +695,10 @@ namespace UI
         private MetroFramework.Controls.MetroComboBox cb_Ins_Sex;
         private MetroFramework.Controls.MetroComboBox cb_Ins_Pilot;
         private MetroFramework.Controls.MetroComboBox cb_Ins_Admin;
-        private MetroFramework.Controls.MetroComboBox cb_Ins_Cottisation;
         private MetroFramework.Controls.MetroDateTime dt_Ins_Naissance;
         private MetroFramework.Controls.MetroButton btnSave;
+        private MetroFramework.Controls.MetroLabel metroLabel16;
+        private MetroFramework.Controls.MetroTextBox tb_Ins_ID;
+        private MetroFramework.Controls.MetroDateTime dt_Ins_cot_val;
     }
 }

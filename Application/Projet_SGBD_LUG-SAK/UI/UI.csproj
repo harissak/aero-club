@@ -83,6 +83,11 @@
     <Compile Include="ManualForm.Designer.cs">
       <DependentUpon>ManualForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MembersDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MembersDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MembersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +99,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="ReservationsForm.cs">
       <SubType>Form</SubType>
@@ -154,7 +164,23 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+    <None Include="MembersDataSet.xsc">
+      <DependentUpon>MembersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MembersDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MembersDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MembersDataSet.xss">
+      <DependentUpon>MembersDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Resources\members2.png" />
   </ItemGroup>
   <ItemGroup>

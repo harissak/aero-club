@@ -15,5 +15,15 @@ namespace BL
             return DAL.AccesMBR.Read_MBR_BY_START_NAME(memberName);
         }
 
+        public static List<MBR> search_member_by_ID(int memberID)
+        {
+            return DAL.AccesMBR.Read_MBR_BY_ID(memberID);
+        }
+
+        public static int Add_new_member ( MBR mbr)
+        {
+            return DAL.AccesMBR.Add_new_member(mbr);
+        }
+
     }
 }

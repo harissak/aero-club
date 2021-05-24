@@ -29,6 +29,7 @@ namespace UI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelMembersScreen = new System.Windows.Forms.Panel();
             this.btnAddMember = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -39,8 +40,29 @@ namespace UI
             this.lblMemberID = new System.Windows.Forms.Label();
             this.lblMemberName = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.membersDataSet = new UI.MembersDataSet();
+            this.mbrBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mbrTableAdapter = new UI.MembersDataSetTableAdapters.MbrTableAdapter();
+            this.mbrIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mbrnomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mbrprenomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mbrsexeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mbrnaissDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mbradrsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mbrnumboiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mbrcpDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mbrlocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mbrmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mbrfixtelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mbrgsmDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mbrcotvalideDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mbrestpilDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.mbrestadmDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.mbrpasswDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelMembersScreen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwShowMembers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.membersDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mbrBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMembersScreen
@@ -105,7 +127,26 @@ namespace UI
             // 
             // dgwShowMembers
             // 
+            this.dgwShowMembers.AutoGenerateColumns = false;
             this.dgwShowMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwShowMembers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.mbrIDDataGridViewTextBoxColumn,
+            this.mbrnomDataGridViewTextBoxColumn,
+            this.mbrprenomDataGridViewTextBoxColumn,
+            this.mbrsexeDataGridViewTextBoxColumn,
+            this.mbrnaissDataGridViewTextBoxColumn,
+            this.mbradrsDataGridViewTextBoxColumn,
+            this.mbrnumboiteDataGridViewTextBoxColumn,
+            this.mbrcpDataGridViewTextBoxColumn,
+            this.mbrlocDataGridViewTextBoxColumn,
+            this.mbrmailDataGridViewTextBoxColumn,
+            this.mbrfixtelDataGridViewTextBoxColumn,
+            this.mbrgsmDataGridViewTextBoxColumn,
+            this.mbrcotvalideDataGridViewTextBoxColumn,
+            this.mbrestpilDataGridViewCheckBoxColumn,
+            this.mbrestadmDataGridViewCheckBoxColumn,
+            this.mbrpasswDataGridViewTextBoxColumn});
+            this.dgwShowMembers.DataSource = this.mbrBindingSource;
             this.dgwShowMembers.Location = new System.Drawing.Point(64, 184);
             this.dgwShowMembers.Name = "dgwShowMembers";
             this.dgwShowMembers.RowHeadersWidth = 51;
@@ -133,6 +174,149 @@ namespace UI
             this.lblMemberName.TabIndex = 7;
             this.lblMemberName.Text = "Member name: ";
             // 
+            // membersDataSet
+            // 
+            this.membersDataSet.DataSetName = "MembersDataSet";
+            this.membersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mbrBindingSource
+            // 
+            this.mbrBindingSource.DataMember = "Mbr";
+            this.mbrBindingSource.DataSource = this.membersDataSet;
+            // 
+            // mbrTableAdapter
+            // 
+            this.mbrTableAdapter.ClearBeforeFill = true;
+            // 
+            // mbrIDDataGridViewTextBoxColumn
+            // 
+            this.mbrIDDataGridViewTextBoxColumn.DataPropertyName = "Mbr_ID";
+            this.mbrIDDataGridViewTextBoxColumn.HeaderText = "Mbr_ID";
+            this.mbrIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mbrIDDataGridViewTextBoxColumn.Name = "mbrIDDataGridViewTextBoxColumn";
+            this.mbrIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mbrIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // mbrnomDataGridViewTextBoxColumn
+            // 
+            this.mbrnomDataGridViewTextBoxColumn.DataPropertyName = "Mbr_nom";
+            this.mbrnomDataGridViewTextBoxColumn.HeaderText = "Mbr_nom";
+            this.mbrnomDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mbrnomDataGridViewTextBoxColumn.Name = "mbrnomDataGridViewTextBoxColumn";
+            this.mbrnomDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // mbrprenomDataGridViewTextBoxColumn
+            // 
+            this.mbrprenomDataGridViewTextBoxColumn.DataPropertyName = "Mbr_prenom";
+            this.mbrprenomDataGridViewTextBoxColumn.HeaderText = "Mbr_prenom";
+            this.mbrprenomDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mbrprenomDataGridViewTextBoxColumn.Name = "mbrprenomDataGridViewTextBoxColumn";
+            this.mbrprenomDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // mbrsexeDataGridViewTextBoxColumn
+            // 
+            this.mbrsexeDataGridViewTextBoxColumn.DataPropertyName = "Mbr_sexe";
+            this.mbrsexeDataGridViewTextBoxColumn.HeaderText = "Mbr_sexe";
+            this.mbrsexeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mbrsexeDataGridViewTextBoxColumn.Name = "mbrsexeDataGridViewTextBoxColumn";
+            this.mbrsexeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // mbrnaissDataGridViewTextBoxColumn
+            // 
+            this.mbrnaissDataGridViewTextBoxColumn.DataPropertyName = "Mbr_naiss";
+            this.mbrnaissDataGridViewTextBoxColumn.HeaderText = "Mbr_naiss";
+            this.mbrnaissDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mbrnaissDataGridViewTextBoxColumn.Name = "mbrnaissDataGridViewTextBoxColumn";
+            this.mbrnaissDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // mbradrsDataGridViewTextBoxColumn
+            // 
+            this.mbradrsDataGridViewTextBoxColumn.DataPropertyName = "Mbr_adrs";
+            this.mbradrsDataGridViewTextBoxColumn.HeaderText = "Mbr_adrs";
+            this.mbradrsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mbradrsDataGridViewTextBoxColumn.Name = "mbradrsDataGridViewTextBoxColumn";
+            this.mbradrsDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // mbrnumboiteDataGridViewTextBoxColumn
+            // 
+            this.mbrnumboiteDataGridViewTextBoxColumn.DataPropertyName = "Mbr_num_boite";
+            this.mbrnumboiteDataGridViewTextBoxColumn.HeaderText = "Mbr_num_boite";
+            this.mbrnumboiteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mbrnumboiteDataGridViewTextBoxColumn.Name = "mbrnumboiteDataGridViewTextBoxColumn";
+            this.mbrnumboiteDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // mbrcpDataGridViewTextBoxColumn
+            // 
+            this.mbrcpDataGridViewTextBoxColumn.DataPropertyName = "Mbr_cp";
+            this.mbrcpDataGridViewTextBoxColumn.HeaderText = "Mbr_cp";
+            this.mbrcpDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mbrcpDataGridViewTextBoxColumn.Name = "mbrcpDataGridViewTextBoxColumn";
+            this.mbrcpDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // mbrlocDataGridViewTextBoxColumn
+            // 
+            this.mbrlocDataGridViewTextBoxColumn.DataPropertyName = "Mbr_loc";
+            this.mbrlocDataGridViewTextBoxColumn.HeaderText = "Mbr_loc";
+            this.mbrlocDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mbrlocDataGridViewTextBoxColumn.Name = "mbrlocDataGridViewTextBoxColumn";
+            this.mbrlocDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // mbrmailDataGridViewTextBoxColumn
+            // 
+            this.mbrmailDataGridViewTextBoxColumn.DataPropertyName = "Mbr_mail";
+            this.mbrmailDataGridViewTextBoxColumn.HeaderText = "Mbr_mail";
+            this.mbrmailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mbrmailDataGridViewTextBoxColumn.Name = "mbrmailDataGridViewTextBoxColumn";
+            this.mbrmailDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // mbrfixtelDataGridViewTextBoxColumn
+            // 
+            this.mbrfixtelDataGridViewTextBoxColumn.DataPropertyName = "Mbr_fix_tel";
+            this.mbrfixtelDataGridViewTextBoxColumn.HeaderText = "Mbr_fix_tel";
+            this.mbrfixtelDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mbrfixtelDataGridViewTextBoxColumn.Name = "mbrfixtelDataGridViewTextBoxColumn";
+            this.mbrfixtelDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // mbrgsmDataGridViewTextBoxColumn
+            // 
+            this.mbrgsmDataGridViewTextBoxColumn.DataPropertyName = "Mbr_gsm";
+            this.mbrgsmDataGridViewTextBoxColumn.HeaderText = "Mbr_gsm";
+            this.mbrgsmDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mbrgsmDataGridViewTextBoxColumn.Name = "mbrgsmDataGridViewTextBoxColumn";
+            this.mbrgsmDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // mbrcotvalideDataGridViewTextBoxColumn
+            // 
+            this.mbrcotvalideDataGridViewTextBoxColumn.DataPropertyName = "Mbr_cot_valide";
+            this.mbrcotvalideDataGridViewTextBoxColumn.HeaderText = "Mbr_cot_valide";
+            this.mbrcotvalideDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mbrcotvalideDataGridViewTextBoxColumn.Name = "mbrcotvalideDataGridViewTextBoxColumn";
+            this.mbrcotvalideDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // mbrestpilDataGridViewCheckBoxColumn
+            // 
+            this.mbrestpilDataGridViewCheckBoxColumn.DataPropertyName = "Mbr_est_pil";
+            this.mbrestpilDataGridViewCheckBoxColumn.HeaderText = "Mbr_est_pil";
+            this.mbrestpilDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.mbrestpilDataGridViewCheckBoxColumn.Name = "mbrestpilDataGridViewCheckBoxColumn";
+            this.mbrestpilDataGridViewCheckBoxColumn.Width = 125;
+            // 
+            // mbrestadmDataGridViewCheckBoxColumn
+            // 
+            this.mbrestadmDataGridViewCheckBoxColumn.DataPropertyName = "Mbr_est_adm";
+            this.mbrestadmDataGridViewCheckBoxColumn.HeaderText = "Mbr_est_adm";
+            this.mbrestadmDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.mbrestadmDataGridViewCheckBoxColumn.Name = "mbrestadmDataGridViewCheckBoxColumn";
+            this.mbrestadmDataGridViewCheckBoxColumn.Width = 125;
+            // 
+            // mbrpasswDataGridViewTextBoxColumn
+            // 
+            this.mbrpasswDataGridViewTextBoxColumn.DataPropertyName = "Mbr_passw";
+            this.mbrpasswDataGridViewTextBoxColumn.HeaderText = "Mbr_passw";
+            this.mbrpasswDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mbrpasswDataGridViewTextBoxColumn.Name = "mbrpasswDataGridViewTextBoxColumn";
+            this.mbrpasswDataGridViewTextBoxColumn.Width = 125;
+            // 
             // MembersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -141,9 +325,12 @@ namespace UI
             this.Controls.Add(this.panelMembersScreen);
             this.Name = "MembersForm";
             this.Text = "MembersForm";
+            this.Load += new System.EventHandler(this.MembersForm_Load);
             this.panelMembersScreen.ResumeLayout(false);
             this.panelMembersScreen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwShowMembers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.membersDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mbrBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -160,5 +347,24 @@ namespace UI
         private System.Windows.Forms.Label lblMemberName;
         private System.Windows.Forms.Button btnAddMember;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private MembersDataSet membersDataSet;
+        private System.Windows.Forms.BindingSource mbrBindingSource;
+        private MembersDataSetTableAdapters.MbrTableAdapter mbrTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mbrIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mbrnomDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mbrprenomDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mbrsexeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mbrnaissDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mbradrsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mbrnumboiteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mbrcpDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mbrlocDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mbrmailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mbrfixtelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mbrgsmDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mbrcotvalideDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn mbrestpilDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn mbrestadmDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mbrpasswDataGridViewTextBoxColumn;
     }
 }

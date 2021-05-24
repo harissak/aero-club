@@ -49,5 +49,27 @@ namespace DAL
 
             return retval;
         }
+
+        public static int Add_new_member(MBR mbr)
+        {
+            int               retVal;
+            DynamicParameters parameters;
+
+            retVal = 0;
+
+            using (IDbConnection connection =DAL.Utilitaire.ConnectionToLocalServer())
+            {
+                parameters = new DynamicParameters();
+                parameters.Add("@MBR_ID", dbType: DbType.Int32, direction: ParameterDirection.Output);
+                parameters.AddDynamicParams(mbr);
+                connection.Execute("sp_insert_new_member",
+                                    param: parameters,
+                                    commandType: CommandType.StoredProcedure) ;
+
+                retVal = parameters.Get<int>("@MBR_ID");
+            }
+
+            return retVal;
+        }
     }
 }
