@@ -36,7 +36,7 @@ namespace UI
         private void MembersForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'membersDataSet.Mbr' table. You can move, or remove it, as needed.
-            this.mbrTableAdapter.Fill(this.membersDataSet.Mbr);
+            //this.mbrTableAdapter.Fill(this.membersDataSet.Mbr);
 
         }
     }

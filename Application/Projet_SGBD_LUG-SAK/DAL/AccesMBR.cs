@@ -11,13 +11,7 @@ namespace DAL
 {
     public static class AccesMBR
     {
-        static public List<MBR> SelectMbr(string start_name)
-        {
-            List<MBR> retval = new List<MBR>();
-            return retval;
-        }
-
-
+        
         static public List<MBR> Read_MBR_BY_START_NAME(string start_name)
         {
             List<MBR> retval = new List<MBR>();
