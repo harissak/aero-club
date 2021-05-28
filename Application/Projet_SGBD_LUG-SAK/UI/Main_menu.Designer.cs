@@ -59,7 +59,7 @@ namespace UI
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(240, 854);
+            this.panelMenu.Size = new System.Drawing.Size(240, 858);
             this.panelMenu.TabIndex = 0;
             // 
             // btnManual
@@ -191,7 +191,7 @@ namespace UI
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(240, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(934, 85);
+            this.panelTitleBar.Size = new System.Drawing.Size(1484, 85);
             this.panelTitleBar.TabIndex = 1;
             // 
             // lblTitle
@@ -199,7 +199,7 @@ namespace UI
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(313, 23);
+            this.lblTitle.Location = new System.Drawing.Point(501, 23);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(150, 48);
             this.lblTitle.TabIndex = 0;
@@ -211,19 +211,20 @@ namespace UI
             this.panelHomeScreen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelHomeScreen.Location = new System.Drawing.Point(240, 85);
             this.panelHomeScreen.Name = "panelHomeScreen";
-            this.panelHomeScreen.Size = new System.Drawing.Size(934, 769);
+            this.panelHomeScreen.Size = new System.Drawing.Size(1484, 773);
             this.panelHomeScreen.TabIndex = 2;
             // 
             // Main_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1174, 854);
+            this.ClientSize = new System.Drawing.Size(1724, 858);
             this.Controls.Add(this.panelHomeScreen);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.MinimumSize = new System.Drawing.Size(1050, 600);
             this.Name = "Main_menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main_menu";
             this.Load += new System.EventHandler(this.Main_menu_Load);
             this.panelMenu.ResumeLayout(false);

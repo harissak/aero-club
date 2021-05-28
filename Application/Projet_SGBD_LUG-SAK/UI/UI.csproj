@@ -53,12 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddNewMemberForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddNewMemberForm.Designer.cs">
-      <DependentUpon>AddNewMemberForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="AiroplaneForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,11 +76,6 @@
     </Compile>
     <Compile Include="ManualForm.Designer.cs">
       <DependentUpon>ManualForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MembersDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MembersDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="MembersForm.cs">
       <SubType>Form</SubType>
@@ -117,6 +106,18 @@
     <Compile Include="SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="User control\mbrList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User control\mbrList.Designer.cs">
+      <DependentUpon>mbrList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User control\saveDelete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User control\saveDelete.Designer.cs">
+      <DependentUpon>saveDelete.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BL\BL.csproj">
@@ -133,9 +134,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AddNewMemberForm.resx">
-      <DependentUpon>AddNewMemberForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AiroplaneForm.resx">
       <DependentUpon>AiroplaneForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,20 +160,15 @@
     <EmbeddedResource Include="SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User control\mbrList.resx">
+      <DependentUpon>mbrList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User control\saveDelete.resx">
+      <DependentUpon>saveDelete.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="MembersDataSet.xsc">
-      <DependentUpon>MembersDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="MembersDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MembersDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MembersDataSet.xss">
-      <DependentUpon>MembersDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

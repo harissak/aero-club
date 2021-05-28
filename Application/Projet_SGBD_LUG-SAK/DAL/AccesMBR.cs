@@ -11,6 +11,8 @@ namespace DAL
 {
     public static class AccesMBR
     {
+        public static object MessageBox { get; private set; }
+
         static public List<MBR> SelectMbr(string start_name)
         {
             List<MBR> retval = new List<MBR>();
@@ -34,10 +36,12 @@ namespace DAL
             return retval;
         }
 
+
+
         static public MBR Read_MBR_BY_ID(int mbr_id)
         {
             MBR retval;
-            List<MBR> liste = new List<MBR>();
+            List<MBR> liste;
 
             //Daper  -  16.05.2021---
             retval = null;
@@ -50,6 +54,7 @@ namespace DAL
                                         commandType: CommandType.StoredProcedure).AsList<MBR>();
                 if (liste.Count == 1)
                     retval = liste[0];
+
             }
 
             return retval;

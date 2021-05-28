@@ -8,18 +8,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UI
+namespace UI.User_control
 {
-    public partial class AddNewMemberForm : MetroFramework.Forms.MetroForm
+    public partial class mbrList : UserControl
     {
-        public AddNewMemberForm()
+        public mbrList()
         {
             InitializeComponent();
         }
 
-    
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (!this.tbMemberName.Text.Equals(""))
+                this.dgvMbrList.DataSource = BL.Services_membre.search_member_by_name(tbMemberName.Text);
+            else if (!this.tbMemberID.Text.Equals(""))
+                this.dgvMbrList.DataSource = BL.Services_membre.search_member_by_ID(Int32.Parse(tbMemberID.Text));       
+     
+            else
+                this.dgvMbrList.DataSource = BL.Services_membre.search_member_by_name(tbMemberName.Text);
+        }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void addNewMember_Click(object sender, EventArgs e)
         {
             try
             {
@@ -28,7 +37,7 @@ namespace UI
                                 new DTO.MBR
                                 {
                                     Mbr_nom = this.tb_Ins_Nom.Text,
-                                    Mbr_prenom = this.tb_Ins_Prènom.Text,
+                                    Mbr_prenom = this.tb_Ins_Prénom.Text,
                                     Mbr_sexe = Convert.ToChar(this.cb_Ins_Sex.Text),
                                     Mbr_naiss = Convert.ToDateTime(this.dt_Ins_Naissance.Text),
                                     Mbr_adrs = this.tb_Ins_Adresse.Text,
@@ -43,7 +52,7 @@ namespace UI
                                     Mbr_est_adm = this.cb_Ins_Admin.Text == "OUI" ? true : false,
                                     Mbr_est_pil = this.cb_Ins_Pilot.Text == "OUI" ? true : false
                                 }).ToString();
-                this.Close();
+                
 
                 MessageBox.Show("You have succesfully registered new member!!");
             }
@@ -51,14 +60,8 @@ namespace UI
             {
                 throw new Exception(ex.Message);
             }
-
-           
-
         }
 
-        private void metroLabel16_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
