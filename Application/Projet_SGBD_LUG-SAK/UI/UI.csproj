@@ -65,6 +65,7 @@
     <Compile Include="BasicDBReadTest.Designer.cs">
       <DependentUpon>BasicDBReadTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Délégués.cs" />
     <Compile Include="Main_menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,17 +107,23 @@
     <Compile Include="SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="User control\mbrList.cs">
+    <Compile Include="User control\uc_mbrList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User control\mbrList.Designer.cs">
-      <DependentUpon>mbrList.cs</DependentUpon>
+    <Compile Include="User control\uc_mbrList.Designer.cs">
+      <DependentUpon>uc_mbrList.cs</DependentUpon>
     </Compile>
-    <Compile Include="User control\saveDelete.cs">
+    <Compile Include="User control\uc_saveDelete.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User control\saveDelete.Designer.cs">
-      <DependentUpon>saveDelete.cs</DependentUpon>
+    <Compile Include="User control\uc_saveDelete.Designer.cs">
+      <DependentUpon>uc_saveDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User control\uc_addNewMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User control\uc_addNewMember.Designer.cs">
+      <DependentUpon>uc_addNewMember.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -160,11 +167,14 @@
     <EmbeddedResource Include="SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User control\mbrList.resx">
-      <DependentUpon>mbrList.cs</DependentUpon>
+    <EmbeddedResource Include="User control\uc_mbrList.resx">
+      <DependentUpon>uc_mbrList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User control\saveDelete.resx">
-      <DependentUpon>saveDelete.cs</DependentUpon>
+    <EmbeddedResource Include="User control\uc_saveDelete.resx">
+      <DependentUpon>uc_saveDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User control\uc_addNewMember.resx">
+      <DependentUpon>uc_addNewMember.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

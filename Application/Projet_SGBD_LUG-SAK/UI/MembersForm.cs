@@ -11,8 +11,15 @@ namespace UI
         public MembersForm()
         {
             InitializeComponent();
+            saveDelete1.Visible = false;
         }
 
 
+        private void ucRech_Mbr(int Mbr_id)
+        {
+            this.ucAddNewMember.ReadMember(Mbr_id);
+        }
+
+      
     }
 }

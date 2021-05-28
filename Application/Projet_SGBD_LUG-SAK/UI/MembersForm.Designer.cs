@@ -30,54 +30,80 @@ namespace UI
         private void InitializeComponent()
         {
             this.panelMembersScreen = new System.Windows.Forms.Panel();
-            this.mbrList1 = new UI.User_control.mbrList();
-            this.mbrList2 = new UI.User_control.mbrList();
-            this.saveDelete1 = new UI.User_control.saveDelete();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblMemberID = new System.Windows.Forms.Label();
+            this.saveDelete1 = new UI.User_control.uc_saveDelete();
+            this.ucAddNewMember = new UI.User_control.uc_addNewMember();
+            this.mbrList = new UI.User_control.uc_mbrList();
             this.panelMembersScreen.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMembersScreen
             // 
             this.panelMembersScreen.Controls.Add(this.saveDelete1);
-            this.panelMembersScreen.Controls.Add(this.mbrList2);
-            this.panelMembersScreen.Controls.Add(this.mbrList1);
+            this.panelMembersScreen.Controls.Add(this.label1);
+            this.panelMembersScreen.Controls.Add(this.lblMemberID);
+            this.panelMembersScreen.Controls.Add(this.ucAddNewMember);
+            this.panelMembersScreen.Controls.Add(this.mbrList);
             this.panelMembersScreen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMembersScreen.Location = new System.Drawing.Point(0, 0);
             this.panelMembersScreen.Name = "panelMembersScreen";
-            this.panelMembersScreen.Size = new System.Drawing.Size(1379, 758);
+            this.panelMembersScreen.Size = new System.Drawing.Size(1354, 734);
             this.panelMembersScreen.TabIndex = 0;
             // 
-            // mbrList1
+            // label1
             // 
-            this.mbrList1.Location = new System.Drawing.Point(0, 0);
-            this.mbrList1.Name = "mbrList1";
-            this.mbrList1.Size = new System.Drawing.Size(1368, 730);
-            this.mbrList1.TabIndex = 0;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(33, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(123, 20);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Member nom:";
             // 
-            // mbrList2
+            // lblMemberID
             // 
-            this.mbrList2.Location = new System.Drawing.Point(8, 8);
-            this.mbrList2.Name = "mbrList2";
-            this.mbrList2.Size = new System.Drawing.Size(1368, 730);
-            this.mbrList2.TabIndex = 1;
+            this.lblMemberID.AutoSize = true;
+            this.lblMemberID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMemberID.Location = new System.Drawing.Point(43, 60);
+            this.lblMemberID.Name = "lblMemberID";
+            this.lblMemberID.Size = new System.Drawing.Size(113, 20);
+            this.lblMemberID.TabIndex = 15;
+            this.lblMemberID.Text = "Member ID: ";
             // 
             // saveDelete1
             // 
-            this.saveDelete1.Location = new System.Drawing.Point(1007, 676);
+            this.saveDelete1.Location = new System.Drawing.Point(969, 645);
             this.saveDelete1.Name = "saveDelete1";
             this.saveDelete1.Size = new System.Drawing.Size(275, 42);
             this.saveDelete1.TabIndex = 1;
+            // 
+            // ucAddNewMember
+            // 
+            this.ucAddNewMember.Location = new System.Drawing.Point(875, 12);
+            this.ucAddNewMember.Name = "ucAddNewMember";
+            this.ucAddNewMember.Size = new System.Drawing.Size(472, 675);
+            this.ucAddNewMember.TabIndex = 2;
+            // 
+            // mbrList
+            // 
+            this.mbrList.Location = new System.Drawing.Point(3, 1);
+            this.mbrList.Name = "mbrList";
+            this.mbrList.Size = new System.Drawing.Size(867, 730);
+            this.mbrList.TabIndex = 1;
+            this.mbrList.SelectMbr += new UI.delSelect(this.ucRech_Mbr);
             // 
             // MembersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1379, 758);
+            this.ClientSize = new System.Drawing.Size(1354, 734);
             this.Controls.Add(this.panelMembersScreen);
             this.Name = "MembersForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MembersForm";
             this.panelMembersScreen.ResumeLayout(false);
+            this.panelMembersScreen.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -101,8 +127,10 @@ namespace UI
         private System.Windows.Forms.DataGridViewCheckBoxColumn mbrestpilDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn mbrestadmDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mbrpasswDataGridViewTextBoxColumn;
-        private User_control.saveDelete saveDelete1;
-        private User_control.mbrList mbrList2;
-        private User_control.mbrList mbrList1;
+        private User_control.uc_saveDelete saveDelete1;
+        private User_control.uc_mbrList mbrList;
+        private User_control.uc_addNewMember ucAddNewMember;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblMemberID;
     }
 }

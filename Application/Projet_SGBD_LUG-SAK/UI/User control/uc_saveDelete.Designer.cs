@@ -1,7 +1,7 @@
 ﻿
 namespace UI.User_control
 {
-    partial class saveDelete
+    partial class uc_saveDelete
     {
         /// <summary> 
         /// Required designer variable.

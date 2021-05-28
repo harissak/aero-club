@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UI.User_control
 {
-    public partial class saveDelete : UserControl
+    public partial class uc_saveDelete : UserControl
     {
-        public saveDelete()
+        public uc_saveDelete()
         {
             InitializeComponent();
         }

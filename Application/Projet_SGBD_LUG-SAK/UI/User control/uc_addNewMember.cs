@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace UI.User_control
 {
-    public partial class mbrList : UserControl
+    public partial class uc_addNewMember : UserControl
     {
-        public mbrList()
+        public uc_addNewMember()
         {
             InitializeComponent();
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            if (!this.tbMemberName.Text.Equals(""))
-                this.dgvMbrList.DataSource = BL.Services_membre.search_member_by_name(tbMemberName.Text);
-            else if (!this.tbMemberID.Text.Equals(""))
-                this.dgvMbrList.DataSource = BL.Services_membre.search_member_by_ID(Int32.Parse(tbMemberID.Text));       
-     
-            else
-                this.dgvMbrList.DataSource = BL.Services_membre.search_member_by_name(tbMemberName.Text);
         }
 
         private void addNewMember_Click(object sender, EventArgs e)
@@ -52,7 +41,7 @@ namespace UI.User_control
                                     Mbr_est_adm = this.cb_Ins_Admin.Text == "OUI" ? true : false,
                                     Mbr_est_pil = this.cb_Ins_Pilot.Text == "OUI" ? true : false
                                 }).ToString();
-                
+
 
                 MessageBox.Show("You have succesfully registered new member!!");
             }
@@ -62,6 +51,13 @@ namespace UI.User_control
             }
         }
 
-        
+      public void ReadMember (int Mbr_id)
+        {
+            ////+++++++++ I HAVE TO FINISH THIS ++++++//////
+            /// Until now we have member id ///////
+            
+
+            MessageBox.Show(Mbr_id.ToString());
+        }
     }
 }
