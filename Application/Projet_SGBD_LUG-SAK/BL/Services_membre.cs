@@ -42,7 +42,7 @@ namespace BL
         {
             //TO ADD: can't remove pilot if there is a running config -FLO-
             int retval = 0;
-            MBR current = DAL.AccesMBR.Read_MBR_BY_ID(mbr.Mbr_ID);
+             MBR current = DAL.AccesMBR.Read_MBR_BY_ID(mbr.Mbr_ID);
 
             if (current != null)
                 retval = DAL.AccesMBR.Update_MBR(current);

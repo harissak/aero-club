@@ -37,27 +37,53 @@ namespace DAL
         }
 
 
+        //static public List<MBR> Read_MBR_BY_ID(int mbr_id)
+        //{
+        //    List<MBR> retval = new List<MBR>();
+
+        //    //Daper  -  16.05.2021---
+
+        //    using (var connection = DAL.Utilitaire.ConnectionToLocalServer())
+        //    {
+        //        retval = connection.Query<MBR>("select_mbr_by_id",
+        //                                param: new { mbr_id = mbr_id },
+        //                                commandType: CommandType.StoredProcedure).AsList<MBR>();
+        //        ////if (liste.Count == 1)
+        //        ////    retval = liste[0];
+
+        //    }
+
+        //    return retval;
+        //}
+
+
+
+
+
+
+
 
         static public MBR Read_MBR_BY_ID(int mbr_id)
         {
             MBR retval;
-            List<MBR> liste;
+        List<MBR> liste;
 
-            //Daper  -  16.05.2021---
-            retval = null;
+        //Daper  -  16.05.2021---
+        retval = null;
             liste = null;
 
-            using (var connection = DAL.Utilitaire.ConnectionToLocalServer())
+            using (IDbConnection connection = DAL.Utilitaire.ConnectionToLocalServer())
             {
                 liste = connection.Query<MBR>("select_mbr_by_id",
-                                        param: new { mbr_id = mbr_id },
+                                        param: new { mbr_id = mbr_id
+    },
                                         commandType: CommandType.StoredProcedure).AsList<MBR>();
                 if (liste.Count == 1)
                     retval = liste[0];
 
             }
 
-            return retval;
+return retval;
         }
 
         public static int Add_new_member(MBR mbr)
@@ -94,7 +120,7 @@ namespace DAL
                     //ONCE RESERVATION IS OPERATIONAL, WE MUST CHECK THAT THE MBR TO DELETE
                     //DOES NOT HAVE AN OPEN RESERVATION
 
-                    retval = connection.Execute("sp_delete_MBR",
+                    retval = connection.Execute("sp_delete_mbr",
                                             param: new { MBR_ID = MBR_ID },
                                             commandType: CommandType.StoredProcedure,
                                             transaction: transac);
@@ -111,7 +137,7 @@ namespace DAL
 
             using (IDbConnection connection = DAL.Utilitaire.ConnectionToLocalServer())
             {
-                retval = connection.Execute("sp_update_MBR",
+                retval = connection.Execute("sp_update_member_infos",
                                             new
                                             {
                                                 Mbr_ID = mbr.Mbr_ID,

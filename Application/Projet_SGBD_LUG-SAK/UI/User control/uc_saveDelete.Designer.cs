@@ -29,44 +29,58 @@ namespace UI.User_control
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.modify = new System.Windows.Forms.Button();
+            this.deleteMember = new System.Windows.Forms.Button();
+            this.cancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // modify
             // 
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 33);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "SAVE";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.modify.Location = new System.Drawing.Point(3, 3);
+            this.modify.Name = "modify";
+            this.modify.Size = new System.Drawing.Size(112, 33);
+            this.modify.TabIndex = 0;
+            this.modify.Text = "MODIFY";
+            this.modify.UseVisualStyleBackColor = true;
+            this.modify.Click += new System.EventHandler(this.modify_Click);
             // 
-            // button2
+            // deleteMember
             // 
-            this.button2.Location = new System.Drawing.Point(156, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 33);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "DELETE";
-            this.button2.UseVisualStyleBackColor = true;
+            this.deleteMember.Location = new System.Drawing.Point(156, 3);
+            this.deleteMember.Name = "deleteMember";
+            this.deleteMember.Size = new System.Drawing.Size(112, 33);
+            this.deleteMember.TabIndex = 1;
+            this.deleteMember.Text = "DELETE";
+            this.deleteMember.UseVisualStyleBackColor = true;
+            this.deleteMember.Click += new System.EventHandler(this.deleteMember_Click);
             // 
-            // saveDelete
+            // cancel
+            // 
+            this.cancel.Location = new System.Drawing.Point(293, 3);
+            this.cancel.Name = "cancel";
+            this.cancel.Size = new System.Drawing.Size(112, 33);
+            this.cancel.TabIndex = 2;
+            this.cancel.Text = "CANCEL";
+            this.cancel.UseVisualStyleBackColor = true;
+            this.cancel.Click += new System.EventHandler(this.cancel_Click);
+            // 
+            // uc_saveDelete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Name = "saveDelete";
-            this.Size = new System.Drawing.Size(275, 42);
+            this.Controls.Add(this.cancel);
+            this.Controls.Add(this.deleteMember);
+            this.Controls.Add(this.modify);
+            this.Name = "uc_saveDelete";
+            this.Size = new System.Drawing.Size(418, 42);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button modify;
+        private System.Windows.Forms.Button deleteMember;
+        private System.Windows.Forms.Button cancel;
     }
 }

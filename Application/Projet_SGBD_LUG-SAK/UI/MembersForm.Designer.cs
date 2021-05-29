@@ -30,26 +30,34 @@ namespace UI
         private void InitializeComponent()
         {
             this.panelMembersScreen = new System.Windows.Forms.Panel();
+            this.saveDeleteMember = new UI.User_control.uc_saveDelete();
             this.label1 = new System.Windows.Forms.Label();
             this.lblMemberID = new System.Windows.Forms.Label();
-            this.saveDelete1 = new UI.User_control.uc_saveDelete();
-            this.ucAddNewMember = new UI.User_control.uc_addNewMember();
+            this.addNewMember = new UI.User_control.uc_addNewMember();
             this.mbrList = new UI.User_control.uc_mbrList();
             this.panelMembersScreen.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMembersScreen
             // 
-            this.panelMembersScreen.Controls.Add(this.saveDelete1);
+            this.panelMembersScreen.Controls.Add(this.saveDeleteMember);
             this.panelMembersScreen.Controls.Add(this.label1);
             this.panelMembersScreen.Controls.Add(this.lblMemberID);
-            this.panelMembersScreen.Controls.Add(this.ucAddNewMember);
+            this.panelMembersScreen.Controls.Add(this.addNewMember);
             this.panelMembersScreen.Controls.Add(this.mbrList);
             this.panelMembersScreen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMembersScreen.Location = new System.Drawing.Point(0, 0);
             this.panelMembersScreen.Name = "panelMembersScreen";
             this.panelMembersScreen.Size = new System.Drawing.Size(1354, 734);
             this.panelMembersScreen.TabIndex = 0;
+            // 
+            // saveDeleteMember
+            // 
+            this.saveDeleteMember.Location = new System.Drawing.Point(910, 645);
+            this.saveDeleteMember.Name = "saveDeleteMember";
+            this.saveDeleteMember.Size = new System.Drawing.Size(418, 42);
+            this.saveDeleteMember.TabIndex = 17;
+            this.saveDeleteMember.updateMbr += new UI.delUpdate(this.updateMember);
             // 
             // label1
             // 
@@ -71,19 +79,12 @@ namespace UI
             this.lblMemberID.TabIndex = 15;
             this.lblMemberID.Text = "Member ID: ";
             // 
-            // saveDelete1
+            // addNewMember
             // 
-            this.saveDelete1.Location = new System.Drawing.Point(969, 645);
-            this.saveDelete1.Name = "saveDelete1";
-            this.saveDelete1.Size = new System.Drawing.Size(275, 42);
-            this.saveDelete1.TabIndex = 1;
-            // 
-            // ucAddNewMember
-            // 
-            this.ucAddNewMember.Location = new System.Drawing.Point(875, 12);
-            this.ucAddNewMember.Name = "ucAddNewMember";
-            this.ucAddNewMember.Size = new System.Drawing.Size(472, 675);
-            this.ucAddNewMember.TabIndex = 2;
+            this.addNewMember.Location = new System.Drawing.Point(875, 12);
+            this.addNewMember.Name = "addNewMember";
+            this.addNewMember.Size = new System.Drawing.Size(472, 675);
+            this.addNewMember.TabIndex = 2;
             // 
             // mbrList
             // 
@@ -91,7 +92,8 @@ namespace UI
             this.mbrList.Name = "mbrList";
             this.mbrList.Size = new System.Drawing.Size(867, 730);
             this.mbrList.TabIndex = 1;
-            this.mbrList.SelectMbr += new UI.delSelect(this.ucRech_Mbr);
+            this.mbrList.SelectMbr += new UI.delSelect(this.recherce_Mbr);
+            this.mbrList.Load += new System.EventHandler(this.mbrList_Load);
             // 
             // MembersForm
             // 
@@ -127,10 +129,10 @@ namespace UI
         private System.Windows.Forms.DataGridViewCheckBoxColumn mbrestpilDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn mbrestadmDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mbrpasswDataGridViewTextBoxColumn;
-        private User_control.uc_saveDelete saveDelete1;
         private User_control.uc_mbrList mbrList;
-        private User_control.uc_addNewMember ucAddNewMember;
+        private User_control.uc_addNewMember addNewMember;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblMemberID;
+        private User_control.uc_saveDelete saveDeleteMember;
     }
 }

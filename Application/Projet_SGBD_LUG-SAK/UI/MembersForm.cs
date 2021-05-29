@@ -11,15 +11,28 @@ namespace UI
         public MembersForm()
         {
             InitializeComponent();
-            saveDelete1.Visible = false;
+            saveDeleteMember.Visible = false;
         }
+        
 
-
-        private void ucRech_Mbr(int Mbr_id)
+        private void recherce_Mbr(int Mbr_id)
         {
-            this.ucAddNewMember.ReadMember(Mbr_id);
+            this.addNewMember.ReadMember(Mbr_id);
+            saveDeleteMember.Visible = true;
+            this.saveDeleteMember.del_member_ID(Mbr_id);
+            
         }
 
-      
+
+        private void updateMember(int Mbr_ID)
+        {
+            this.addNewMember.updateMember(Mbr_ID);
+            
+        }
+
+        private void mbrList_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

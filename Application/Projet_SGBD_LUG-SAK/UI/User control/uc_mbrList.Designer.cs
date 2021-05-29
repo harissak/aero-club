@@ -47,6 +47,7 @@ namespace UI.User_control
             this.dgvMbrList.Size = new System.Drawing.Size(854, 564);
             this.dgvMbrList.TabIndex = 0;
             this.dgvMbrList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemCliked);
+            this.dgvMbrList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMbrList_CellContentClick);
             // 
             // btnSearch
             // 
