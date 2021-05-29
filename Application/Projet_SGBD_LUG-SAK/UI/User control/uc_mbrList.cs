@@ -55,5 +55,11 @@ namespace UI.User_control
         {
 
         }
+
+        public void RefreshMemberList()
+        {
+            this.dgvMbrList.DataSource = BL.Services_membre.search_member_by_name(tbMemberName.Text);
+        }
+        
     }
 }

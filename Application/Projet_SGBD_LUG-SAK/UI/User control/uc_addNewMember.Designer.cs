@@ -29,10 +29,8 @@ namespace UI.User_control
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.addNewMember = new System.Windows.Forms.Button();
             this.dt_Ins_cot_val = new System.Windows.Forms.DateTimePicker();
-            this.bsMember = new System.Windows.Forms.BindingSource(this.components);
             this.tb_Ins_TeleFixe = new System.Windows.Forms.TextBox();
             this.tb_Ins_GSM = new System.Windows.Forms.TextBox();
             this.tb_Ins_Password = new System.Windows.Forms.TextBox();
@@ -64,7 +62,6 @@ namespace UI.User_control
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.bsMember)).BeginInit();
             this.SuspendLayout();
             // 
             // addNewMember
@@ -79,7 +76,6 @@ namespace UI.User_control
             // 
             // dt_Ins_cot_val
             // 
-            this.dt_Ins_cot_val.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_cot_valide", true));
             this.dt_Ins_cot_val.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dt_Ins_cot_val.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dt_Ins_cot_val.Location = new System.Drawing.Point(166, 580);
@@ -87,13 +83,8 @@ namespace UI.User_control
             this.dt_Ins_cot_val.Size = new System.Drawing.Size(138, 30);
             this.dt_Ins_cot_val.TabIndex = 97;
             // 
-            // bsMember
-            // 
-            this.bsMember.DataSource = typeof(DTO.MBR);
-            // 
             // tb_Ins_TeleFixe
             // 
-            this.tb_Ins_TeleFixe.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_fix_tel", true));
             this.tb_Ins_TeleFixe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Ins_TeleFixe.Location = new System.Drawing.Point(166, 466);
             this.tb_Ins_TeleFixe.Name = "tb_Ins_TeleFixe";
@@ -103,7 +94,6 @@ namespace UI.User_control
             // 
             // tb_Ins_GSM
             // 
-            this.tb_Ins_GSM.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_gsm", true));
             this.tb_Ins_GSM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Ins_GSM.Location = new System.Drawing.Point(166, 430);
             this.tb_Ins_GSM.Name = "tb_Ins_GSM";
@@ -113,7 +103,6 @@ namespace UI.User_control
             // 
             // tb_Ins_Password
             // 
-            this.tb_Ins_Password.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_passw", true));
             this.tb_Ins_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Ins_Password.Location = new System.Drawing.Point(166, 394);
             this.tb_Ins_Password.Name = "tb_Ins_Password";
@@ -123,7 +112,6 @@ namespace UI.User_control
             // 
             // tb_Ins_Mail
             // 
-            this.tb_Ins_Mail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_mail", true));
             this.tb_Ins_Mail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Ins_Mail.Location = new System.Drawing.Point(166, 358);
             this.tb_Ins_Mail.Name = "tb_Ins_Mail";
@@ -133,7 +121,6 @@ namespace UI.User_control
             // 
             // tb_Ins_Ville
             // 
-            this.tb_Ins_Ville.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_loc", true));
             this.tb_Ins_Ville.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Ins_Ville.Location = new System.Drawing.Point(166, 322);
             this.tb_Ins_Ville.Name = "tb_Ins_Ville";
@@ -143,7 +130,6 @@ namespace UI.User_control
             // 
             // tb_Ins_CP
             // 
-            this.tb_Ins_CP.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_cp", true));
             this.tb_Ins_CP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Ins_CP.Location = new System.Drawing.Point(166, 284);
             this.tb_Ins_CP.Name = "tb_Ins_CP";
@@ -153,7 +139,6 @@ namespace UI.User_control
             // 
             // tb_Ins_NbrBoite
             // 
-            this.tb_Ins_NbrBoite.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_num_boite", true));
             this.tb_Ins_NbrBoite.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Ins_NbrBoite.Location = new System.Drawing.Point(166, 244);
             this.tb_Ins_NbrBoite.Name = "tb_Ins_NbrBoite";
@@ -163,7 +148,6 @@ namespace UI.User_control
             // 
             // tb_Ins_Adresse
             // 
-            this.tb_Ins_Adresse.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_adrs", true));
             this.tb_Ins_Adresse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Ins_Adresse.Location = new System.Drawing.Point(166, 203);
             this.tb_Ins_Adresse.Name = "tb_Ins_Adresse";
@@ -173,7 +157,6 @@ namespace UI.User_control
             // 
             // dt_Ins_Naissance
             // 
-            this.dt_Ins_Naissance.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_naiss", true));
             this.dt_Ins_Naissance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dt_Ins_Naissance.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dt_Ins_Naissance.Location = new System.Drawing.Point(166, 163);
@@ -183,7 +166,6 @@ namespace UI.User_control
             // 
             // cb_Ins_Pilot
             // 
-            this.cb_Ins_Pilot.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_est_pil", true));
             this.cb_Ins_Pilot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Ins_Pilot.FormattingEnabled = true;
             this.cb_Ins_Pilot.Items.AddRange(new object[] {
@@ -196,7 +178,6 @@ namespace UI.User_control
             // 
             // cb_Ins_Admin
             // 
-            this.cb_Ins_Admin.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_est_adm", true));
             this.cb_Ins_Admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Ins_Admin.FormattingEnabled = true;
             this.cb_Ins_Admin.Items.AddRange(new object[] {
@@ -209,7 +190,6 @@ namespace UI.User_control
             // 
             // cb_Ins_Sex
             // 
-            this.cb_Ins_Sex.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_sexe", true));
             this.cb_Ins_Sex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Ins_Sex.FormattingEnabled = true;
             this.cb_Ins_Sex.Items.AddRange(new object[] {
@@ -222,7 +202,6 @@ namespace UI.User_control
             // 
             // tb_Ins_Prénom
             // 
-            this.tb_Ins_Prénom.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_prenom", true));
             this.tb_Ins_Prénom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Ins_Prénom.Location = new System.Drawing.Point(166, 85);
             this.tb_Ins_Prénom.Name = "tb_Ins_Prénom";
@@ -232,7 +211,6 @@ namespace UI.User_control
             // 
             // tb_Ins_Nom
             // 
-            this.tb_Ins_Nom.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_nom", true));
             this.tb_Ins_Nom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Ins_Nom.Location = new System.Drawing.Point(166, 45);
             this.tb_Ins_Nom.Name = "tb_Ins_Nom";
@@ -242,7 +220,6 @@ namespace UI.User_control
             // 
             // tb_Ins_ID
             // 
-            this.tb_Ins_ID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_ID", true));
             this.tb_Ins_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Ins_ID.Location = new System.Drawing.Point(166, 3);
             this.tb_Ins_ID.Name = "tb_Ins_ID";
@@ -450,8 +427,6 @@ namespace UI.User_control
             this.Controls.Add(this.label17);
             this.Name = "uc_addNewMember";
             this.Size = new System.Drawing.Size(465, 675);
-            this.Load += new System.EventHandler(this.uc_addNewMember_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bsMember)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -492,6 +467,5 @@ namespace UI.User_control
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.BindingSource bsMember;
     }
 }
