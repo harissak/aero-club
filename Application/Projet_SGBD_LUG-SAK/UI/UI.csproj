@@ -107,11 +107,23 @@
     <Compile Include="SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="User control\uc_add_new_reservation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User control\uc_add_new_reservation.Designer.cs">
+      <DependentUpon>uc_add_new_reservation.cs</DependentUpon>
+    </Compile>
     <Compile Include="User control\uc_mbrList.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="User control\uc_mbrList.Designer.cs">
       <DependentUpon>uc_mbrList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User control\uc_md_del_reservation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User control\uc_md_del_reservation.Designer.cs">
+      <DependentUpon>uc_md_del_reservation.cs</DependentUpon>
     </Compile>
     <Compile Include="User control\uc_saveDelete.cs">
       <SubType>UserControl</SubType>
@@ -167,8 +179,14 @@
     <EmbeddedResource Include="SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User control\uc_add_new_reservation.resx">
+      <DependentUpon>uc_add_new_reservation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User control\uc_mbrList.resx">
       <DependentUpon>uc_mbrList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User control\uc_md_del_reservation.resx">
+      <DependentUpon>uc_md_del_reservation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User control\uc_saveDelete.resx">
       <DependentUpon>uc_saveDelete.cs</DependentUpon>
