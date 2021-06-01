@@ -206,6 +206,7 @@ namespace UI.User_control
             // cb_mdf_Pilot
             // 
             this.cb_mdf_Pilot.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_est_pil", true));
+            this.cb_mdf_Pilot.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_mdf_Pilot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_mdf_Pilot.FormattingEnabled = true;
             this.cb_mdf_Pilot.Items.AddRange(new object[] {
@@ -219,6 +220,7 @@ namespace UI.User_control
             // cb_mdf_Admin
             // 
             this.cb_mdf_Admin.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_est_adm", true));
+            this.cb_mdf_Admin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_mdf_Admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_mdf_Admin.FormattingEnabled = true;
             this.cb_mdf_Admin.Items.AddRange(new object[] {
@@ -232,6 +234,7 @@ namespace UI.User_control
             // cb_mdf_Sex
             // 
             this.cb_mdf_Sex.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_sexe", true));
+            this.cb_mdf_Sex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_mdf_Sex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_mdf_Sex.FormattingEnabled = true;
             this.cb_mdf_Sex.Items.AddRange(new object[] {

@@ -166,6 +166,7 @@ namespace UI.User_control
             // 
             // cb_Ins_Pilot
             // 
+            this.cb_Ins_Pilot.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Ins_Pilot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Ins_Pilot.FormattingEnabled = true;
             this.cb_Ins_Pilot.Items.AddRange(new object[] {
@@ -178,6 +179,7 @@ namespace UI.User_control
             // 
             // cb_Ins_Admin
             // 
+            this.cb_Ins_Admin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Ins_Admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Ins_Admin.FormattingEnabled = true;
             this.cb_Ins_Admin.Items.AddRange(new object[] {
@@ -190,6 +192,7 @@ namespace UI.User_control
             // 
             // cb_Ins_Sex
             // 
+            this.cb_Ins_Sex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Ins_Sex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Ins_Sex.FormattingEnabled = true;
             this.cb_Ins_Sex.Items.AddRange(new object[] {

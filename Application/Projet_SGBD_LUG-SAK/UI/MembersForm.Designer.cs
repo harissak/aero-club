@@ -85,6 +85,7 @@ namespace UI
             this.addNewMember.Name = "addNewMember";
             this.addNewMember.Size = new System.Drawing.Size(472, 675);
             this.addNewMember.TabIndex = 2;
+            this.addNewMember.refreshMbrList += new UI.delRefresh(this.refreshMembersList);
             // 
             // mbrList
             // 

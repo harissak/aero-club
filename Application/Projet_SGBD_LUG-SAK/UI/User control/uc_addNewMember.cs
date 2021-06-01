@@ -12,6 +12,9 @@ namespace UI.User_control
 {
     public partial class uc_addNewMember : UserControl
     {
+
+        public event delRefresh refreshMbrList;
+
         public uc_addNewMember()
         {
             InitializeComponent();
@@ -45,7 +48,10 @@ namespace UI.User_control
 
 
                 MessageBox.Show("You have succesfully registered new member!!");
-              
+                refreshMbrList();
+                ResetAllControls(this);
+                
+                
             }
             catch (Exception ex)
             {
@@ -53,9 +59,32 @@ namespace UI.User_control
             }
         }
 
-     
+        public static void ResetAllControls(Control form)
+        {
+            foreach (Control control in form.Controls)
+            {
+                if (control is TextBox)
+                {
+                    TextBox textBox = (TextBox)control;
+                    textBox.Text = null;
+                }
 
-      
+                if (control is ComboBox)
+                {
+                    ComboBox comboBox = (ComboBox)control;
+                    if (comboBox.Items.Count > 0)
+                        comboBox.SelectedIndex = 0;
+                }
+
+                if (control is DateTimePicker)
+                {
+                    DateTimePicker dateTimePicker = (DateTimePicker)control;
+                    dateTimePicker.Value = DateTime.Now;
+                }
+
+            }
+        }
+
 
     }
 }

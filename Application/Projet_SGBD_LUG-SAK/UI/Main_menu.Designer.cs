@@ -199,7 +199,7 @@ namespace UI
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(501, 23);
+            this.lblTitle.Location = new System.Drawing.Point(492, 23);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(150, 48);
             this.lblTitle.TabIndex = 0;
@@ -208,6 +208,7 @@ namespace UI
             // 
             // panelHomeScreen
             // 
+            this.panelHomeScreen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelHomeScreen.BackgroundImage")));
             this.panelHomeScreen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelHomeScreen.Location = new System.Drawing.Point(250, 85);
             this.panelHomeScreen.Name = "panelHomeScreen";

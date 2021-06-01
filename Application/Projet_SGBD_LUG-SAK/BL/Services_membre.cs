@@ -46,6 +46,7 @@ namespace BL
 
                               // I dont know and can not figure out why this funkcion doesnt work
                               // just to test MODIFY METHOD i put it in comment
+
             MBR current = mbr;//DAL.AccesMBR.Read_MBR_BY_ID(mbr.Mbr_ID);
 
             if (current != null)
