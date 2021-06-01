@@ -53,12 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddNewMemberForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddNewMemberForm.Designer.cs">
-      <DependentUpon>AddNewMemberForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="AiroplaneForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +65,7 @@
     <Compile Include="BasicDBReadTest.Designer.cs">
       <DependentUpon>BasicDBReadTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Délégués.cs" />
     <Compile Include="Main_menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,11 +77,6 @@
     </Compile>
     <Compile Include="ManualForm.Designer.cs">
       <DependentUpon>ManualForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MembersDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MembersDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="MembersForm.cs">
       <SubType>Form</SubType>
@@ -117,6 +107,42 @@
     <Compile Include="SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="User control\uc_add_new_reservation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User control\uc_add_new_reservation.Designer.cs">
+      <DependentUpon>uc_add_new_reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User control\uc_appList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User control\uc_appList.Designer.cs">
+      <DependentUpon>uc_appList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User control\uc_mbrList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User control\uc_mbrList.Designer.cs">
+      <DependentUpon>uc_mbrList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User control\uc_md_del_reservation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User control\uc_md_del_reservation.Designer.cs">
+      <DependentUpon>uc_md_del_reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User control\uc_saveDelete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User control\uc_saveDelete.Designer.cs">
+      <DependentUpon>uc_saveDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User control\uc_addNewMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User control\uc_addNewMember.Designer.cs">
+      <DependentUpon>uc_addNewMember.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BL\BL.csproj">
@@ -133,9 +159,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AddNewMemberForm.resx">
-      <DependentUpon>AddNewMemberForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AiroplaneForm.resx">
       <DependentUpon>AiroplaneForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,21 +185,33 @@
     <EmbeddedResource Include="SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User control\uc_add_new_reservation.resx">
+      <DependentUpon>uc_add_new_reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User control\uc_appList.resx">
+      <DependentUpon>uc_appList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User control\uc_mbrList.resx">
+      <DependentUpon>uc_mbrList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User control\uc_md_del_reservation.resx">
+      <DependentUpon>uc_md_del_reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User control\uc_saveDelete.resx">
+      <DependentUpon>uc_saveDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User control\uc_addNewMember.resx">
+      <DependentUpon>uc_addNewMember.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="MembersDataSet.xsc">
-      <DependentUpon>MembersDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="MembersDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MembersDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MembersDataSet.xss">
-      <DependentUpon>MembersDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DTO.APP.datasource" />
+    <None Include="Properties\DataSources\DTO.Indisp.datasource" />
+    <None Include="Properties\DataSources\DTO.LIC.datasource" />
+    <None Include="Properties\DataSources\DTO.MBR.datasource" />
+    <None Include="Properties\DataSources\DTO.RES.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -194,6 +229,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\book12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

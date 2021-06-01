@@ -59,7 +59,7 @@ namespace UI
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(240, 854);
+            this.panelMenu.Size = new System.Drawing.Size(250, 867);
             this.panelMenu.TabIndex = 0;
             // 
             // btnManual
@@ -73,7 +73,7 @@ namespace UI
             this.btnManual.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManual.Location = new System.Drawing.Point(0, 325);
             this.btnManual.Name = "btnManual";
-            this.btnManual.Size = new System.Drawing.Size(240, 60);
+            this.btnManual.Size = new System.Drawing.Size(250, 60);
             this.btnManual.TabIndex = 4;
             this.btnManual.Text = "MANUAL";
             this.btnManual.UseVisualStyleBackColor = false;
@@ -90,7 +90,7 @@ namespace UI
             this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSettings.Location = new System.Drawing.Point(0, 265);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(240, 60);
+            this.btnSettings.Size = new System.Drawing.Size(250, 60);
             this.btnSettings.TabIndex = 3;
             this.btnSettings.Text = "SETTINGS";
             this.btnSettings.UseVisualStyleBackColor = false;
@@ -107,7 +107,7 @@ namespace UI
             this.btnAiroPlane.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAiroPlane.Location = new System.Drawing.Point(0, 205);
             this.btnAiroPlane.Name = "btnAiroPlane";
-            this.btnAiroPlane.Size = new System.Drawing.Size(240, 60);
+            this.btnAiroPlane.Size = new System.Drawing.Size(250, 60);
             this.btnAiroPlane.TabIndex = 2;
             this.btnAiroPlane.Text = "AIRPLANE";
             this.btnAiroPlane.UseVisualStyleBackColor = false;
@@ -124,7 +124,7 @@ namespace UI
             this.btnReservation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReservation.Location = new System.Drawing.Point(0, 145);
             this.btnReservation.Name = "btnReservation";
-            this.btnReservation.Size = new System.Drawing.Size(240, 60);
+            this.btnReservation.Size = new System.Drawing.Size(250, 60);
             this.btnReservation.TabIndex = 1;
             this.btnReservation.Text = "RESERVATION";
             this.btnReservation.UseVisualStyleBackColor = false;
@@ -141,7 +141,7 @@ namespace UI
             this.btnMembers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMembers.Location = new System.Drawing.Point(0, 85);
             this.btnMembers.Name = "btnMembers";
-            this.btnMembers.Size = new System.Drawing.Size(240, 60);
+            this.btnMembers.Size = new System.Drawing.Size(250, 60);
             this.btnMembers.TabIndex = 0;
             this.btnMembers.Text = "MEMBERS";
             this.btnMembers.UseVisualStyleBackColor = false;
@@ -154,7 +154,7 @@ namespace UI
             this.panelHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHome.Location = new System.Drawing.Point(0, 0);
             this.panelHome.Name = "panelHome";
-            this.panelHome.Size = new System.Drawing.Size(240, 85);
+            this.panelHome.Size = new System.Drawing.Size(250, 85);
             this.panelHome.TabIndex = 0;
             this.panelHome.Click += new System.EventHandler(this.panelHome_click);
             // 
@@ -189,9 +189,9 @@ namespace UI
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(179)))), ((int)(((byte)(213)))));
             this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(240, 0);
+            this.panelTitleBar.Location = new System.Drawing.Point(250, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(934, 85);
+            this.panelTitleBar.Size = new System.Drawing.Size(1378, 85);
             this.panelTitleBar.TabIndex = 1;
             // 
             // lblTitle
@@ -199,7 +199,7 @@ namespace UI
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(313, 23);
+            this.lblTitle.Location = new System.Drawing.Point(492, 23);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(150, 48);
             this.lblTitle.TabIndex = 0;
@@ -208,22 +208,24 @@ namespace UI
             // 
             // panelHomeScreen
             // 
+            this.panelHomeScreen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelHomeScreen.BackgroundImage")));
             this.panelHomeScreen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelHomeScreen.Location = new System.Drawing.Point(240, 85);
+            this.panelHomeScreen.Location = new System.Drawing.Point(250, 85);
             this.panelHomeScreen.Name = "panelHomeScreen";
-            this.panelHomeScreen.Size = new System.Drawing.Size(934, 769);
+            this.panelHomeScreen.Size = new System.Drawing.Size(1378, 782);
             this.panelHomeScreen.TabIndex = 2;
             // 
             // Main_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1174, 854);
+            this.ClientSize = new System.Drawing.Size(1628, 867);
             this.Controls.Add(this.panelHomeScreen);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
-            this.MinimumSize = new System.Drawing.Size(1050, 600);
+            this.MinimumSize = new System.Drawing.Size(1646, 914);
             this.Name = "Main_menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main_menu";
             this.Load += new System.EventHandler(this.Main_menu_Load);
             this.panelMenu.ResumeLayout(false);

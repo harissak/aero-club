@@ -34,7 +34,6 @@ namespace UI
         {
 
             this.OpenNewWindow(new MembersForm());
-
             this.lblTitle.Text = "MEMBERS";
             this.btnMembers.BackColor = Color.FromArgb(220, 118, 51);
             this.panelTitleBar.BackColor = Color.FromArgb(220, 118, 51);

@@ -11,33 +11,34 @@ namespace UI
         public MembersForm()
         {
             InitializeComponent();
+            saveDeleteMember.Visible = false;
         }
 
-        private void btnSearchMember(object sender, EventArgs e)
-        {
 
-            if (!this.tbMemberName.Text.Equals(""))
-                this.dgwShowMembers.DataSource = BL.Services_membre.search_member_by_name(tbMemberName.Text);
-            else if (!this.tbMemberID.Text.Equals(""))
-                this.dgwShowMembers.DataSource = BL.Services_membre.search_member_by_ID(Int32.Parse(tbMemberID.Text));
-            else
-                this.dgwShowMembers.DataSource = BL.Services_membre.search_member_by_name(tbMemberName.Text);
+        private void recherce_Mbr(int Mbr_id)
+        {
+            this.saveDeleteMember.ReadMember(Mbr_id);
+            saveDeleteMember.Visible = true;
+            this.saveDeleteMember.del_member_ID(Mbr_id);
+
         }
 
-        private void addNewMember(object sender, EventArgs e)
 
+        private void updateMember(int Mbr_ID)
         {
-            AddNewMemberForm addNewMemberF = new AddNewMemberForm();
-            addNewMemberF.ShowDialog();
-               
-            
+            //this.saveDeleteMember.updateMember(Mbr_ID);
+
         }
 
         private void MembersForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'membersDataSet.Mbr' table. You can move, or remove it, as needed.
-            //this.mbrTableAdapter.Fill(this.membersDataSet.Mbr);
+           
 
+        }
+        
+        private void refreshMembersList()
+        {
+            this.mbrList.RefreshMemberList();
         }
     }
 }

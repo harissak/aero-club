@@ -30,54 +30,50 @@ namespace UI
         private void InitializeComponent()
         {
             this.TB_MBR = new System.Windows.Forms.TextBox();
-            this.BUT_Member = new System.Windows.Forms.Button();
-            this.DGV_MBR = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_MBR)).BeginInit();
+            this.BUT = new System.Windows.Forms.Button();
+            this.DGV = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
             this.SuspendLayout();
             // 
             // TB_MBR
             // 
-            this.TB_MBR.Location = new System.Drawing.Point(16, 15);
-            this.TB_MBR.Margin = new System.Windows.Forms.Padding(4);
+            this.TB_MBR.Location = new System.Drawing.Point(12, 12);
             this.TB_MBR.Name = "TB_MBR";
-            this.TB_MBR.Size = new System.Drawing.Size(249, 22);
+            this.TB_MBR.Size = new System.Drawing.Size(188, 20);
             this.TB_MBR.TabIndex = 0;
             this.TB_MBR.TextChanged += new System.EventHandler(this.TB_MBR_TextChanged);
             // 
-            // BUT_Member
+            // BUT
             // 
-            this.BUT_Member.Location = new System.Drawing.Point(321, 10);
-            this.BUT_Member.Margin = new System.Windows.Forms.Padding(4);
-            this.BUT_Member.Name = "BUT_Member";
-            this.BUT_Member.Size = new System.Drawing.Size(100, 28);
-            this.BUT_Member.TabIndex = 1;
-            this.BUT_Member.Text = "Load";
-            this.BUT_Member.UseVisualStyleBackColor = true;
-            this.BUT_Member.Click += new System.EventHandler(this.BUT_Member_Click);
+            this.BUT.Location = new System.Drawing.Point(241, 8);
+            this.BUT.Name = "BUT";
+            this.BUT.Size = new System.Drawing.Size(75, 23);
+            this.BUT.TabIndex = 1;
+            this.BUT.Text = "Load";
+            this.BUT.UseVisualStyleBackColor = true;
+            this.BUT.Click += new System.EventHandler(this.BUT_Member_Click);
             // 
-            // DGV_MBR
+            // DGV
             // 
-            this.DGV_MBR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_MBR.Location = new System.Drawing.Point(16, 47);
-            this.DGV_MBR.Margin = new System.Windows.Forms.Padding(4);
-            this.DGV_MBR.Name = "DGV_MBR";
-            this.DGV_MBR.RowHeadersWidth = 51;
-            this.DGV_MBR.Size = new System.Drawing.Size(1035, 492);
-            this.DGV_MBR.TabIndex = 2;
-            this.DGV_MBR.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_MBR_CellContentClick);
+            this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV.Location = new System.Drawing.Point(12, 38);
+            this.DGV.Name = "DGV";
+            this.DGV.RowHeadersWidth = 51;
+            this.DGV.Size = new System.Drawing.Size(776, 400);
+            this.DGV.TabIndex = 2;
+            this.DGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_MBR_CellContentClick);
             // 
             // BasicDBReadTest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.DGV_MBR);
-            this.Controls.Add(this.BUT_Member);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.DGV);
+            this.Controls.Add(this.BUT);
             this.Controls.Add(this.TB_MBR);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BasicDBReadTest";
             this.Text = "BasicDBReadTest";
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_MBR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,7 +82,7 @@ namespace UI
         #endregion
 
         private System.Windows.Forms.TextBox TB_MBR;
-        private System.Windows.Forms.Button BUT_Member;
-        private System.Windows.Forms.DataGridView DGV_MBR;
+        private System.Windows.Forms.Button BUT;
+        private System.Windows.Forms.DataGridView DGV;
     }
 }

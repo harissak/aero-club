@@ -15,9 +15,15 @@ namespace BL
             return DAL.AccesMBR.Read_MBR_BY_START_NAME(memberName);
         }
 
-        public static MBR search_member_by_ID(int memberID)
+        public static List<MBR> search_member_by_ID(int memberID)
         {
-            return DAL.AccesMBR.Read_MBR_BY_ID(memberID);
+
+            List<MBR> retVal = new List<MBR>();
+            
+            retVal.Add(DAL.AccesMBR.Read_MBR_BY_ID(memberID));
+
+            return retVal;
+            
         }
 
         public static int Add_new_member ( MBR mbr)
@@ -40,7 +46,12 @@ namespace BL
         {
             //TO ADD: can't remove pilot if there is a running config -FLO-
             int retval = 0;
-            MBR current = DAL.AccesMBR.Read_MBR_BY_ID(mbr.Mbr_ID);
+
+
+                              // I dont know and can not figure out why this funkcion doesnt work
+                              // just to test MODIFY METHOD i put it in comment
+
+            MBR current = mbr;//DAL.AccesMBR.Read_MBR_BY_ID(mbr.Mbr_ID);
 
             if (current != null)
                 retval = DAL.AccesMBR.Update_MBR(current);
