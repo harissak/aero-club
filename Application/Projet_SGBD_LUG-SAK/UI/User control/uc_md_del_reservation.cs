@@ -16,5 +16,11 @@ namespace UI.User_control
         {
             InitializeComponent();
         }
+
+
+        private void uc_btn_res_cancel_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+        }
     }
 }

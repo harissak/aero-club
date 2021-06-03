@@ -58,5 +58,17 @@ namespace BL
 
             return retval;
         }
+
+        public static List<MBR> read_all_members_id()
+        {
+            return DAL.AccesMBR.Read_all_members_id();
+        }
+
+        //public static string Read_member_by_id(int MBR_ID)
+        //{
+        //    return DAL.AccesMBR.Read_member_by_id(MBR_ID);
+        //}
+
+
     }
 }

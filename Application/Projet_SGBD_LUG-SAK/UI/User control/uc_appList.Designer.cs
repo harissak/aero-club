@@ -32,12 +32,12 @@ namespace UI.User_control
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_app_list = new System.Windows.Forms.DataGridView();
-            this.bt_search = new System.Windows.Forms.Button();
-            this.bs_apps = new System.Windows.Forms.BindingSource(this.components);
             this.appIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.appimmaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.appclasseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.appdescrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bs_apps = new System.Windows.Forms.BindingSource(this.components);
+            this.bt_search = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_app_list)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs_apps)).BeginInit();
             this.SuspendLayout();
@@ -60,63 +60,76 @@ namespace UI.User_control
             this.appclasseDataGridViewTextBoxColumn,
             this.appdescrDataGridViewTextBoxColumn});
             this.dgv_app_list.DataSource = this.bs_apps;
-            this.dgv_app_list.Location = new System.Drawing.Point(3, 98);
+            this.dgv_app_list.Location = new System.Drawing.Point(4, 121);
+            this.dgv_app_list.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv_app_list.Name = "dgv_app_list";
-            this.dgv_app_list.Size = new System.Drawing.Size(601, 366);
+            this.dgv_app_list.RowHeadersWidth = 51;
+            this.dgv_app_list.Size = new System.Drawing.Size(801, 450);
             this.dgv_app_list.TabIndex = 0;
-            // 
-            // bt_search
-            // 
-            this.bt_search.Location = new System.Drawing.Point(129, 38);
-            this.bt_search.Name = "bt_search";
-            this.bt_search.Size = new System.Drawing.Size(75, 23);
-            this.bt_search.TabIndex = 1;
-            this.bt_search.Text = "Load All";
-            this.bt_search.UseVisualStyleBackColor = true;
-            this.bt_search.Click += new System.EventHandler(this.bt_search_Click);
-            // 
-            // bs_apps
-            // 
-            this.bs_apps.DataSource = typeof(DTO.APP);
+            this.dgv_app_list.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_app_list_CellContentClick);
             // 
             // appIDDataGridViewTextBoxColumn
             // 
             this.appIDDataGridViewTextBoxColumn.DataPropertyName = "App_ID";
             this.appIDDataGridViewTextBoxColumn.HeaderText = "Mat. Club";
+            this.appIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.appIDDataGridViewTextBoxColumn.Name = "appIDDataGridViewTextBoxColumn";
             this.appIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.appIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.appIDDataGridViewTextBoxColumn.Width = 125;
             // 
             // appimmaDataGridViewTextBoxColumn
             // 
             this.appimmaDataGridViewTextBoxColumn.DataPropertyName = "App_imma";
             this.appimmaDataGridViewTextBoxColumn.HeaderText = "Immatriculation";
+            this.appimmaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.appimmaDataGridViewTextBoxColumn.Name = "appimmaDataGridViewTextBoxColumn";
             this.appimmaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.appimmaDataGridViewTextBoxColumn.Width = 125;
             // 
             // appclasseDataGridViewTextBoxColumn
             // 
             this.appclasseDataGridViewTextBoxColumn.DataPropertyName = "App_classe";
             this.appclasseDataGridViewTextBoxColumn.HeaderText = "Classe";
+            this.appclasseDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.appclasseDataGridViewTextBoxColumn.Name = "appclasseDataGridViewTextBoxColumn";
             this.appclasseDataGridViewTextBoxColumn.ReadOnly = true;
+            this.appclasseDataGridViewTextBoxColumn.Width = 125;
             // 
             // appdescrDataGridViewTextBoxColumn
             // 
             this.appdescrDataGridViewTextBoxColumn.DataPropertyName = "App_descr";
             this.appdescrDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.appdescrDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.appdescrDataGridViewTextBoxColumn.Name = "appdescrDataGridViewTextBoxColumn";
             this.appdescrDataGridViewTextBoxColumn.ReadOnly = true;
             this.appdescrDataGridViewTextBoxColumn.Width = 250;
             // 
+            // bs_apps
+            // 
+            this.bs_apps.DataSource = typeof(DTO.APP);
+            this.bs_apps.CurrentChanged += new System.EventHandler(this.bs_apps_CurrentChanged);
+            // 
+            // bt_search
+            // 
+            this.bt_search.Location = new System.Drawing.Point(172, 47);
+            this.bt_search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_search.Name = "bt_search";
+            this.bt_search.Size = new System.Drawing.Size(100, 28);
+            this.bt_search.TabIndex = 1;
+            this.bt_search.Text = "Load All";
+            this.bt_search.UseVisualStyleBackColor = true;
+            this.bt_search.Click += new System.EventHandler(this.bt_search_Click);
+            // 
             // uc_appList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.bt_search);
             this.Controls.Add(this.dgv_app_list);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "uc_appList";
-            this.Size = new System.Drawing.Size(607, 467);
+            this.Size = new System.Drawing.Size(809, 575);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_app_list)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs_apps)).EndInit();
             this.ResumeLayout(false);

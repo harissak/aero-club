@@ -26,5 +26,15 @@ namespace UI.User_control
         {
 
         }
+
+        private void dgv_app_list_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bs_apps_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

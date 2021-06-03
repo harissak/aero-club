@@ -39,27 +39,30 @@ namespace UI
             this.panelAiroplaneScreen.Controls.Add(this.uc_appList1);
             this.panelAiroplaneScreen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAiroplaneScreen.Location = new System.Drawing.Point(0, 0);
-            this.panelAiroplaneScreen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelAiroplaneScreen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelAiroplaneScreen.Name = "panelAiroplaneScreen";
-            this.panelAiroplaneScreen.Size = new System.Drawing.Size(723, 600);
+            this.panelAiroplaneScreen.Size = new System.Drawing.Size(964, 738);
             this.panelAiroplaneScreen.TabIndex = 0;
             // 
             // uc_appList1
             // 
             this.uc_appList1.Location = new System.Drawing.Point(0, 0);
+            this.uc_appList1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.uc_appList1.Name = "uc_appList1";
-            this.uc_appList1.Size = new System.Drawing.Size(664, 538);
+            this.uc_appList1.Size = new System.Drawing.Size(885, 662);
             this.uc_appList1.TabIndex = 0;
+            this.uc_appList1.Load += new System.EventHandler(this.uc_appList1_Load);
             // 
             // AiroplaneForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(723, 600);
+            this.ClientSize = new System.Drawing.Size(964, 738);
             this.Controls.Add(this.panelAiroplaneScreen);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AiroplaneForm";
             this.Text = "AiroplaneForm";
+            this.Load += new System.EventHandler(this.AiroplaneForm_Load);
             this.panelAiroplaneScreen.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -22,17 +22,17 @@ namespace UI.User_control
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if (!this.tbMemberName.Text.Equals(""))
-                this.dgvMbrList.DataSource = BL.Services_membre.search_member_by_name(tbMemberName.Text);
+                this.bs_members_list.DataSource = BL.Services_membre.search_member_by_name(tbMemberName.Text);
             else if (!this.tbMemberID.Text.Equals(""))
-                this.dgvMbrList.DataSource = BL.Services_membre.search_member_by_ID(Int32.Parse(tbMemberID.Text));
+                this.bs_members_list.DataSource = BL.Services_membre.search_member_by_ID(Int32.Parse(tbMemberID.Text));
             else
-                this.dgvMbrList.DataSource = BL.Services_membre.search_member_by_name(tbMemberName.Text);
+                this.bs_members_list.DataSource = BL.Services_membre.search_member_by_name(tbMemberName.Text);
         }
 
 
         private void ucRech_mbr(object sender, EventArgs e)
         {
-            this.dgvMbrList.DataSource = BL.Services_membre.search_member_by_name(tbMemberName.Text);
+            this.bs_members_list.DataSource = BL.Services_membre.search_member_by_name(tbMemberName.Text);
         }
 
         private void itemCliked(object sender, DataGridViewCellEventArgs e)
@@ -58,7 +58,7 @@ namespace UI.User_control
 
         public void RefreshMemberList()
         {
-            this.dgvMbrList.DataSource = BL.Services_membre.search_member_by_name(tbMemberName.Text);
+            this.bs_members_list.DataSource = BL.Services_membre.search_member_by_name(tbMemberName.Text);
         }
         
     }

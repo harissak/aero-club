@@ -131,6 +131,12 @@
     <Compile Include="User control\uc_md_del_reservation.Designer.cs">
       <DependentUpon>uc_md_del_reservation.cs</DependentUpon>
     </Compile>
+    <Compile Include="User control\uc_reservations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User control\uc_reservations.Designer.cs">
+      <DependentUpon>uc_reservations.cs</DependentUpon>
+    </Compile>
     <Compile Include="User control\uc_saveDelete.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User control\uc_md_del_reservation.resx">
       <DependentUpon>uc_md_del_reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User control\uc_reservations.resx">
+      <DependentUpon>uc_reservations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User control\uc_saveDelete.resx">
       <DependentUpon>uc_saveDelete.cs</DependentUpon>

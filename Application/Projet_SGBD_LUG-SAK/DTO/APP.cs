@@ -12,5 +12,15 @@ namespace DTO
         public string App_imma { get; set; }
         public string App_classe { get; set; }
         public string App_descr { get; set; }
+
+        public override string ToString()
+        {
+            return this.App_descr;
+        }
+
+        public int APP_ID ()
+        {
+            return App_ID;
+        }
     }
 }

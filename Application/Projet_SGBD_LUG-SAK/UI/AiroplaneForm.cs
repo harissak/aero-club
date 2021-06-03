@@ -16,5 +16,15 @@ namespace UI
         {
             InitializeComponent();
         }
+
+        private void uc_appList1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AiroplaneForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

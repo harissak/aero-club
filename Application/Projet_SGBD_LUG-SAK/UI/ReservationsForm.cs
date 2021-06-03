@@ -15,11 +15,14 @@ namespace UI
         public ReservationsForm()
         {
             InitializeComponent();
+            this.md_del_reservation.Visible = false;
         }
 
-        private void panelReservations_Paint(object sender, PaintEventArgs e)
+        private void ReservationsForm_Load(object sender, EventArgs e)
         {
 
         }
+
+
     }
 }

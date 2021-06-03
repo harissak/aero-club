@@ -25,5 +25,18 @@ namespace DTO
         public bool       Mbr_est_pil { get; set; }
         public bool       Mbr_est_adm { get; set; }
         public string     Mbr_passw { get; set; }
+
+
+        public override string ToString()
+        {
+             
+            return this.Mbr_ID+"";
+        }
+
+        public string getNomPrenom()
+        {
+            return this.Mbr_nom + " " + this.Mbr_prenom;
+        }
     }
+
 }

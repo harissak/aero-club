@@ -156,5 +156,28 @@ namespace DAL
             }
             return retval;
         }
+
+      static public  List <MBR> Read_all_members_id()
+        {
+            List<MBR> retVal;
+
+            retVal = new List<MBR>();
+
+            using (IDbConnection connection = DAL.Utilitaire.ConnectionToLocalServer())
+                retVal = connection.Query<MBR>("read_all_members",
+                                               commandType: CommandType.StoredProcedure).AsList<MBR>();
+
+            return retVal;
+        }
+
+
+        //public static string Read_member_by_id(int mbr_id)
+        //{
+        //    using (IDbConnection connection = DAL.Utilitaire.ConnectionToLocalServer())
+        //     return  connection.Query<MBR>("sp_select_mbr_by_id",
+        //                                    param: new { mbr_id = mbr_id },
+        //                                commandType: CommandType.StoredProcedure).ToString();
+
+        //}
     }
 }

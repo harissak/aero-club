@@ -57,6 +57,42 @@ namespace DAL
             }
             return retval;
         }
-        
+
+        //static public APP Read_app_by_desc(string app_desc)
+        //{
+        //    APP retval;
+
+        //    using (IDbConnection connection = DAL.Utilitaire.ConnectionToLocalServer())
+        //    {
+        //        retval = connection.QuerySingle("sp_select_app_by_desc",
+        //                                        param: new { app_desc = app_desc },
+        //                                        commandType: CommandType.StoredProcedure).APP_ID();
+        //    }
+        //    return retval;
+        //}
+
+
+        static public APP Read_app_by_desc(string app_desc)
+        {
+            APP retval;
+            List<APP> liste;
+
+            //Daper  -  16.05.2021---
+            retval = null;
+            liste = null;
+
+            using (IDbConnection connection = DAL.Utilitaire.ConnectionToLocalServer())
+            {
+                liste = connection.Query<APP>("sp_select_app_by_desc",
+                                        param: new { app_desc = app_desc },
+                                        commandType: CommandType.StoredProcedure).AsList<APP>();
+                if (liste.Count == 1)
+                    retval = liste[0];
+
+            }
+
+            return retval;
+        }
+
     }
 }

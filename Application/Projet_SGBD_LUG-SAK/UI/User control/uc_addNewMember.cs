@@ -26,7 +26,7 @@ namespace UI.User_control
             try
             {
 
-                tb_Ins_ID.Text = BL.Services_membre.Add_new_member(
+                 this.tb_Ins_ID.Text = BL.Services_membre.Add_new_member(
                                 new DTO.MBR
                                 {
                                     Mbr_nom = this.tb_Ins_Nom.Text,
@@ -85,6 +85,9 @@ namespace UI.User_control
             }
         }
 
+        private void uc_addNewMember_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }
