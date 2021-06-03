@@ -22,5 +22,15 @@ namespace UI.User_control
         {
             this.Visible = false;
         }
+
+        private void uc_res_change_date_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

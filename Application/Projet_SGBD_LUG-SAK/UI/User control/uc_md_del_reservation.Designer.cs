@@ -32,6 +32,7 @@ namespace UI.User_control
             this.components = new System.ComponentModel.Container();
             this.uc_btn_res_modify = new System.Windows.Forms.Button();
             this.uc_res_change_heur_deb = new System.Windows.Forms.ComboBox();
+            this.res_binding_source = new System.Windows.Forms.BindingSource(this.components);
             this.uc_res_change_machine = new System.Windows.Forms.ComboBox();
             this.uc_res_change_nom = new System.Windows.Forms.ComboBox();
             this.uc_res_id = new System.Windows.Forms.TextBox();
@@ -49,16 +50,17 @@ namespace UI.User_control
             this.label7 = new System.Windows.Forms.Label();
             this.uc_res_change_heur_fin = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.res_binding_source = new System.Windows.Forms.BindingSource(this.components);
+            this.dtp_hour_start = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.res_binding_source)).BeginInit();
             this.SuspendLayout();
             // 
             // uc_btn_res_modify
             // 
             this.uc_btn_res_modify.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_btn_res_modify.Location = new System.Drawing.Point(4, 555);
+            this.uc_btn_res_modify.Location = new System.Drawing.Point(3, 451);
+            this.uc_btn_res_modify.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uc_btn_res_modify.Name = "uc_btn_res_modify";
-            this.uc_btn_res_modify.Size = new System.Drawing.Size(110, 34);
+            this.uc_btn_res_modify.Size = new System.Drawing.Size(82, 28);
             this.uc_btn_res_modify.TabIndex = 23;
             this.uc_btn_res_modify.Text = "Modify";
             this.uc_btn_res_modify.UseVisualStyleBackColor = true;
@@ -80,62 +82,75 @@ namespace UI.User_control
             "15:00",
             "16:00",
             "17:00"});
-            this.uc_res_change_heur_deb.Location = new System.Drawing.Point(94, 329);
+            this.uc_res_change_heur_deb.Location = new System.Drawing.Point(205, 261);
+            this.uc_res_change_heur_deb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uc_res_change_heur_deb.Name = "uc_res_change_heur_deb";
-            this.uc_res_change_heur_deb.Size = new System.Drawing.Size(121, 28);
+            this.uc_res_change_heur_deb.Size = new System.Drawing.Size(92, 24);
             this.uc_res_change_heur_deb.TabIndex = 22;
+            // 
+            // res_binding_source
+            // 
+            this.res_binding_source.DataSource = typeof(DTO.RES);
             // 
             // uc_res_change_machine
             // 
             this.uc_res_change_machine.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uc_res_change_machine.FormattingEnabled = true;
-            this.uc_res_change_machine.Location = new System.Drawing.Point(94, 69);
+            this.uc_res_change_machine.Location = new System.Drawing.Point(70, 56);
+            this.uc_res_change_machine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uc_res_change_machine.Name = "uc_res_change_machine";
-            this.uc_res_change_machine.Size = new System.Drawing.Size(206, 28);
+            this.uc_res_change_machine.Size = new System.Drawing.Size(156, 24);
             this.uc_res_change_machine.TabIndex = 21;
             // 
             // uc_res_change_nom
             // 
             this.uc_res_change_nom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uc_res_change_nom.FormattingEnabled = true;
-            this.uc_res_change_nom.Location = new System.Drawing.Point(94, 33);
+            this.uc_res_change_nom.Location = new System.Drawing.Point(70, 27);
+            this.uc_res_change_nom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uc_res_change_nom.Name = "uc_res_change_nom";
-            this.uc_res_change_nom.Size = new System.Drawing.Size(206, 28);
+            this.uc_res_change_nom.Size = new System.Drawing.Size(156, 24);
             this.uc_res_change_nom.TabIndex = 20;
             // 
             // uc_res_id
             // 
             this.uc_res_id.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.res_binding_source, "Res_ID", true));
             this.uc_res_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_res_id.Location = new System.Drawing.Point(94, 3);
+            this.uc_res_id.Location = new System.Drawing.Point(70, 2);
+            this.uc_res_id.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uc_res_id.Name = "uc_res_id";
-            this.uc_res_id.Size = new System.Drawing.Size(100, 26);
+            this.uc_res_id.Size = new System.Drawing.Size(76, 23);
             this.uc_res_id.TabIndex = 19;
             // 
             // uc_res_change_date
             // 
             this.uc_res_change_date.DataBindings.Add(new System.Windows.Forms.Binding("SelectionRange", this.res_binding_source, "Res_date", true));
-            this.uc_res_change_date.Location = new System.Drawing.Point(94, 110);
+            this.uc_res_change_date.Location = new System.Drawing.Point(70, 89);
+            this.uc_res_change_date.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.uc_res_change_date.Name = "uc_res_change_date";
             this.uc_res_change_date.TabIndex = 18;
+            this.uc_res_change_date.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.uc_res_change_date_DateChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(-1, 329);
+            this.label5.Location = new System.Drawing.Point(-1, 267);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 24);
+            this.label5.Size = new System.Drawing.Size(95, 18);
             this.label5.TabIndex = 17;
-            this.label5.Text = "Heur:";
+            this.label5.Text = "Heure Debut:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(0, 110);
+            this.label4.Location = new System.Drawing.Point(0, 89);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 24);
+            this.label4.Size = new System.Drawing.Size(43, 18);
             this.label4.TabIndex = 16;
             this.label4.Text = "Date:";
             // 
@@ -143,9 +158,10 @@ namespace UI.User_control
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(-1, 69);
+            this.label3.Location = new System.Drawing.Point(-1, 56);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 24);
+            this.label3.Size = new System.Drawing.Size(68, 18);
             this.label3.TabIndex = 15;
             this.label3.Text = "Machine:";
             // 
@@ -153,9 +169,10 @@ namespace UI.User_control
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(0, 33);
+            this.label2.Location = new System.Drawing.Point(0, 27);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 24);
+            this.label2.Size = new System.Drawing.Size(48, 18);
             this.label2.TabIndex = 14;
             this.label2.Text = "NOM:";
             // 
@@ -164,17 +181,19 @@ namespace UI.User_control
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(-1, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 24);
+            this.label1.Size = new System.Drawing.Size(70, 18);
             this.label1.TabIndex = 13;
             this.label1.Text = "RÉS - ID:";
             // 
             // uc_btn_res_delet
             // 
             this.uc_btn_res_delet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_btn_res_delet.Location = new System.Drawing.Point(190, 555);
+            this.uc_btn_res_delet.Location = new System.Drawing.Point(142, 451);
+            this.uc_btn_res_delet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uc_btn_res_delet.Name = "uc_btn_res_delet";
-            this.uc_btn_res_delet.Size = new System.Drawing.Size(110, 34);
+            this.uc_btn_res_delet.Size = new System.Drawing.Size(82, 28);
             this.uc_btn_res_delet.TabIndex = 24;
             this.uc_btn_res_delet.Text = "Delete";
             this.uc_btn_res_delet.UseVisualStyleBackColor = true;
@@ -182,9 +201,10 @@ namespace UI.User_control
             // uc_btn_res_cancel
             // 
             this.uc_btn_res_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_btn_res_cancel.Location = new System.Drawing.Point(94, 595);
+            this.uc_btn_res_cancel.Location = new System.Drawing.Point(70, 483);
+            this.uc_btn_res_cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uc_btn_res_cancel.Name = "uc_btn_res_cancel";
-            this.uc_btn_res_cancel.Size = new System.Drawing.Size(110, 34);
+            this.uc_btn_res_cancel.Size = new System.Drawing.Size(82, 28);
             this.uc_btn_res_cancel.TabIndex = 25;
             this.uc_btn_res_cancel.Text = "Cancel";
             this.uc_btn_res_cancel.UseVisualStyleBackColor = true;
@@ -199,17 +219,19 @@ namespace UI.User_control
             this.uc_res_change_annul.Items.AddRange(new object[] {
             "OUI",
             "NON"});
-            this.uc_res_change_annul.Location = new System.Drawing.Point(94, 415);
+            this.uc_res_change_annul.Location = new System.Drawing.Point(70, 337);
+            this.uc_res_change_annul.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uc_res_change_annul.Name = "uc_res_change_annul";
-            this.uc_res_change_annul.Size = new System.Drawing.Size(121, 28);
+            this.uc_res_change_annul.Size = new System.Drawing.Size(92, 24);
             this.uc_res_change_annul.TabIndex = 31;
             // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(-1, 415);
+            this.label8.Location = new System.Drawing.Point(-1, 337);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 43);
+            this.label8.Size = new System.Drawing.Size(61, 35);
             this.label8.TabIndex = 30;
             this.label8.Text = "Résér. est annulée:";
             // 
@@ -222,17 +244,19 @@ namespace UI.User_control
             this.uc_res_change_prevu.Items.AddRange(new object[] {
             "OUI",
             "NON"});
-            this.uc_res_change_prevu.Location = new System.Drawing.Point(94, 458);
+            this.uc_res_change_prevu.Location = new System.Drawing.Point(70, 372);
+            this.uc_res_change_prevu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uc_res_change_prevu.Name = "uc_res_change_prevu";
-            this.uc_res_change_prevu.Size = new System.Drawing.Size(121, 28);
+            this.uc_res_change_prevu.Size = new System.Drawing.Size(92, 24);
             this.uc_res_change_prevu.TabIndex = 29;
             // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(-1, 458);
+            this.label7.Location = new System.Drawing.Point(-1, 372);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 41);
+            this.label7.Size = new System.Drawing.Size(61, 33);
             this.label7.TabIndex = 28;
             this.label7.Text = "Résér. est prevu:";
             // 
@@ -253,29 +277,36 @@ namespace UI.User_control
             "15:00",
             "16:00",
             "17:00"});
-            this.uc_res_change_heur_fin.Location = new System.Drawing.Point(94, 372);
+            this.uc_res_change_heur_fin.Location = new System.Drawing.Point(205, 302);
+            this.uc_res_change_heur_fin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uc_res_change_heur_fin.Name = "uc_res_change_heur_fin";
-            this.uc_res_change_heur_fin.Size = new System.Drawing.Size(121, 28);
+            this.uc_res_change_heur_fin.Size = new System.Drawing.Size(92, 24);
             this.uc_res_change_heur_fin.TabIndex = 27;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(-1, 372);
+            this.label6.Location = new System.Drawing.Point(-1, 302);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 24);
+            this.label6.Size = new System.Drawing.Size(63, 18);
             this.label6.TabIndex = 26;
             this.label6.Text = "Heur fin:";
             // 
-            // res_binding_source
+            // dtp_hour_start
             // 
-            this.res_binding_source.DataSource = typeof(DTO.RES);
+            this.dtp_hour_start.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtp_hour_start.Location = new System.Drawing.Point(99, 267);
+            this.dtp_hour_start.Name = "dtp_hour_start";
+            this.dtp_hour_start.Size = new System.Drawing.Size(89, 20);
+            this.dtp_hour_start.TabIndex = 32;
             // 
             // uc_md_del_reservation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dtp_hour_start);
             this.Controls.Add(this.uc_res_change_annul);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.uc_res_change_prevu);
@@ -295,8 +326,9 @@ namespace UI.User_control
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "uc_md_del_reservation";
-            this.Size = new System.Drawing.Size(305, 636);
+            this.Size = new System.Drawing.Size(313, 517);
             ((System.ComponentModel.ISupportInitialize)(this.res_binding_source)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -325,5 +357,6 @@ namespace UI.User_control
         private System.Windows.Forms.ComboBox uc_res_change_heur_fin;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.BindingSource res_binding_source;
+        private System.Windows.Forms.DateTimePicker dtp_hour_start;
     }
 }

@@ -15,7 +15,7 @@ namespace UI
         public ReservationsForm()
         {
             InitializeComponent();
-            this.md_del_reservation.Visible = false;
+            //this.md_del_reservation.Visible = false;
         }
 
         private void ReservationsForm_Load(object sender, EventArgs e)

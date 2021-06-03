@@ -7,7 +7,7 @@ using DTO;
 
 namespace BL
 {
-    public static class Services_membre
+    public static class Services_membre 
     {
 
         public static List <MBR> search_member_by_name (String memberName)
@@ -69,6 +69,28 @@ namespace BL
         //    return DAL.AccesMBR.Read_member_by_id(MBR_ID);
         //}
 
+        //test
+        public static string TranslateIDToName(string id)
+        {
+            return DAL.AccesMBR.TranslateIDTOName(Int32.Parse(id));
+        }
 
+        public static List<MBR> LoadPilotOnly()
+        {
+            List<MBR> retval = new List<MBR>();
+            List<MBR> allmbr = new List<MBR>();
+
+            allmbr = DAL.AccesMBR.Read_MBR_BY_START_NAME("");
+
+            foreach (MBR membre in allmbr)
+            {
+                if (membre.Mbr_est_pil == true)
+                    retval.Add(membre);
+            }
+
+            retval.Sort();
+
+            return retval;
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class MBR
+    public class MBR :IComparable<MBR>
     {
 
         public int        Mbr_ID { get; set; }
@@ -36,6 +36,11 @@ namespace DTO
         public string getNomPrenom()
         {
             return this.Mbr_nom + " " + this.Mbr_prenom;
+        }
+
+        public int CompareTo(MBR obj)
+        {
+            return this.Mbr_ID - obj.Mbr_ID;
         }
     }
 

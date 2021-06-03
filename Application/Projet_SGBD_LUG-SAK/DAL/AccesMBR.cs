@@ -170,6 +170,24 @@ namespace DAL
             return retVal;
         }
 
+        static public string TranslateIDTOName(int mbr_id)
+        {
+            string retval;
+           
+           
+            using (IDbConnection connection = DAL.Utilitaire.ConnectionToLocalServer())
+            {
+                retval = connection.QuerySingle<string>("select_name_MBR_by_id",
+                                        param: new { mbr_id = mbr_id },
+                                        commandType: CommandType.StoredProcedure);
+            }
+
+            return retval;
+        }
+
+
+    }
+
 
         //public static string Read_member_by_id(int mbr_id)
         //{
@@ -179,5 +197,5 @@ namespace DAL
         //                                commandType: CommandType.StoredProcedure).ToString();
 
         //}
-    }
+    
 }
