@@ -63,7 +63,7 @@ namespace UI
             // 
             // cherche_reservations
             // 
-            this.cherche_reservations.Location = new System.Drawing.Point(12, 0);
+            this.cherche_reservations.Location = new System.Drawing.Point(3, 3);
             this.cherche_reservations.Name = "cherche_reservations";
             this.cherche_reservations.Size = new System.Drawing.Size(707, 744);
             this.cherche_reservations.TabIndex = 2;
