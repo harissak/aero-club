@@ -119,11 +119,11 @@
     <Compile Include="User control\uc_add_new_reservation.Designer.cs">
       <DependentUpon>uc_add_new_reservation.cs</DependentUpon>
     </Compile>
-    <Compile Include="User control\uc_appList.cs">
+    <Compile Include="User control\uc_appList_del.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User control\uc_appList.Designer.cs">
-      <DependentUpon>uc_appList.cs</DependentUpon>
+    <Compile Include="User control\uc_appList_del.Designer.cs">
+      <DependentUpon>uc_appList_del.cs</DependentUpon>
     </Compile>
     <Compile Include="User control\uc_mbrList.cs">
       <SubType>UserControl</SubType>
@@ -136,6 +136,12 @@
     </Compile>
     <Compile Include="User control\uc_md_del_reservation.Designer.cs">
       <DependentUpon>uc_md_del_reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User control\uc_modify_aircraft.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User control\uc_modify_aircraft.Designer.cs">
+      <DependentUpon>uc_modify_aircraft.cs</DependentUpon>
     </Compile>
     <Compile Include="User control\uc_reservations.cs">
       <SubType>UserControl</SubType>
@@ -203,14 +209,17 @@
     <EmbeddedResource Include="User control\uc_add_new_reservation.resx">
       <DependentUpon>uc_add_new_reservation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User control\uc_appList.resx">
-      <DependentUpon>uc_appList.cs</DependentUpon>
+    <EmbeddedResource Include="User control\uc_appList_del.resx">
+      <DependentUpon>uc_appList_del.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User control\uc_mbrList.resx">
       <DependentUpon>uc_mbrList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User control\uc_md_del_reservation.resx">
       <DependentUpon>uc_md_del_reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User control\uc_modify_aircraft.resx">
+      <DependentUpon>uc_modify_aircraft.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User control\uc_reservations.resx">
       <DependentUpon>uc_reservations.cs</DependentUpon>

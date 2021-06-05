@@ -96,7 +96,7 @@ namespace UI.User_control
             // 
             // bt_add_app
             // 
-            this.bt_add_app.Location = new System.Drawing.Point(110, 207);
+            this.bt_add_app.Location = new System.Drawing.Point(28, 207);
             this.bt_add_app.Name = "bt_add_app";
             this.bt_add_app.Size = new System.Drawing.Size(100, 23);
             this.bt_add_app.TabIndex = 6;

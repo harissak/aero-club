@@ -104,6 +104,7 @@ namespace DAL
                 {
                     retval = connection.Execute("sp_delete_app",
                                    param: new { APP_ID = app_id },
+                                   commandType: CommandType.StoredProcedure,
                                    transaction: transac);
 
                     transac.Commit();
