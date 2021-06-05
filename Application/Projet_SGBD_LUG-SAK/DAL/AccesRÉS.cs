@@ -58,5 +58,27 @@ namespace DAL
             return retval;
         }
 
+       public static int CheckIFRunningResByApp(int app_id,DateTime now)
+        {
+            int retval;
+            DynamicParameters parameters;
+
+            using (IDbConnection connection = DAL.Utilitaire.ConnectionToLocalServer())
+            {
+                connection.Open();
+                parameters = new DynamicParameters();
+                parameters.Add("@RES_FK_APP_ID", app_id, DbType.Int32, direction: ParameterDirection.Input);
+                parameters.Add("@RES_date_now", now, DbType.DateTime, direction: ParameterDirection.Input);
+                parameters.Add("@count", 0, DbType.Int32, direction: ParameterDirection.Output);
+
+                connection.Execute("sp_select_running_res_by_app",     
+                                   param: parameters,
+                                   commandType: CommandType.StoredProcedure);
+
+                retval = parameters.Get<int>("@count");
+            }
+
+            return retval;
+        }
     }
 }

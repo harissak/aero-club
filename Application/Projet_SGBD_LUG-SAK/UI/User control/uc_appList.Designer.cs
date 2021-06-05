@@ -38,6 +38,8 @@ namespace UI.User_control
             this.appdescrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bs_apps = new System.Windows.Forms.BindingSource(this.components);
             this.bt_search = new System.Windows.Forms.Button();
+            this.bt_add_app = new System.Windows.Forms.Button();
+            this.bt_app_delete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_app_list)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs_apps)).BeginInit();
             this.SuspendLayout();
@@ -60,11 +62,10 @@ namespace UI.User_control
             this.appclasseDataGridViewTextBoxColumn,
             this.appdescrDataGridViewTextBoxColumn});
             this.dgv_app_list.DataSource = this.bs_apps;
-            this.dgv_app_list.Location = new System.Drawing.Point(4, 121);
-            this.dgv_app_list.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_app_list.Location = new System.Drawing.Point(3, 98);
             this.dgv_app_list.Name = "dgv_app_list";
             this.dgv_app_list.RowHeadersWidth = 51;
-            this.dgv_app_list.Size = new System.Drawing.Size(801, 450);
+            this.dgv_app_list.Size = new System.Drawing.Size(601, 366);
             this.dgv_app_list.TabIndex = 0;
             this.dgv_app_list.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_app_list_CellContentClick);
             // 
@@ -112,24 +113,43 @@ namespace UI.User_control
             // 
             // bt_search
             // 
-            this.bt_search.Location = new System.Drawing.Point(172, 47);
-            this.bt_search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_search.Location = new System.Drawing.Point(3, 13);
             this.bt_search.Name = "bt_search";
-            this.bt_search.Size = new System.Drawing.Size(100, 28);
+            this.bt_search.Size = new System.Drawing.Size(75, 23);
             this.bt_search.TabIndex = 1;
             this.bt_search.Text = "Load All";
             this.bt_search.UseVisualStyleBackColor = true;
             this.bt_search.Click += new System.EventHandler(this.bt_search_Click);
             // 
+            // bt_add_app
+            // 
+            this.bt_add_app.Location = new System.Drawing.Point(4, 43);
+            this.bt_add_app.Name = "bt_add_app";
+            this.bt_add_app.Size = new System.Drawing.Size(75, 23);
+            this.bt_add_app.TabIndex = 2;
+            this.bt_add_app.Text = "Add Aircraft";
+            this.bt_add_app.UseVisualStyleBackColor = true;
+            // 
+            // bt_app_delete
+            // 
+            this.bt_app_delete.Location = new System.Drawing.Point(369, 43);
+            this.bt_app_delete.Name = "bt_app_delete";
+            this.bt_app_delete.Size = new System.Drawing.Size(75, 23);
+            this.bt_app_delete.TabIndex = 3;
+            this.bt_app_delete.Text = "Delete A/C";
+            this.bt_app_delete.UseVisualStyleBackColor = true;
+            this.bt_app_delete.Click += new System.EventHandler(this.bt_app_delete_Click);
+            // 
             // uc_appList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.bt_app_delete);
+            this.Controls.Add(this.bt_add_app);
             this.Controls.Add(this.bt_search);
             this.Controls.Add(this.dgv_app_list);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "uc_appList";
-            this.Size = new System.Drawing.Size(809, 575);
+            this.Size = new System.Drawing.Size(607, 467);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_app_list)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs_apps)).EndInit();
             this.ResumeLayout(false);
@@ -145,5 +165,7 @@ namespace UI.User_control
         private System.Windows.Forms.DataGridViewTextBoxColumn appimmaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn appclasseDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn appdescrDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button bt_add_app;
+        private System.Windows.Forms.Button bt_app_delete;
     }
 }

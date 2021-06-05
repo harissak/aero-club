@@ -88,11 +88,28 @@ namespace DAL
                                         commandType: CommandType.StoredProcedure).AsList<APP>();
                 if (liste.Count == 1)
                     retval = liste[0];
-
             }
 
             return retval;
         }
 
+        static public int DeleteAPP(int app_id)
+        {
+            int retval;
+
+            using (IDbConnection connection = DAL.Utilitaire.ConnectionToLocalServer())
+            {
+                connection.Open();
+                using (var transac = connection.BeginTransaction())
+                {
+                    retval = connection.Execute("sp_delete_app",
+                                   param: new { APP_ID = app_id },
+                                   transaction: transac);
+
+                    transac.Commit();
+                }
+            }
+            return retval;
+        }
     }
 }
