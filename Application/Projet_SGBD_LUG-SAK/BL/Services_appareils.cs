@@ -23,6 +23,8 @@ namespace BL
 
         public static int Add_new_app(APP app)
         {
+            if (app.App_imma == "")
+                throw new Exception("BL_APP_CHECK_RULE_1");
             return DAL.AccesApp.Add_new_app(app);
         }
 
@@ -47,5 +49,18 @@ namespace BL
 
         }
 
+        public static int Delete_app(int app_id)
+        {
+            int retval = 0;
+            DateTime now = DateTime.Now;
+
+            if(DAL.AccesRÉS.CheckIFRunningResByApp(app_id,now) > 0)
+                throw new Exception("BL_APP_CHECK_RULE_2");
+
+
+            retval = DAL.AccesApp.DeleteAPP(app_id);
+
+            return retval;
+        }
     }
 }

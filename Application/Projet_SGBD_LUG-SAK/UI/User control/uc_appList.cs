@@ -36,5 +36,28 @@ namespace UI.User_control
         {
 
         }
+
+        private void bt_app_delete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Vous confirmez la suppression ? ",
+                               "Confirmation",
+                                MessageBoxButtons.OKCancel,
+                                MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                try
+                {
+                    // VALEUR TEMPORAIRE POUR LE TEST
+                    BL.Services_appareils.Delete_app(1);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show((ex.Message),
+                        "Warning",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+            }
+                
+        }
     }
 }
