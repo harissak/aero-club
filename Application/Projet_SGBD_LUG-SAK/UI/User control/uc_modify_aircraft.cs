@@ -8,20 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UI
+namespace UI.User_control
 {
-    public partial class ReservationsForm : Form
+    public partial class uc_modify_aircraft : UserControl
     {
-        public ReservationsForm()
+        public uc_modify_aircraft()
         {
             InitializeComponent();
         }
-
-
-        private void Select_reservationdID(int resID, int mbrID, int maschineID)
-        {
-           // this.md_del_reservation.Read_reservation(resID, mbrID , maschineID);
-        }
-
     }
 }

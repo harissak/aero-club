@@ -39,7 +39,6 @@ namespace UI.User_control
             this.appclasseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.appdescrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bs_apps = new System.Windows.Forms.BindingSource(this.components);
-            this.bt_search = new System.Windows.Forms.Button();
             this.bt_add_app = new System.Windows.Forms.Button();
             this.bt_app_delete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_app_list)).BeginInit();
@@ -170,6 +169,6 @@ namespace UI.User_control
         private System.Windows.Forms.DataGridViewTextBoxColumn appclasseDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn appdescrDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button bt_add_app;
-        private System.Windows.Forms.Button bt_app_delete;
+
     }
 }

@@ -72,7 +72,7 @@ namespace BL
                 throw new Exception("BL_APP_CHECK_RULE_2");
 
 
-            retval = DAL.AccesApp.DeleteAPP(app_id);
+          //  retval = DAL.AccesApp.DeleteAPP(app_id);
 
             return retval;
         }

@@ -96,5 +96,15 @@ namespace UI.User_control
             this.uc_res_change_machine.Text = "";
 
         }
+
+        private void uc_res_change_date_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
