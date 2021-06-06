@@ -13,6 +13,7 @@ namespace UI.User_control
 {
     public partial class uc_appList_del : UserControl
     {
+        
         public uc_appList_del()
         {
             InitializeComponent();
@@ -56,6 +57,7 @@ namespace UI.User_control
         {
             this.bs_apps.DataSource = BL.Services_appareils.Read_all_app();
         }
+
 
     }
 }

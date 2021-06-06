@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BL;
 
 namespace UI.User_control
 {
@@ -15,6 +16,11 @@ namespace UI.User_control
         public uc_modify_aircraft()
         {
             InitializeComponent();
+        }
+
+        public void ReadSelectedAircraft(int app_id)
+        {
+            this.bs_mod_app.DataSource = BL.Services_appareils.Read_appareil_by_ID(app_id);
         }
     }
 }
