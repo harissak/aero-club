@@ -70,6 +70,10 @@ namespace UI.User_control
             // 
             this.res_binding_source.DataSource = typeof(DTO.RES);
             // 
+            // res_binding_source
+            // 
+            this.res_binding_source.DataSource = typeof(DTO.RES);
+            // 
             // uc_res_change_machine
             // 
             this.uc_res_change_machine.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -106,6 +110,7 @@ namespace UI.User_control
             this.uc_res_change_date.Location = new System.Drawing.Point(93, 151);
             this.uc_res_change_date.Name = "uc_res_change_date";
             this.uc_res_change_date.TabIndex = 18;
+            this.uc_res_change_date.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.uc_res_change_date_DateChanged);
             // 
             // label5
             // 
@@ -123,7 +128,7 @@ namespace UI.User_control
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(0, 151);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 24);
+            this.label4.Size = new System.Drawing.Size(43, 18);
             this.label4.TabIndex = 16;
             this.label4.Text = "Date:";
             // 
@@ -133,7 +138,7 @@ namespace UI.User_control
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(-1, 110);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 24);
+            this.label3.Size = new System.Drawing.Size(68, 18);
             this.label3.TabIndex = 15;
             this.label3.Text = "Machine:";
             // 
@@ -143,7 +148,7 @@ namespace UI.User_control
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(0, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 24);
+            this.label2.Size = new System.Drawing.Size(48, 18);
             this.label2.TabIndex = 14;
             this.label2.Text = "NOM:";
             // 
@@ -152,8 +157,9 @@ namespace UI.User_control
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(-1, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 24);
+            this.label1.Size = new System.Drawing.Size(70, 18);
             this.label1.TabIndex = 13;
             this.label1.Text = "RÉS - ID:";
             // 
@@ -193,7 +199,7 @@ namespace UI.User_control
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(-1, 413);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 24);
+            this.label6.Size = new System.Drawing.Size(63, 18);
             this.label6.TabIndex = 26;
             this.label6.Text = "Heur fin:";
             // 
@@ -261,7 +267,7 @@ namespace UI.User_control
             // 
             // uc_md_del_reservation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.uc_ch_res_mbr_id);
             this.Controls.Add(this.label9);

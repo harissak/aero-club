@@ -83,38 +83,7 @@ namespace DAL
             return retval;
         }
 
-        static public int DeleteAPP(int app_id)
-        {
-            int retval;
-
-            using (IDbConnection connection = DAL.Utilitaire.ConnectionToLocalServer())
-            {
-                connection.Open();
-                using (var transac = connection.BeginTransaction())
-                {
-                    retval = connection.Execute("sp_delete_app",
-                                   param: new { APP_ID = app_id },
-                                   transaction: transac);
-
-                    transac.Commit();
-                }
-            }
             return retval;
         }
-
-
-        //static public List <APP> Read_app_imm_by_desc(string app_desc)
-        //{
-        //     List <APP> retval = null;
-        //    using (IDbConnection connection = DAL.Utilitaire.ConnectionToLocalServer())
-        //    {
-        //        retval = connection.Query<APP>("sp_select_app_imm_by_desc",
-        //                                param: new { description_app = app_desc },
-        //                                commandType: CommandType.StoredProcedure).AsList<APP>();
-               
-        //    }
-
-        //    return retval;
-        //}
     }
 }

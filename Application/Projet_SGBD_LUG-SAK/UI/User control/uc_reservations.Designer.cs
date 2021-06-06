@@ -56,7 +56,7 @@ namespace UI.User_control
             this.tb_uc_rechercher_nom.Location = new System.Drawing.Point(212, 2);
             this.tb_uc_rechercher_nom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_uc_rechercher_nom.Name = "tb_uc_rechercher_nom";
-            this.tb_uc_rechercher_nom.Size = new System.Drawing.Size(161, 26);
+            this.tb_uc_rechercher_nom.Size = new System.Drawing.Size(122, 23);
             this.tb_uc_rechercher_nom.TabIndex = 0;
             // 
             // tb_uc_recherch_res_id
@@ -65,7 +65,7 @@ namespace UI.User_control
             this.tb_uc_recherch_res_id.Location = new System.Drawing.Point(212, 44);
             this.tb_uc_recherch_res_id.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_uc_recherch_res_id.Name = "tb_uc_recherch_res_id";
-            this.tb_uc_recherch_res_id.Size = new System.Drawing.Size(100, 26);
+            this.tb_uc_recherch_res_id.Size = new System.Drawing.Size(76, 23);
             this.tb_uc_recherch_res_id.TabIndex = 1;
             // 
             // bt_uc_res_search
@@ -85,16 +85,17 @@ namespace UI.User_control
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(16, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 25);
+            this.label1.Size = new System.Drawing.Size(49, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "NOM:";
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 44);
+            this.label2.Location = new System.Drawing.Point(13, 36);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 41);
+            this.label2.Size = new System.Drawing.Size(118, 33);
             this.label2.TabIndex = 5;
             this.label2.Text = "NUMMERO DE RÉSÉRVATION:";
             // 
@@ -207,7 +208,7 @@ namespace UI.User_control
             // 
             // uc_reservations
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgv_running_reserv);
             this.Controls.Add(this.label2);
@@ -217,7 +218,7 @@ namespace UI.User_control
             this.Controls.Add(this.tb_uc_rechercher_nom);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "uc_reservations";
-            this.Size = new System.Drawing.Size(697, 741);
+            this.Size = new System.Drawing.Size(523, 602);
             this.Load += new System.EventHandler(this.LoadAllReservation);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_running_reserv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs_reservation_list)).EndInit();

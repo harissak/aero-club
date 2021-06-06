@@ -81,7 +81,18 @@ namespace BL
 
             retval.Sort();
 
-            return retval;
         }
+        //test
+        public static string TranslateIDToName(string id)
+        {
+            return DAL.AccesMBR.TranslateIDTOName(Int32.Parse(id));
+        }
+
+        public static List<MBR> LoadPilotOnly()
+        {
+            List<MBR> retval = new List<MBR>();
+            List<MBR> allmbr = new List<MBR>();
+
+            allmbr = DAL.AccesMBR.Read_MBR_BY_START_NAME("");
     }
-}
+
