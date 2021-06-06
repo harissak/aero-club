@@ -7,7 +7,7 @@ using DTO;
 
 namespace BL
 {
-    public static class Services_membre
+    public static class Services_membre 
     {
 
         public static List <MBR> search_member_by_name (String memberName)
@@ -15,16 +15,7 @@ namespace BL
             return DAL.AccesMBR.Read_MBR_BY_START_NAME(memberName);
         }
 
-        public static List<MBR> search_member_by_ID(int memberID)
-        {
-
-            List<MBR> retVal = new List<MBR>();
-            
-            retVal.Add(DAL.AccesMBR.Read_MBR_BY_ID(memberID));
-
-            return retVal;
-            
-        }
+      
 
         public static int Add_new_member ( MBR mbr)
         {
@@ -64,11 +55,33 @@ namespace BL
             return DAL.AccesMBR.Read_all_members_id();
         }
 
-        //public static string Read_member_by_id(int MBR_ID)
-        //{
-        //    return DAL.AccesMBR.Read_member_by_id(MBR_ID);
-        //}
+        public static MBR search_member_by_ID(int MBR_ID)
+        {
+            return DAL.AccesMBR.Read_MBR_BY_ID(MBR_ID);
+        }
 
+        //test
+        public static string TranslateIDToName(string id)
+        {
+            return DAL.AccesMBR.TranslateIDTOName(Int32.Parse(id));
+        }
 
+        public static List<MBR> LoadPilotOnly()
+        {
+            List<MBR> retval = new List<MBR>();
+            List<MBR> allmbr = new List<MBR>();
+
+            allmbr = DAL.AccesMBR.Read_MBR_BY_START_NAME("");
+
+            foreach (MBR membre in allmbr)
+            {
+                if (membre.Mbr_est_pil == true)
+                    retval.Add(membre);
+            }
+
+            retval.Sort();
+
+            return retval;
+        }
     }
 }

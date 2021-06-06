@@ -107,7 +107,6 @@ namespace UI
             this.Name = "MembersForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MembersForm";
-            this.Load += new System.EventHandler(this.MembersForm_Load);
             this.panelMembersScreen.ResumeLayout(false);
             this.panelMembersScreen.PerformLayout();
             this.ResumeLayout(false);

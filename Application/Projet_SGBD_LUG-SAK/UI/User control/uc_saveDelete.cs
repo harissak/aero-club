@@ -94,6 +94,11 @@ namespace UI.User_control
         {
 
         }
+
+        private void uc_saveDelete_Load(object sender, EventArgs e)
+        {
+
+        }
     }    
 
 }

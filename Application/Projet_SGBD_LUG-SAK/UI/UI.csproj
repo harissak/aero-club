@@ -107,6 +107,12 @@
     <Compile Include="SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="User control\uc_add_aircraft.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User control\uc_add_aircraft.Designer.cs">
+      <DependentUpon>uc_add_aircraft.cs</DependentUpon>
+    </Compile>
     <Compile Include="User control\uc_add_new_reservation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -190,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User control\uc_add_aircraft.resx">
+      <DependentUpon>uc_add_aircraft.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User control\uc_add_new_reservation.resx">
       <DependentUpon>uc_add_new_reservation.cs</DependentUpon>

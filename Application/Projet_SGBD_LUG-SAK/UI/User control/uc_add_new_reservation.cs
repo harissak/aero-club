@@ -25,33 +25,25 @@ namespace UI.User_control
         {
             try
             {
-                String heurD = this.cb_uc_res_aj_heur_deb.Text;
-                DateTime heurDebut = DateTime.ParseExact("12:00", "HH:mm", System.Globalization.CultureInfo.CurrentCulture);
-                String heurF = this.cb_uc_res_aj_heur_fin.Text;
-                DateTime heurFin = DateTime.ParseExact("14:00", "HH:mm", System.Globalization.CultureInfo.CurrentCulture);
 
-
-                //MessageBox.Show(heurDebut.ToString());
-
+                DateTime jour = Convert.ToDateTime(this.dt_uc_res_aj_date.SelectionRange.Start.ToShortDateString());
+                DateTime heurdeb = this.dtp_hour_start.Value;
+                DateTime heurfin = this.dtp_hour_end.Value;
 
                 BL.Service_réservation.Add_new_reservation(
                                  new DTO.RES
                                  {
                                      Res_FK_Mbr_ID = Convert.ToInt32(this.cb_uc_res_aj_id.Text),
-                                     Res_hr_deb = heurDebut,
-                                     Res_date = Convert.ToDateTime(this.dt_uc_res_aj_date.SelectionRange.Start.ToShortDateString()),
-                                     Res_hr_fin = heurFin,
+                                     Res_date = jour,
+                                     Res_hr_deb = new DateTime(jour.Year,jour.Month,jour.Day,heurdeb.Hour,heurdeb.Minute,0),
+                                     Res_hr_fin = new DateTime(jour.Year, jour.Month, jour.Day,heurfin.Hour,heurfin.Minute,0),
                                      Res_est_annule = false,
-                                     Res_est_prevenu = this.cb_uc_add_res_prevu.Text == "OUI" ? true : false,
+                                     Res_est_prevenu = false,
                                      Res_FK_App_ID = app_id
-
-
-
                                  }).ToString();
 
-
                 MessageBox.Show("You have succesfully made new reservation!!");
-
+                ResetAllControls(this);
 
             }
             catch (Exception ex)
@@ -60,25 +52,58 @@ namespace UI.User_control
             }
         }
 
-        private void LoadMemberName(object sender, EventArgs e)
+        private void LoadPilotOnly(object sender, EventArgs e)
         {
             
-            this.cb_uc_res_aj_id.DataSource = BL.Services_membre.read_all_members_id();
+            this.cb_uc_res_aj_id.DataSource = BL.Services_membre.LoadPilotOnly();
             this.cb_uc_res_aj_machine.DataSource = BL.Services_appareils.Read_all_app();
-           
+
         }
 
         private void MbrIDValueChanged(object sender, EventArgs e)
         {
-          List<DTO.MBR> member= BL.Services_membre.search_member_by_ID(Convert.ToInt32(this.cb_uc_res_aj_id.Text));
-          this.tb_uc_res_aj_nom.Text = member[0].getNomPrenom();
+            this.tb_uc_res_aj_nom.Text= BL.Services_membre.search_member_by_ID(Convert.ToInt32(this.cb_uc_res_aj_id.Text)).getNomPrenom();   
         }
 
         private void machine_SelectedIndexChanged(object sender, EventArgs e)
         {
             List<DTO.APP> appareil = BL.Services_appareils.search_app_by_desc(this.cb_uc_res_aj_machine.Text);
-            app_id = appareil[0].APP_ID();  
+            app_id = appareil[0].APP_ID();
 
         }
+
+        public static void ResetAllControls(Control form)
+        {
+            foreach (Control control in form.Controls)
+            {
+                if (control is TextBox)
+                {
+                    TextBox textBox = (TextBox)control;
+                    textBox.Text = null;
+                }
+
+                if (control is ComboBox)
+                {
+                    ComboBox comboBox = (ComboBox)control;
+                    if (comboBox.Items.Count > 0)
+                        comboBox.SelectedIndex = 0;
+                }
+
+                if (control is DateTimePicker)
+                {
+                    DateTimePicker dateTimePicker = (DateTimePicker)control;
+                    dateTimePicker.Value = DateTime.Now;
+                }
+
+                if (control is MonthCalendar)
+                {
+                    MonthCalendar monthCalendar = (MonthCalendar)control;
+                    monthCalendar.TodayDate = DateTime.Now;
+                }
+
+            }
+        }
+
+
     }
 }

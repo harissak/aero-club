@@ -15,14 +15,13 @@ namespace UI
         public ReservationsForm()
         {
             InitializeComponent();
-            this.md_del_reservation.Visible = false;
         }
 
-        private void ReservationsForm_Load(object sender, EventArgs e)
+
+        private void Select_reservationdID(int resID, int mbrID, int maschineID)
         {
-
+            this.md_del_reservation.Read_reservation(resID, mbrID , maschineID);
         }
-
 
     }
 }

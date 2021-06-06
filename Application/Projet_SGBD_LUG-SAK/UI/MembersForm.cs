@@ -41,6 +41,6 @@ namespace UI
             this.mbrList.RefreshMemberList();
         }
 
-       
+        
     }
 }
