@@ -99,22 +99,25 @@ namespace DAL
                                             {
                                                
                                                 RES_ID = reservation.Res_ID,
-                                                MBR_ID = reservation.Res_FK_Mbr_ID,
-                                                APP_ID = reservation.Res_FK_App_ID,
                                                 RES_DATE = reservation.Res_date,
                                                 RES_HR_DEB = reservation.Res_hr_deb,
                                                 RES_HR_FIN = reservation.Res_hr_fin,
                                                 RES_EST_ANN = reservation.Res_est_annule,
-                                                RES_EST_PRE = reservation.Res_est_prevenu
-
+                                                RES_EST_PRE = reservation.Res_est_prevenu,
+                                                res_fkt_mbr_id = reservation.Res_FK_Mbr_ID,
+                                                res_fkt_app_id = reservation.Res_FK_App_ID
+               
+                                                
                                             },
                                             commandType: CommandType.StoredProcedure);
+
+               
             }
             return retval;
         }
 
         public static int Delete_reservation(int reservation_ID)
-        {
+        { 
             int retval;
 
             using (IDbConnection connection = DAL.Utilitaire.ConnectionToLocalServer())

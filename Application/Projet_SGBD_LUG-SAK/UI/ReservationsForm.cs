@@ -15,12 +15,19 @@ namespace UI
         public ReservationsForm()
         {
             InitializeComponent();
+            this.tab_mdf_reservation.Enabled = false;
+
+        }
+        private void SelectReservationID(int resID, int mbrID, int machineID)
+        {
+            this.md_del_reservation.ReadData(resID, mbrID, machineID);
+            this.tab_mdf_reservation.Enabled = true;
         }
 
-
-        private void Select_reservationdID(int resID, int mbrID, int maschineID)
+        private void RefreschReservationList()
         {
-           // this.md_del_reservation.Read_reservation(resID, mbrID , maschineID);
+            this.cherche_reservations.RefreshAllReservation();
+            this.tab_reservation.SelectTab("tab_Overview");
         }
 
     }

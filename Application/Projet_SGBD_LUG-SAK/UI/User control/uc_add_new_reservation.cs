@@ -14,6 +14,7 @@ namespace UI.User_control
     {
 
         private int app_id;
+        public event delRefresh refreshList;
 
         public uc_add_new_reservation()
         {
@@ -44,6 +45,7 @@ namespace UI.User_control
 
                 MessageBox.Show("You have succesfully made new reservation!!");
                 ResetAllControls(this);
+                refreshList();
 
             }
             catch (Exception ex)
@@ -67,8 +69,7 @@ namespace UI.User_control
 
         private void machine_SelectedIndexChanged(object sender, EventArgs e)
         {
-            List<DTO.APP> appareil = BL.Services_appareils.search_app_by_desc(this.cb_uc_res_aj_machine.Text);
-            app_id = appareil[0].APP_ID();
+            app_id = Convert.ToInt32(BL.Services_appareils.search_app_by_desc(this.cb_uc_res_aj_machine.Text).APP_ID());
 
         }
 

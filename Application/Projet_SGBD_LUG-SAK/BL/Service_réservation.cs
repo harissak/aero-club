@@ -33,22 +33,13 @@ namespace BL
 
         public static int Update_reservation(RES reservation)
         {
+            return DAL.AccesRÉS.Update_reservation(reservation);
 
-            int retVal = 0;
-
-            retVal= DAL.AccesRÉS.Update_reservation(reservation);
-
-            return retVal;
-           
         }
 
         public static int Delete_reservation(int RES_ID)
         {
-            int retval = 0;
-
-            retval = DAL.AccesRÉS.Delete_reservation(RES_ID);
-
-            return retval;
+            return DAL.AccesRÉS.Delete_reservation(RES_ID);
         }
 
     }

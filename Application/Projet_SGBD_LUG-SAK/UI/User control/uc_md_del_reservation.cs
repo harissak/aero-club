@@ -13,35 +13,16 @@ namespace UI.User_control
     public partial class uc_md_del_reservation : UserControl
     {
 
-        private int member_ID;
-        private int maschine_ID;
+        public event delRefresh refreshList;
+
         public uc_md_del_reservation()
         {
             InitializeComponent();
         }
- 
-
-        public void Read_reservation(int res_ID, int mbrID, int maschineID)
-        {
-            member_ID   = mbrID;
-            maschine_ID = maschineID;
-
-            String description = BL.Services_appareils.search_app_by_ID(maschineID).ToString();
-            //insert data to modify reservation list 
-
-            this.uc_res_change_nom.Text              = BL.Services_membre.search_member_by_ID(mbrID).getNomPrenom();
-            this.res_binding_source.DataSource       = BL.Service_réservation.Read_reservation_by_ID(res_ID);
-            this.uc_res_change_machine.DataSource    = BL.Services_appareils.Read_all_app();
-            this.uc_res_change_machine.SelectedIndex = uc_res_change_machine.FindStringExact(description);
-            this.uc_ch_res_mbr_id.DataSource            = BL.Services_membre.LoadPilotOnly();
-            this.uc_ch_res_mbr_id.SelectedIndex         = uc_ch_res_mbr_id.FindStringExact(mbrID.ToString());
-
-        }
-
 
         private void Uc_btn_res_modify_Click(object sender, EventArgs e)
         {
-
+            int machID = BL.Services_appareils.search_app_by_desc(uc_res_change_machine.Text).APP_ID();
 
 
             try
@@ -51,12 +32,14 @@ namespace UI.User_control
                 DateTime heurdeb = this.dtp_ch_hour_start.Value;
                 DateTime heurfin = this.dtp_ch_hour_fin.Value;
 
+
+
                 BL.Service_réservation.Update_reservation(
                                  new DTO.RES
                                  {
                                      Res_ID = Convert.ToInt32(this.uc_ch_res_mbr_id.Text),
                                      Res_FK_Mbr_ID = Convert.ToInt32(this.uc_ch_res_mbr_id.Text),
-                                     Res_FK_App_ID = maschine_ID,
+                                     Res_FK_App_ID = machID,
                                      Res_date = jour,
                                      Res_hr_deb = new DateTime(jour.Year, jour.Month, jour.Day, heurdeb.Hour, heurdeb.Minute, 0),
                                      Res_hr_fin = new DateTime(jour.Year, jour.Month, jour.Day, heurfin.Hour, heurfin.Minute, 0),
@@ -66,16 +49,18 @@ namespace UI.User_control
                                  }).ToString();
 
                 MessageBox.Show("You have succesfully made new reservation!!");
-                MessageBox.Show(jour.ToString()+"  :  " +
-                                heurdeb.ToString() + "  :  " +
-                                heurfin.ToString());
+                res_binding_source.Clear();
+                Clear_data();
+                refreshList();
+
+
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
 
-         
+
 
         }
 
@@ -85,6 +70,9 @@ namespace UI.User_control
             MessageBox.Show("You have successfuly deleted reservation.");
             res_binding_source.Clear();
             Clear_data();
+            refreshList();
+            this.Enabled = false;
+
         }
 
         private void Clear_data()
@@ -97,13 +85,19 @@ namespace UI.User_control
 
         }
 
-        private void uc_res_change_date_DateChanged(object sender, DateRangeEventArgs e)
+       public void ReadData(int reservationID, int mbrID, int mashinID)
         {
 
-        }
+            this.Enabled = true;
+            String description = BL.Services_appareils.search_app_by_ID(mashinID).ToString();
+            //insert data to modify reservation list 
 
-        private void label5_Click(object sender, EventArgs e)
-        {
+            this.uc_res_change_nom.Text = BL.Services_membre.search_member_by_ID(mbrID).getNomPrenom();
+            this.res_binding_source.DataSource = BL.Service_réservation.Read_reservation_by_ID(reservationID);
+            this.uc_res_change_machine.DataSource = BL.Services_appareils.Read_all_app();          
+            this.uc_res_change_machine.SelectedIndex = uc_res_change_machine.FindStringExact(description);
+            this.uc_ch_res_mbr_id.DataSource = BL.Services_membre.LoadPilotOnly();
+            this.uc_ch_res_mbr_id.SelectedIndex = uc_ch_res_mbr_id.FindStringExact(mbrID.ToString());
 
         }
     }
