@@ -14,6 +14,7 @@ namespace UI.User_control
     {
 
         private int app_id;
+        public event delRefresh refreshList;
 
         public uc_add_new_reservation()
         {
@@ -25,10 +26,6 @@ namespace UI.User_control
         {
             try
             {
-
-                //DateTime heurDebut = DateTime.ParseExact("12:00", "HH:mm", System.Globalization.CultureInfo.CurrentCulture);
-                //DateTime heurFin = DateTime.ParseExact("14:00", "HH:mm", System.Globalization.CultureInfo.CurrentCulture);
-                //MessageBox.Show(heurDebut.ToString());
 
                 DateTime jour = Convert.ToDateTime(this.dt_uc_res_aj_date.SelectionRange.Start.ToShortDateString());
                 DateTime heurdeb = this.dtp_hour_start.Value;
@@ -47,6 +44,8 @@ namespace UI.User_control
                                  }).ToString();
 
                 MessageBox.Show("You have succesfully made new reservation!!");
+                ResetAllControls(this);
+                refreshList();
 
             }
             catch (Exception ex)
@@ -60,20 +59,52 @@ namespace UI.User_control
             
             this.cb_uc_res_aj_id.DataSource = BL.Services_membre.LoadPilotOnly();
             this.cb_uc_res_aj_machine.DataSource = BL.Services_appareils.Read_all_app();
-           
+
         }
 
         private void MbrIDValueChanged(object sender, EventArgs e)
         {
-          List<DTO.MBR> member= BL.Services_membre.search_member_by_ID(Convert.ToInt32(this.cb_uc_res_aj_id.Text));
-          this.tb_uc_res_aj_nom.Text = member[0].getNomPrenom();
+            this.tb_uc_res_aj_nom.Text= BL.Services_membre.search_member_by_ID(Convert.ToInt32(this.cb_uc_res_aj_id.Text)).getNomPrenom();   
         }
 
         private void machine_SelectedIndexChanged(object sender, EventArgs e)
         {
-            List<DTO.APP> appareil = BL.Services_appareils.search_app_by_desc(this.cb_uc_res_aj_machine.Text);
-            app_id = appareil[0].APP_ID();  
+            app_id = Convert.ToInt32(BL.Services_appareils.search_app_by_desc(this.cb_uc_res_aj_machine.Text).APP_ID());
 
         }
+
+        public static void ResetAllControls(Control form)
+        {
+            foreach (Control control in form.Controls)
+            {
+                if (control is TextBox)
+                {
+                    TextBox textBox = (TextBox)control;
+                    textBox.Text = null;
+                }
+
+                if (control is ComboBox)
+                {
+                    ComboBox comboBox = (ComboBox)control;
+                    if (comboBox.Items.Count > 0)
+                        comboBox.SelectedIndex = 0;
+                }
+
+                if (control is DateTimePicker)
+                {
+                    DateTimePicker dateTimePicker = (DateTimePicker)control;
+                    dateTimePicker.Value = DateTime.Now;
+                }
+
+                if (control is MonthCalendar)
+                {
+                    MonthCalendar monthCalendar = (MonthCalendar)control;
+                    monthCalendar.TodayDate = DateTime.Now;
+                }
+
+            }
+        }
+
+
     }
 }

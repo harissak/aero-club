@@ -40,8 +40,12 @@ namespace UI
         {
             this.uc_add_aircraft1.Visible = false;
             this.bt_cancel_add.Visible = false;
-            this.uc_add_aircraft1.ResetAddControl();
             this.uc_modify_aircraft1.Visible = true;
+        }
+
+        private void uc_appList1_SelectApp(int appID)
+        {
+            this.uc_modify_aircraft1.ReadSelectedAircraft(appID);
         }
     }
 }

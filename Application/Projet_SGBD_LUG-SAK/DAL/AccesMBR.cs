@@ -37,27 +37,6 @@ namespace DAL
         }
 
 
-        //static public List<MBR> Read_MBR_BY_ID(int mbr_id)
-        //{
-        //    List<MBR> retval = new List<MBR>();
-
-        //    //Daper  -  16.05.2021---
-
-        //    using (var connection = DAL.Utilitaire.ConnectionToLocalServer())
-        //    {
-        //        retval = connection.Query<MBR>("select_mbr_by_id",
-        //                                param: new { mbr_id = mbr_id },
-        //                                commandType: CommandType.StoredProcedure).AsList<MBR>();
-        //        ////if (liste.Count == 1)
-        //        ////    retval = liste[0];
-
-        //    }
-
-        //    return retval;
-        //}
-
-
-
 
         static public MBR Read_MBR_BY_ID(int mbr_id)
         {
@@ -73,7 +52,7 @@ namespace DAL
                 liste = connection.Query<MBR>("select_mbr_by_id",
                                         param: new { mbr_id = mbr_id},
                                         commandType: CommandType.StoredProcedure).AsList<MBR>();
-                if (liste.Count == 1)
+                
                     retval = liste[0];
 
             }
@@ -187,15 +166,6 @@ namespace DAL
 
 
     }
-
-
-        //public static string Read_member_by_id(int mbr_id)
-        //{
-        //    using (IDbConnection connection = DAL.Utilitaire.ConnectionToLocalServer())
-        //     return  connection.Query<MBR>("sp_select_mbr_by_id",
-        //                                    param: new { mbr_id = mbr_id },
-        //                                commandType: CommandType.StoredProcedure).ToString();
-
-        //}
+  
     
 }

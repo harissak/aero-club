@@ -13,6 +13,7 @@ namespace UI.User_control
 {
     public partial class uc_appList_del : UserControl
     {
+        public event delSelectApp SelectApp;
         
         public uc_appList_del()
         {
@@ -58,6 +59,15 @@ namespace UI.User_control
             this.bs_apps.DataSource = BL.Services_appareils.Read_all_app();
         }
 
+       
+        private void dgv_app_list_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (this.dgv_app_list.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                this.dgv_app_list.CurrentRow.Selected = true;
 
+                this.SelectApp(Int32.Parse(this.dgv_app_list.Rows[e.RowIndex].Cells["appIDDataGridViewTextBoxColumn"].FormattedValue.ToString()));
+            }
+        }
     }
 }

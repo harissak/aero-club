@@ -71,7 +71,7 @@ namespace UI.User_control
             }
         }
 
-        public void ResetAddControl()
+        private void ResetAddControl()
         {
             this.tb_add_app_imma.Text = "";
             this.cb_add_app_class.SelectedIndex = 0;

@@ -31,7 +31,16 @@ namespace BL
             return DAL.AccesRÉS.Read_all_reservations();
         }
 
-        
+        public static int Update_reservation(RES reservation)
+        {
+            return DAL.AccesRÉS.Update_reservation(reservation);
+
+        }
+
+        public static int Delete_reservation(int RES_ID)
+        {
+            return DAL.AccesRÉS.Delete_reservation(RES_ID);
+        }
 
     }
 }

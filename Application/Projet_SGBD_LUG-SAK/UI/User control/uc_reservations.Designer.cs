@@ -36,13 +36,13 @@ namespace UI.User_control
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_running_reserv = new System.Windows.Forms.DataGridView();
-            this.resIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Res_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reshrdebDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reshrfinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name_of_mbr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.resFKMbrIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.resFKAppIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mbr_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.app_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resestannuleDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.resestprevenuDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.bs_reservation_list = new System.Windows.Forms.BindingSource(this.components);
@@ -53,27 +53,27 @@ namespace UI.User_control
             // tb_uc_rechercher_nom
             // 
             this.tb_uc_rechercher_nom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_uc_rechercher_nom.Location = new System.Drawing.Point(159, 2);
-            this.tb_uc_rechercher_nom.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_uc_rechercher_nom.Location = new System.Drawing.Point(283, 2);
+            this.tb_uc_rechercher_nom.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tb_uc_rechercher_nom.Name = "tb_uc_rechercher_nom";
-            this.tb_uc_rechercher_nom.Size = new System.Drawing.Size(122, 23);
+            this.tb_uc_rechercher_nom.Size = new System.Drawing.Size(161, 26);
             this.tb_uc_rechercher_nom.TabIndex = 0;
             // 
             // tb_uc_recherch_res_id
             // 
             this.tb_uc_recherch_res_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_uc_recherch_res_id.Location = new System.Drawing.Point(159, 36);
-            this.tb_uc_recherch_res_id.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_uc_recherch_res_id.Location = new System.Drawing.Point(283, 54);
+            this.tb_uc_recherch_res_id.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tb_uc_recherch_res_id.Name = "tb_uc_recherch_res_id";
-            this.tb_uc_recherch_res_id.Size = new System.Drawing.Size(76, 23);
+            this.tb_uc_recherch_res_id.Size = new System.Drawing.Size(100, 26);
             this.tb_uc_recherch_res_id.TabIndex = 1;
             // 
             // bt_uc_res_search
             // 
-            this.bt_uc_res_search.Location = new System.Drawing.Point(309, 2);
-            this.bt_uc_res_search.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_uc_res_search.Location = new System.Drawing.Point(549, 2);
+            this.bt_uc_res_search.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.bt_uc_res_search.Name = "bt_uc_res_search";
-            this.bt_uc_res_search.Size = new System.Drawing.Size(82, 25);
+            this.bt_uc_res_search.Size = new System.Drawing.Size(145, 38);
             this.bt_uc_res_search.TabIndex = 3;
             this.bt_uc_res_search.Text = "SEARCH";
             this.bt_uc_res_search.UseVisualStyleBackColor = true;
@@ -83,20 +83,19 @@ namespace UI.User_control
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 2);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(21, 2);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 20);
+            this.label1.Size = new System.Drawing.Size(65, 25);
             this.label1.TabIndex = 4;
             this.label1.Text = "NOM:";
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 36);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(17, 44);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 33);
+            this.label2.Size = new System.Drawing.Size(157, 41);
             this.label2.TabIndex = 5;
             this.label2.Text = "NUMMERO DE RÉSÉRVATION:";
             // 
@@ -105,33 +104,35 @@ namespace UI.User_control
             this.dgv_running_reserv.AutoGenerateColumns = false;
             this.dgv_running_reserv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_running_reserv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.resIDDataGridViewTextBoxColumn,
+            this.Res_ID,
             this.resdateDataGridViewTextBoxColumn,
             this.reshrdebDataGridViewTextBoxColumn,
             this.reshrfinDataGridViewTextBoxColumn,
             this.name_of_mbr,
-            this.resFKMbrIDDataGridViewTextBoxColumn,
-            this.resFKAppIDDataGridViewTextBoxColumn,
+            this.mbr_id,
+            this.app_id,
             this.resestannuleDataGridViewCheckBoxColumn,
             this.resestprevenuDataGridViewCheckBoxColumn});
             this.dgv_running_reserv.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.dgv_running_reserv.DataSource = this.bs_reservation_list;
-            this.dgv_running_reserv.Location = new System.Drawing.Point(2, 71);
-            this.dgv_running_reserv.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_running_reserv.Location = new System.Drawing.Point(4, 123);
+            this.dgv_running_reserv.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dgv_running_reserv.Name = "dgv_running_reserv";
             this.dgv_running_reserv.RowHeadersWidth = 51;
             this.dgv_running_reserv.RowTemplate.Height = 24;
-            this.dgv_running_reserv.Size = new System.Drawing.Size(519, 516);
+            this.dgv_running_reserv.Size = new System.Drawing.Size(689, 616);
             this.dgv_running_reserv.TabIndex = 6;
+            this.dgv_running_reserv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Reservation_clicked);
+            this.dgv_running_reserv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_running_reserv_CellContentClick);
             // 
-            // resIDDataGridViewTextBoxColumn
+            // Res_ID
             // 
-            this.resIDDataGridViewTextBoxColumn.DataPropertyName = "Res_ID";
-            this.resIDDataGridViewTextBoxColumn.HeaderText = "Réservation ID";
-            this.resIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.resIDDataGridViewTextBoxColumn.Name = "resIDDataGridViewTextBoxColumn";
-            this.resIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.resIDDataGridViewTextBoxColumn.Width = 125;
+            this.Res_ID.DataPropertyName = "Res_ID";
+            this.Res_ID.HeaderText = "Réservation ID";
+            this.Res_ID.MinimumWidth = 6;
+            this.Res_ID.Name = "Res_ID";
+            this.Res_ID.ReadOnly = true;
+            this.Res_ID.Width = 125;
             // 
             // resdateDataGridViewTextBoxColumn
             // 
@@ -163,24 +164,26 @@ namespace UI.User_control
             // name_of_mbr
             // 
             this.name_of_mbr.HeaderText = "Nom Prénom";
+            this.name_of_mbr.MinimumWidth = 6;
             this.name_of_mbr.Name = "name_of_mbr";
             this.name_of_mbr.ReadOnly = true;
+            this.name_of_mbr.Width = 125;
             // 
-            // resFKMbrIDDataGridViewTextBoxColumn
+            // mbr_id
             // 
-            this.resFKMbrIDDataGridViewTextBoxColumn.DataPropertyName = "Res_FK_Mbr_ID";
-            this.resFKMbrIDDataGridViewTextBoxColumn.HeaderText = "Res_FK_Mbr_ID";
-            this.resFKMbrIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.resFKMbrIDDataGridViewTextBoxColumn.Name = "resFKMbrIDDataGridViewTextBoxColumn";
-            this.resFKMbrIDDataGridViewTextBoxColumn.Width = 125;
+            this.mbr_id.DataPropertyName = "Res_FK_Mbr_ID";
+            this.mbr_id.HeaderText = "Res_FK_Mbr_ID";
+            this.mbr_id.MinimumWidth = 6;
+            this.mbr_id.Name = "mbr_id";
+            this.mbr_id.Width = 125;
             // 
-            // resFKAppIDDataGridViewTextBoxColumn
+            // app_id
             // 
-            this.resFKAppIDDataGridViewTextBoxColumn.DataPropertyName = "Res_FK_App_ID";
-            this.resFKAppIDDataGridViewTextBoxColumn.HeaderText = "Res_FK_App_ID";
-            this.resFKAppIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.resFKAppIDDataGridViewTextBoxColumn.Name = "resFKAppIDDataGridViewTextBoxColumn";
-            this.resFKAppIDDataGridViewTextBoxColumn.Width = 125;
+            this.app_id.DataPropertyName = "Res_FK_App_ID";
+            this.app_id.HeaderText = "Res_FK_App_ID";
+            this.app_id.MinimumWidth = 6;
+            this.app_id.Name = "app_id";
+            this.app_id.Width = 125;
             // 
             // resestannuleDataGridViewCheckBoxColumn
             // 
@@ -203,11 +206,10 @@ namespace UI.User_control
             // bs_reservation_list
             // 
             this.bs_reservation_list.DataSource = typeof(DTO.RES);
-            
             // 
             // uc_reservations
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgv_running_reserv);
             this.Controls.Add(this.label2);
@@ -215,9 +217,9 @@ namespace UI.User_control
             this.Controls.Add(this.bt_uc_res_search);
             this.Controls.Add(this.tb_uc_recherch_res_id);
             this.Controls.Add(this.tb_uc_rechercher_nom);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "uc_reservations";
-            this.Size = new System.Drawing.Size(523, 602);
+            this.Size = new System.Drawing.Size(697, 741);
             this.Load += new System.EventHandler(this.LoadAllReservation);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_running_reserv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs_reservation_list)).EndInit();
@@ -235,13 +237,13 @@ namespace UI.User_control
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgv_running_reserv;
         private System.Windows.Forms.BindingSource bs_reservation_list;
-        private System.Windows.Forms.DataGridViewTextBoxColumn resIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Res_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn resdateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn reshrdebDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn reshrfinDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn name_of_mbr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn resFKMbrIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn resFKAppIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mbr_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn app_id;
         private System.Windows.Forms.DataGridViewCheckBoxColumn resestannuleDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn resestprevenuDataGridViewCheckBoxColumn;
     }

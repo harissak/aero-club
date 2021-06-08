@@ -71,10 +71,10 @@ namespace UI.User_control
             // 
             // modify
             // 
-            this.modify.Location = new System.Drawing.Point(22, 514);
-            this.modify.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.modify.Location = new System.Drawing.Point(29, 633);
+            this.modify.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.modify.Name = "modify";
-            this.modify.Size = new System.Drawing.Size(84, 27);
+            this.modify.Size = new System.Drawing.Size(112, 33);
             this.modify.TabIndex = 0;
             this.modify.Text = "MODIFY";
             this.modify.UseVisualStyleBackColor = true;
@@ -82,10 +82,10 @@ namespace UI.User_control
             // 
             // deleteMember
             // 
-            this.deleteMember.Location = new System.Drawing.Point(118, 514);
-            this.deleteMember.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.deleteMember.Location = new System.Drawing.Point(157, 633);
+            this.deleteMember.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteMember.Name = "deleteMember";
-            this.deleteMember.Size = new System.Drawing.Size(84, 27);
+            this.deleteMember.Size = new System.Drawing.Size(112, 33);
             this.deleteMember.TabIndex = 1;
             this.deleteMember.Text = "DELETE";
             this.deleteMember.UseVisualStyleBackColor = true;
@@ -93,10 +93,10 @@ namespace UI.User_control
             // 
             // cancel
             // 
-            this.cancel.Location = new System.Drawing.Point(218, 514);
-            this.cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cancel.Location = new System.Drawing.Point(291, 633);
+            this.cancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(84, 27);
+            this.cancel.Size = new System.Drawing.Size(112, 33);
             this.cancel.TabIndex = 2;
             this.cancel.Text = "CANCEL";
             this.cancel.UseVisualStyleBackColor = true;
@@ -107,10 +107,10 @@ namespace UI.User_control
             this.dt_mdf_cot_val.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_cot_valide", true));
             this.dt_mdf_cot_val.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dt_mdf_cot_val.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt_mdf_cot_val.Location = new System.Drawing.Point(126, 471);
-            this.dt_mdf_cot_val.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dt_mdf_cot_val.Location = new System.Drawing.Point(168, 580);
+            this.dt_mdf_cot_val.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dt_mdf_cot_val.Name = "dt_mdf_cot_val";
-            this.dt_mdf_cot_val.Size = new System.Drawing.Size(104, 26);
+            this.dt_mdf_cot_val.Size = new System.Drawing.Size(137, 30);
             this.dt_mdf_cot_val.TabIndex = 130;
             // 
             // bsMember
@@ -122,10 +122,10 @@ namespace UI.User_control
             // 
             this.tb_mdf_TeleFixe.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_fix_tel", true));
             this.tb_mdf_TeleFixe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_mdf_TeleFixe.Location = new System.Drawing.Point(126, 379);
-            this.tb_mdf_TeleFixe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_mdf_TeleFixe.Location = new System.Drawing.Point(168, 466);
+            this.tb_mdf_TeleFixe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_mdf_TeleFixe.Name = "tb_mdf_TeleFixe";
-            this.tb_mdf_TeleFixe.Size = new System.Drawing.Size(223, 26);
+            this.tb_mdf_TeleFixe.Size = new System.Drawing.Size(296, 30);
             this.tb_mdf_TeleFixe.TabIndex = 129;
             this.tb_mdf_TeleFixe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -133,10 +133,10 @@ namespace UI.User_control
             // 
             this.tb_mdf_GSM.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_gsm", true));
             this.tb_mdf_GSM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_mdf_GSM.Location = new System.Drawing.Point(126, 349);
-            this.tb_mdf_GSM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_mdf_GSM.Location = new System.Drawing.Point(168, 430);
+            this.tb_mdf_GSM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_mdf_GSM.Name = "tb_mdf_GSM";
-            this.tb_mdf_GSM.Size = new System.Drawing.Size(223, 26);
+            this.tb_mdf_GSM.Size = new System.Drawing.Size(296, 30);
             this.tb_mdf_GSM.TabIndex = 128;
             this.tb_mdf_GSM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -144,10 +144,10 @@ namespace UI.User_control
             // 
             this.tb_mdf_Password.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_passw", true));
             this.tb_mdf_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_mdf_Password.Location = new System.Drawing.Point(126, 320);
-            this.tb_mdf_Password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_mdf_Password.Location = new System.Drawing.Point(168, 394);
+            this.tb_mdf_Password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_mdf_Password.Name = "tb_mdf_Password";
-            this.tb_mdf_Password.Size = new System.Drawing.Size(223, 26);
+            this.tb_mdf_Password.Size = new System.Drawing.Size(296, 30);
             this.tb_mdf_Password.TabIndex = 127;
             this.tb_mdf_Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -155,10 +155,10 @@ namespace UI.User_control
             // 
             this.tb_mdf_Mail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_mail", true));
             this.tb_mdf_Mail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_mdf_Mail.Location = new System.Drawing.Point(126, 291);
-            this.tb_mdf_Mail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_mdf_Mail.Location = new System.Drawing.Point(168, 358);
+            this.tb_mdf_Mail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_mdf_Mail.Name = "tb_mdf_Mail";
-            this.tb_mdf_Mail.Size = new System.Drawing.Size(223, 26);
+            this.tb_mdf_Mail.Size = new System.Drawing.Size(296, 30);
             this.tb_mdf_Mail.TabIndex = 126;
             this.tb_mdf_Mail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -166,10 +166,10 @@ namespace UI.User_control
             // 
             this.tb_mdf_Ville.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_loc", true));
             this.tb_mdf_Ville.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_mdf_Ville.Location = new System.Drawing.Point(126, 262);
-            this.tb_mdf_Ville.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_mdf_Ville.Location = new System.Drawing.Point(168, 322);
+            this.tb_mdf_Ville.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_mdf_Ville.Name = "tb_mdf_Ville";
-            this.tb_mdf_Ville.Size = new System.Drawing.Size(223, 26);
+            this.tb_mdf_Ville.Size = new System.Drawing.Size(296, 30);
             this.tb_mdf_Ville.TabIndex = 125;
             this.tb_mdf_Ville.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -177,10 +177,10 @@ namespace UI.User_control
             // 
             this.tb_mdf_CP.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_cp", true));
             this.tb_mdf_CP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_mdf_CP.Location = new System.Drawing.Point(126, 231);
-            this.tb_mdf_CP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_mdf_CP.Location = new System.Drawing.Point(168, 284);
+            this.tb_mdf_CP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_mdf_CP.Name = "tb_mdf_CP";
-            this.tb_mdf_CP.Size = new System.Drawing.Size(104, 26);
+            this.tb_mdf_CP.Size = new System.Drawing.Size(137, 30);
             this.tb_mdf_CP.TabIndex = 124;
             this.tb_mdf_CP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -188,10 +188,10 @@ namespace UI.User_control
             // 
             this.tb_mdf_NbrBoite.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_num_boite", true));
             this.tb_mdf_NbrBoite.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_mdf_NbrBoite.Location = new System.Drawing.Point(126, 198);
-            this.tb_mdf_NbrBoite.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_mdf_NbrBoite.Location = new System.Drawing.Point(168, 244);
+            this.tb_mdf_NbrBoite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_mdf_NbrBoite.Name = "tb_mdf_NbrBoite";
-            this.tb_mdf_NbrBoite.Size = new System.Drawing.Size(104, 26);
+            this.tb_mdf_NbrBoite.Size = new System.Drawing.Size(137, 30);
             this.tb_mdf_NbrBoite.TabIndex = 123;
             this.tb_mdf_NbrBoite.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -199,10 +199,10 @@ namespace UI.User_control
             // 
             this.tb_mdf_Adresse.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_adrs", true));
             this.tb_mdf_Adresse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_mdf_Adresse.Location = new System.Drawing.Point(126, 165);
-            this.tb_mdf_Adresse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_mdf_Adresse.Location = new System.Drawing.Point(168, 203);
+            this.tb_mdf_Adresse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_mdf_Adresse.Name = "tb_mdf_Adresse";
-            this.tb_mdf_Adresse.Size = new System.Drawing.Size(223, 26);
+            this.tb_mdf_Adresse.Size = new System.Drawing.Size(296, 30);
             this.tb_mdf_Adresse.TabIndex = 122;
             this.tb_mdf_Adresse.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -211,10 +211,10 @@ namespace UI.User_control
             this.dt_mdf_Naissance.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_naiss", true));
             this.dt_mdf_Naissance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dt_mdf_Naissance.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dt_mdf_Naissance.Location = new System.Drawing.Point(126, 132);
-            this.dt_mdf_Naissance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dt_mdf_Naissance.Location = new System.Drawing.Point(168, 162);
+            this.dt_mdf_Naissance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dt_mdf_Naissance.Name = "dt_mdf_Naissance";
-            this.dt_mdf_Naissance.Size = new System.Drawing.Size(104, 26);
+            this.dt_mdf_Naissance.Size = new System.Drawing.Size(137, 30);
             this.dt_mdf_Naissance.TabIndex = 121;
             // 
             // cb_mdf_Sex
@@ -226,20 +226,20 @@ namespace UI.User_control
             this.cb_mdf_Sex.Items.AddRange(new object[] {
             "F",
             "M"});
-            this.cb_mdf_Sex.Location = new System.Drawing.Point(126, 101);
-            this.cb_mdf_Sex.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_mdf_Sex.Location = new System.Drawing.Point(168, 124);
+            this.cb_mdf_Sex.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cb_mdf_Sex.Name = "cb_mdf_Sex";
-            this.cb_mdf_Sex.Size = new System.Drawing.Size(104, 28);
+            this.cb_mdf_Sex.Size = new System.Drawing.Size(137, 33);
             this.cb_mdf_Sex.TabIndex = 118;
             // 
             // tb_mdf_Prénom
             // 
             this.tb_mdf_Prénom.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_prenom", true));
             this.tb_mdf_Prénom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_mdf_Prénom.Location = new System.Drawing.Point(126, 69);
-            this.tb_mdf_Prénom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_mdf_Prénom.Location = new System.Drawing.Point(168, 85);
+            this.tb_mdf_Prénom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_mdf_Prénom.Name = "tb_mdf_Prénom";
-            this.tb_mdf_Prénom.Size = new System.Drawing.Size(223, 26);
+            this.tb_mdf_Prénom.Size = new System.Drawing.Size(296, 30);
             this.tb_mdf_Prénom.TabIndex = 117;
             this.tb_mdf_Prénom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -247,10 +247,10 @@ namespace UI.User_control
             // 
             this.tb_mdf_Nom.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_nom", true));
             this.tb_mdf_Nom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_mdf_Nom.Location = new System.Drawing.Point(126, 37);
-            this.tb_mdf_Nom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_mdf_Nom.Location = new System.Drawing.Point(168, 46);
+            this.tb_mdf_Nom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_mdf_Nom.Name = "tb_mdf_Nom";
-            this.tb_mdf_Nom.Size = new System.Drawing.Size(223, 26);
+            this.tb_mdf_Nom.Size = new System.Drawing.Size(296, 30);
             this.tb_mdf_Nom.TabIndex = 116;
             this.tb_mdf_Nom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -258,11 +258,11 @@ namespace UI.User_control
             // 
             this.tb_mdf_ID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsMember, "Mbr_ID", true));
             this.tb_mdf_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_mdf_ID.Location = new System.Drawing.Point(126, 2);
-            this.tb_mdf_ID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_mdf_ID.Location = new System.Drawing.Point(168, 2);
+            this.tb_mdf_ID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_mdf_ID.Name = "tb_mdf_ID";
             this.tb_mdf_ID.ReadOnly = true;
-            this.tb_mdf_ID.Size = new System.Drawing.Size(104, 26);
+            this.tb_mdf_ID.Size = new System.Drawing.Size(137, 30);
             this.tb_mdf_ID.TabIndex = 115;
             this.tb_mdf_ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -270,10 +270,9 @@ namespace UI.User_control
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(3, 479);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Location = new System.Drawing.Point(4, 590);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(115, 17);
+            this.label16.Size = new System.Drawing.Size(137, 20);
             this.label16.TabIndex = 114;
             this.label16.Text = "Cotisation valide:";
             // 
@@ -281,10 +280,9 @@ namespace UI.User_control
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(5, 445);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Location = new System.Drawing.Point(7, 548);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(74, 17);
+            this.label15.Size = new System.Drawing.Size(89, 20);
             this.label15.TabIndex = 113;
             this.label15.Text = "Est admin:";
             // 
@@ -292,10 +290,9 @@ namespace UI.User_control
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(5, 414);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Location = new System.Drawing.Point(7, 510);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(70, 17);
+            this.label14.Size = new System.Drawing.Size(84, 20);
             this.label14.TabIndex = 112;
             this.label14.Text = "Est pilote:";
             this.label14.Click += new System.EventHandler(this.label14_Click);
@@ -304,10 +301,9 @@ namespace UI.User_control
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(3, 384);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(4, 473);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(105, 17);
+            this.label13.Size = new System.Drawing.Size(122, 20);
             this.label13.TabIndex = 111;
             this.label13.Text = "Téléphone fixe:";
             // 
@@ -315,10 +311,9 @@ namespace UI.User_control
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(3, 171);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(4, 210);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(64, 17);
+            this.label12.Size = new System.Drawing.Size(76, 20);
             this.label12.TabIndex = 110;
             this.label12.Text = "Adresse:";
             // 
@@ -326,10 +321,9 @@ namespace UI.User_control
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(3, 236);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(4, 290);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(30, 17);
+            this.label11.Size = new System.Drawing.Size(37, 20);
             this.label11.TabIndex = 109;
             this.label11.Text = "CP:";
             // 
@@ -337,10 +331,9 @@ namespace UI.User_control
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(3, 267);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(4, 329);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 17);
+            this.label10.Size = new System.Drawing.Size(46, 20);
             this.label10.TabIndex = 108;
             this.label10.Text = "Ville:";
             // 
@@ -348,10 +341,9 @@ namespace UI.User_control
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(3, 75);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(4, 92);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 17);
+            this.label9.Size = new System.Drawing.Size(72, 20);
             this.label9.TabIndex = 107;
             this.label9.Text = "Prénom:";
             // 
@@ -359,10 +351,9 @@ namespace UI.User_control
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(3, 106);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(4, 130);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 17);
+            this.label8.Size = new System.Drawing.Size(51, 20);
             this.label8.TabIndex = 106;
             this.label8.Text = "Sexe:";
             // 
@@ -370,10 +361,9 @@ namespace UI.User_control
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 140);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(4, 172);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(130, 17);
+            this.label7.Size = new System.Drawing.Size(154, 20);
             this.label7.TabIndex = 105;
             this.label7.Text = "Date de naissance:";
             // 
@@ -381,10 +371,9 @@ namespace UI.User_control
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 204);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(4, 251);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 17);
+            this.label6.Size = new System.Drawing.Size(138, 20);
             this.label6.TabIndex = 104;
             this.label6.Text = "Numéro de boîte:";
             // 
@@ -392,10 +381,9 @@ namespace UI.User_control
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 297);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(4, 366);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 17);
+            this.label5.Size = new System.Drawing.Size(45, 20);
             this.label5.TabIndex = 103;
             this.label5.Text = "Mail:";
             // 
@@ -403,10 +391,9 @@ namespace UI.User_control
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 326);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(4, 401);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 17);
+            this.label4.Size = new System.Drawing.Size(88, 20);
             this.label4.TabIndex = 102;
             this.label4.Text = "Password:";
             // 
@@ -414,10 +401,9 @@ namespace UI.User_control
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 355);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(4, 437);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 17);
+            this.label3.Size = new System.Drawing.Size(52, 20);
             this.label3.TabIndex = 101;
             this.label3.Text = "GSM:";
             // 
@@ -425,10 +411,9 @@ namespace UI.User_control
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 42);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(4, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 17);
+            this.label2.Size = new System.Drawing.Size(49, 20);
             this.label2.TabIndex = 100;
             this.label2.Text = "Nom:";
             // 
@@ -436,10 +421,9 @@ namespace UI.User_control
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(5, 8);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Location = new System.Drawing.Point(7, 10);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(25, 17);
+            this.label17.Size = new System.Drawing.Size(31, 20);
             this.label17.TabIndex = 99;
             this.label17.Text = "ID:";
             // 
@@ -447,9 +431,10 @@ namespace UI.User_control
             // 
             this.cb_mdf_is_pilote.AutoSize = true;
             this.cb_mdf_is_pilote.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bsMember, "Mbr_est_pil", true));
-            this.cb_mdf_is_pilote.Location = new System.Drawing.Point(126, 417);
+            this.cb_mdf_is_pilote.Location = new System.Drawing.Point(168, 513);
+            this.cb_mdf_is_pilote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cb_mdf_is_pilote.Name = "cb_mdf_is_pilote";
-            this.cb_mdf_is_pilote.Size = new System.Drawing.Size(15, 14);
+            this.cb_mdf_is_pilote.Size = new System.Drawing.Size(18, 17);
             this.cb_mdf_is_pilote.TabIndex = 131;
             this.cb_mdf_is_pilote.UseVisualStyleBackColor = true;
             // 
@@ -457,15 +442,16 @@ namespace UI.User_control
             // 
             this.cb_mdf_is_admin.AutoSize = true;
             this.cb_mdf_is_admin.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bsMember, "Mbr_est_adm", true));
-            this.cb_mdf_is_admin.Location = new System.Drawing.Point(126, 445);
+            this.cb_mdf_is_admin.Location = new System.Drawing.Point(168, 548);
+            this.cb_mdf_is_admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cb_mdf_is_admin.Name = "cb_mdf_is_admin";
-            this.cb_mdf_is_admin.Size = new System.Drawing.Size(15, 14);
+            this.cb_mdf_is_admin.Size = new System.Drawing.Size(18, 17);
             this.cb_mdf_is_admin.TabIndex = 132;
             this.cb_mdf_is_admin.UseVisualStyleBackColor = true;
             // 
             // uc_saveDelete
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.cb_mdf_is_admin);
             this.Controls.Add(this.cb_mdf_is_pilote);
@@ -502,9 +488,10 @@ namespace UI.User_control
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.deleteMember);
             this.Controls.Add(this.modify);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "uc_saveDelete";
-            this.Size = new System.Drawing.Size(353, 545);
+            this.Size = new System.Drawing.Size(471, 671);
+            this.Load += new System.EventHandler(this.uc_saveDelete_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bsMember)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

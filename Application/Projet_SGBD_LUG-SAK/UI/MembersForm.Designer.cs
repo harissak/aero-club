@@ -30,9 +30,9 @@ namespace UI
         private void InitializeComponent()
         {
             this.panelMembersScreen = new System.Windows.Forms.Panel();
-            this.saveDeleteMember = new UI.User_control.uc_saveDelete();
             this.label1 = new System.Windows.Forms.Label();
             this.lblMemberID = new System.Windows.Forms.Label();
+            this.saveDeleteMember = new UI.User_control.uc_saveDelete();
             this.addNewMember = new UI.User_control.uc_addNewMember();
             this.mbrList = new UI.User_control.uc_mbrList();
             this.panelMembersScreen.SuspendLayout();
@@ -50,15 +50,6 @@ namespace UI
             this.panelMembersScreen.Name = "panelMembersScreen";
             this.panelMembersScreen.Size = new System.Drawing.Size(1354, 734);
             this.panelMembersScreen.TabIndex = 0;
-            // 
-            // saveDeleteMember
-            // 
-            this.saveDeleteMember.Location = new System.Drawing.Point(871, 12);
-            this.saveDeleteMember.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.saveDeleteMember.Name = "saveDeleteMember";
-            this.saveDeleteMember.Size = new System.Drawing.Size(471, 671);
-            this.saveDeleteMember.TabIndex = 17;
-            this.saveDeleteMember.refreshMbrList += new UI.delRefresh(this.refreshMembersList);
             // 
             // label1
             // 
@@ -80,6 +71,16 @@ namespace UI
             this.lblMemberID.TabIndex = 15;
             this.lblMemberID.Text = "Member ID: ";
             // 
+            // saveDeleteMember
+            // 
+            this.saveDeleteMember.Location = new System.Drawing.Point(871, 12);
+            this.saveDeleteMember.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.saveDeleteMember.Name = "saveDeleteMember";
+            this.saveDeleteMember.Size = new System.Drawing.Size(471, 671);
+            this.saveDeleteMember.TabIndex = 17;
+            this.saveDeleteMember.refreshMbrList += new UI.delRefresh(this.refreshMembersList);
+            this.saveDeleteMember.Load += new System.EventHandler(this.saveDeleteMember_Load);
+            // 
             // addNewMember
             // 
             this.addNewMember.Location = new System.Drawing.Point(875, 12);
@@ -97,6 +98,7 @@ namespace UI
             this.mbrList.Size = new System.Drawing.Size(867, 730);
             this.mbrList.TabIndex = 1;
             this.mbrList.SelectMbr += new UI.delSelect(this.recherce_Mbr);
+            this.mbrList.Load += new System.EventHandler(this.mbrList_Load);
             // 
             // MembersForm
             // 
@@ -107,7 +109,7 @@ namespace UI
             this.Name = "MembersForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MembersForm";
-            this.Load += new System.EventHandler(this.MembersForm_Load);
+            this.Load += new System.EventHandler(this.MembersForm_Load_1);
             this.panelMembersScreen.ResumeLayout(false);
             this.panelMembersScreen.PerformLayout();
             this.ResumeLayout(false);

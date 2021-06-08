@@ -22,5 +22,10 @@ namespace DTO
         {
             return App_ID;
         }
+
+        public int GetClasse()
+        {
+            return Int32.Parse( this.App_classe);
+        }
     }
 }

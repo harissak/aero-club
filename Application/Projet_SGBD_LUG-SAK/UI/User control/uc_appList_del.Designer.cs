@@ -32,12 +32,13 @@ namespace UI.User_control
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_app_list = new System.Windows.Forms.DataGridView();
-            this.bs_apps = new System.Windows.Forms.BindingSource(this.components);
-            this.bt_app_delete = new System.Windows.Forms.Button();
             this.appIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.appimmaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.appclasseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.appdescrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bs_apps = new System.Windows.Forms.BindingSource(this.components);
+            this.bt_app_delete = new System.Windows.Forms.Button();
+            this.bt_add_app = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_app_list)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs_apps)).BeginInit();
             this.SuspendLayout();
@@ -65,23 +66,8 @@ namespace UI.User_control
             this.dgv_app_list.RowHeadersWidth = 51;
             this.dgv_app_list.Size = new System.Drawing.Size(601, 494);
             this.dgv_app_list.TabIndex = 0;
+            this.dgv_app_list.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_app_list_CellClick);
             this.dgv_app_list.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_app_list_CellContentClick);
-            // 
-            // bs_apps
-            // 
-            this.bs_apps.DataSource = typeof(DTO.APP);
-            this.bs_apps.CurrentChanged += new System.EventHandler(this.bs_apps_CurrentChanged);
-            // 
-            // bt_app_delete
-            // 
-            this.bt_app_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_app_delete.Location = new System.Drawing.Point(3, 503);
-            this.bt_app_delete.Name = "bt_app_delete";
-            this.bt_app_delete.Size = new System.Drawing.Size(147, 42);
-            this.bt_app_delete.TabIndex = 3;
-            this.bt_app_delete.Text = "Delete selected  A/C";
-            this.bt_app_delete.UseVisualStyleBackColor = true;
-            this.bt_app_delete.Click += new System.EventHandler(this.bt_app_delete_Click);
             // 
             // appIDDataGridViewTextBoxColumn
             // 
@@ -120,13 +106,40 @@ namespace UI.User_control
             this.appdescrDataGridViewTextBoxColumn.ReadOnly = true;
             this.appdescrDataGridViewTextBoxColumn.Width = 300;
             // 
-            // uc_appList
+            // bs_apps
+            // 
+            this.bs_apps.DataSource = typeof(DTO.APP);
+            this.bs_apps.CurrentChanged += new System.EventHandler(this.bs_apps_CurrentChanged);
+            // 
+            // bt_app_delete
+            // 
+            this.bt_app_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_app_delete.Location = new System.Drawing.Point(4, 504);
+            this.bt_app_delete.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_app_delete.Name = "bt_app_delete";
+            this.bt_app_delete.Size = new System.Drawing.Size(145, 39);
+            this.bt_app_delete.TabIndex = 3;
+            this.bt_app_delete.Text = "Delete A/C";
+            this.bt_app_delete.UseVisualStyleBackColor = true;
+            this.bt_app_delete.Click += new System.EventHandler(this.bt_app_delete_Click);
+            // 
+            // bt_add_app
+            // 
+            this.bt_add_app.Location = new System.Drawing.Point(5, 53);
+            this.bt_add_app.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_add_app.Name = "bt_add_app";
+            this.bt_add_app.Size = new System.Drawing.Size(100, 28);
+            this.bt_add_app.TabIndex = 2;
+            this.bt_add_app.Text = "Add Aircraft";
+            this.bt_add_app.UseVisualStyleBackColor = true;
+            // 
+            // uc_appList_del
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.bt_app_delete);
             this.Controls.Add(this.dgv_app_list);
-            this.Name = "uc_appList";
+            this.Name = "uc_appList_del";
             this.Size = new System.Drawing.Size(614, 551);
             this.Load += new System.EventHandler(this.uc_appList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_app_list)).EndInit();
@@ -144,5 +157,7 @@ namespace UI.User_control
         private System.Windows.Forms.DataGridViewTextBoxColumn appimmaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn appclasseDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn appdescrDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button bt_add_app;
+
     }
 }

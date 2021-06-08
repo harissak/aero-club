@@ -41,6 +41,19 @@ namespace UI
             this.mbrList.RefreshMemberList();
         }
 
-       
+        private void MembersForm_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void saveDeleteMember_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mbrList_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

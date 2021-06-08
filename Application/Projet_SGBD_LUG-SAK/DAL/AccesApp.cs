@@ -14,12 +14,15 @@ namespace DAL
         static public APP Read_App_By_ID(int app_ID)
         {
             APP retval;
+            List<APP> liste;
 
             using (IDbConnection connection = DAL.Utilitaire.ConnectionToLocalServer())
             {
-                retval = connection.QuerySingle("select_app_by_id",
+                liste = connection.Query<APP>("select_app_by_id",
                                                 param: new { app_id = app_ID },
-                                                commandType: CommandType.StoredProcedure);
+                                                commandType: CommandType.StoredProcedure).AsList<APP>();
+
+                retval = liste[0];
             }
             return retval;
         }
@@ -58,19 +61,6 @@ namespace DAL
             return retval;
         }
 
-        //static public APP Read_app_by_desc(string app_desc)
-        //{
-        //    APP retval;
-
-        //    using (IDbConnection connection = DAL.Utilitaire.ConnectionToLocalServer())
-        //    {
-        //        retval = connection.QuerySingle("sp_select_app_by_desc",
-        //                                        param: new { app_desc = app_desc },
-        //                                        commandType: CommandType.StoredProcedure).APP_ID();
-        //    }
-        //    return retval;
-        //}
-
 
         static public APP Read_app_by_desc(string app_desc)
         {
@@ -103,13 +93,33 @@ namespace DAL
                 using (var transac = connection.BeginTransaction())
                 {
                     retval = connection.Execute("sp_delete_app",
-                                   param: new { APP_ID = app_id },
-                                   commandType: CommandType.StoredProcedure,
-                                   transaction: transac);
-
+                                param: new { APP_ID = app_id },
+                                commandType: CommandType.StoredProcedure,
+                                transaction: transac);
                     transac.Commit();
                 }
             }
+
+            return retval;
+        }
+
+        static public int Modify_app(APP update)
+        {
+            int retval;
+
+            using (IDbConnection connection = DAL.Utilitaire.ConnectionToLocalServer())
+            {
+                retval = connection.Execute("sp_update_app",
+                          new
+                          {
+                              App_id = update.App_ID,
+                              App_imma = update.App_imma,
+                              App_classe = update.App_classe,
+                              App_descr = update.App_descr
+                          },
+                          commandType: CommandType.StoredProcedure);
+            }
+
             return retval;
         }
     }

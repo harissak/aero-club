@@ -30,11 +30,11 @@ namespace UI
         private void InitializeComponent()
         {
             this.panelAiroplaneScreen = new System.Windows.Forms.Panel();
-            this.bt_add_aircraft = new System.Windows.Forms.Button();
+            this.uc_modify_aircraft1 = new UI.User_control.uc_modify_aircraft();
             this.bt_cancel_add = new System.Windows.Forms.Button();
+            this.bt_add_aircraft = new System.Windows.Forms.Button();
             this.uc_add_aircraft1 = new UI.User_control.uc_add_aircraft();
             this.uc_appList1 = new UI.User_control.uc_appList_del();
-            this.uc_modify_aircraft1 = new UI.User_control.uc_modify_aircraft();
             this.panelAiroplaneScreen.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,16 +52,12 @@ namespace UI
             this.panelAiroplaneScreen.Size = new System.Drawing.Size(967, 600);
             this.panelAiroplaneScreen.TabIndex = 0;
             // 
-            // bt_add_aircraft
+            // uc_modify_aircraft1
             // 
-            this.bt_add_aircraft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_add_aircraft.Location = new System.Drawing.Point(178, 511);
-            this.bt_add_aircraft.Name = "bt_add_aircraft";
-            this.bt_add_aircraft.Size = new System.Drawing.Size(145, 39);
-            this.bt_add_aircraft.TabIndex = 2;
-            this.bt_add_aircraft.Text = "Add an A/C";
-            this.bt_add_aircraft.UseVisualStyleBackColor = true;
-            this.bt_add_aircraft.Click += new System.EventHandler(this.bt_add_aircraft_Click);
+            this.uc_modify_aircraft1.Location = new System.Drawing.Point(613, 12);
+            this.uc_modify_aircraft1.Name = "uc_modify_aircraft1";
+            this.uc_modify_aircraft1.Size = new System.Drawing.Size(345, 233);
+            this.uc_modify_aircraft1.TabIndex = 4;
             // 
             // bt_cancel_add
             // 
@@ -73,6 +69,17 @@ namespace UI
             this.bt_cancel_add.UseVisualStyleBackColor = true;
             this.bt_cancel_add.Visible = false;
             this.bt_cancel_add.Click += new System.EventHandler(this.bt_cancel_add_Click);
+            // 
+            // bt_add_aircraft
+            // 
+            this.bt_add_aircraft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_add_aircraft.Location = new System.Drawing.Point(188, 509);
+            this.bt_add_aircraft.Name = "bt_add_aircraft";
+            this.bt_add_aircraft.Size = new System.Drawing.Size(145, 39);
+            this.bt_add_aircraft.TabIndex = 2;
+            this.bt_add_aircraft.Text = "Add an A/C";
+            this.bt_add_aircraft.UseVisualStyleBackColor = true;
+            this.bt_add_aircraft.Click += new System.EventHandler(this.bt_add_aircraft_Click);
             // 
             // uc_add_aircraft1
             // 
@@ -89,14 +96,8 @@ namespace UI
             this.uc_appList1.Name = "uc_appList1";
             this.uc_appList1.Size = new System.Drawing.Size(606, 600);
             this.uc_appList1.TabIndex = 0;
+            this.uc_appList1.SelectApp += new UI.delSelectApp(this.uc_appList1_SelectApp);
             this.uc_appList1.Load += new System.EventHandler(this.uc_appList1_Load);
-            // 
-            // uc_modify_aircraft1
-            // 
-            this.uc_modify_aircraft1.Location = new System.Drawing.Point(613, 12);
-            this.uc_modify_aircraft1.Name = "uc_modify_aircraft1";
-            this.uc_modify_aircraft1.Size = new System.Drawing.Size(345, 233);
-            this.uc_modify_aircraft1.TabIndex = 4;
             // 
             // AiroplaneForm
             // 
