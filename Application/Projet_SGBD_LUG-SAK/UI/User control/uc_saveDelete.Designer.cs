@@ -116,7 +116,6 @@ namespace UI.User_control
             // bsMember
             // 
             this.bsMember.DataSource = typeof(DTO.MBR);
-            this.bsMember.CurrentChanged += new System.EventHandler(this.bsMember_CurrentChanged);
             // 
             // tb_mdf_TeleFixe
             // 

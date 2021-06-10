@@ -30,9 +30,9 @@ namespace UI
         private void InitializeComponent()
         {
             this.panelAiroplaneScreen = new System.Windows.Forms.Panel();
-            this.uc_modify_aircraft1 = new UI.User_control.uc_modify_aircraft();
             this.bt_cancel_add = new System.Windows.Forms.Button();
             this.bt_add_aircraft = new System.Windows.Forms.Button();
+            this.uc_modify_aircraft1 = new UI.User_control.uc_modify_aircraft();
             this.uc_add_aircraft1 = new UI.User_control.uc_add_aircraft();
             this.uc_appList1 = new UI.User_control.uc_appList_del();
             this.panelAiroplaneScreen.SuspendLayout();
@@ -51,13 +51,6 @@ namespace UI
             this.panelAiroplaneScreen.Name = "panelAiroplaneScreen";
             this.panelAiroplaneScreen.Size = new System.Drawing.Size(967, 600);
             this.panelAiroplaneScreen.TabIndex = 0;
-            // 
-            // uc_modify_aircraft1
-            // 
-            this.uc_modify_aircraft1.Location = new System.Drawing.Point(613, 12);
-            this.uc_modify_aircraft1.Name = "uc_modify_aircraft1";
-            this.uc_modify_aircraft1.Size = new System.Drawing.Size(345, 233);
-            this.uc_modify_aircraft1.TabIndex = 4;
             // 
             // bt_cancel_add
             // 
@@ -80,6 +73,14 @@ namespace UI
             this.bt_add_aircraft.Text = "Add an A/C";
             this.bt_add_aircraft.UseVisualStyleBackColor = true;
             this.bt_add_aircraft.Click += new System.EventHandler(this.bt_add_aircraft_Click);
+            // 
+            // uc_modify_aircraft1
+            // 
+            this.uc_modify_aircraft1.Location = new System.Drawing.Point(613, 12);
+            this.uc_modify_aircraft1.Name = "uc_modify_aircraft1";
+            this.uc_modify_aircraft1.Size = new System.Drawing.Size(345, 233);
+            this.uc_modify_aircraft1.TabIndex = 4;
+            this.uc_modify_aircraft1.RefreshApp += new UI.delRefreshApp(this.uc_modify_aircraft1_RefreshApp);
             // 
             // uc_add_aircraft1
             // 
@@ -108,7 +109,6 @@ namespace UI
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AiroplaneForm";
             this.Text = "AiroplaneForm";
-            this.Load += new System.EventHandler(this.AiroplaneForm_Load);
             this.panelAiroplaneScreen.ResumeLayout(false);
             this.ResumeLayout(false);
 

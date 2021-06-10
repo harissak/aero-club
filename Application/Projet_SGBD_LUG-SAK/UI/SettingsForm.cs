@@ -12,9 +12,13 @@ namespace UI
 {
     public partial class SettingsForm : Form
     {
+        public event delSearchLICbyName SearchLICbyName;
+
         public SettingsForm()
         {
             InitializeComponent();
         }
+
+       
     }
 }

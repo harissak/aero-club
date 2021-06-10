@@ -14,6 +14,8 @@ namespace UI.User_control
 {
     public partial class uc_modify_aircraft : UserControl
     {
+        public event delRefreshApp RefreshApp;
+
         public uc_modify_aircraft()
         {
             InitializeComponent();
@@ -44,10 +46,19 @@ namespace UI.User_control
                         App_classe = (this.cb_mod_app_class.SelectedItem.ToString() ),
                         App_descr = this.tb_mod_app_descr.Text
                     }) ;
+
+                MessageBox.Show("Modification(s) done with sucess!",
+                             "Sucess!",
+                             MessageBoxButtons.OK);
+
+                RefreshApp();
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                MessageBox.Show((ex.Message),
+                        "Warning",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
             }
 
         }

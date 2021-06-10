@@ -83,6 +83,32 @@ namespace BL
 
             return retval;
         }
+
+        public static bool Modif_Is_upgratedPilot(int mbr_id, bool modif_pilot)
+        {
+            bool retval = false;
+            bool cur_pilot_status_db = DAL.AccesMBR.Read_MBR_BY_ID(mbr_id).Mbr_est_pil;
+
+            if (modif_pilot == true && cur_pilot_status_db == false)                 //cb modification pilot is checked
+                retval = true;                                                      //If is not pilote in DB --> Is an upgrade
+       
+            return retval;
+        }
+
+        public static bool Modif_Is_DowngradeMBR(int mbr_id, bool modif_pilot)
+        {
+            bool retval = false;
+            bool cur_pilot_status_db = DAL.AccesMBR.Read_MBR_BY_ID(mbr_id).Mbr_est_pil;
+
+            if (modif_pilot == false && cur_pilot_status_db == true)               //cb modification pilot is not checked
+                retval = true;                                                     //if is pilot in DB --> Is a downgrade
+
+            return retval;
+            
+        }
+
+
+
         //test
         //public static string TranslateIDToName(string id)
         //{

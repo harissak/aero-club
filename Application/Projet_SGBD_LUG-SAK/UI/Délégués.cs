@@ -12,5 +12,7 @@ namespace UI
     public delegate void delRefresh();
     public delegate void delSelectReservation (int resID, int mbrID, int machineID);
     public delegate void delSelectApp(int appID);
+    public delegate void delRefreshApp();
+    public delegate void delSearchLICbyName(string name);
 
 }

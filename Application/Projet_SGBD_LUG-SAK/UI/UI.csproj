@@ -125,6 +125,12 @@
     <Compile Include="User control\uc_appList_del.Designer.cs">
       <DependentUpon>uc_appList_del.cs</DependentUpon>
     </Compile>
+    <Compile Include="User control\uc_licenses_list.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User control\uc_licenses_list.Designer.cs">
+      <DependentUpon>uc_licenses_list.cs</DependentUpon>
+    </Compile>
     <Compile Include="User control\uc_mbrList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -211,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User control\uc_appList_del.resx">
       <DependentUpon>uc_appList_del.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User control\uc_licenses_list.resx">
+      <DependentUpon>uc_licenses_list.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User control\uc_mbrList.resx">
       <DependentUpon>uc_mbrList.cs</DependentUpon>

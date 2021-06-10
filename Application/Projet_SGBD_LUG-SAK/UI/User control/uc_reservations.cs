@@ -35,6 +35,10 @@ namespace UI.User_control
                                         Int32.Parse(this.dgv_running_reserv.Rows[e.RowIndex].Cells["app_id"].FormattedValue.ToString()));
                
             }
+            else
+            {
+
+            }
         }
 
         private void dgv_running_reserv_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -68,6 +68,13 @@ namespace UI.User_control
 
                 this.SelectApp(Int32.Parse(this.dgv_app_list.Rows[e.RowIndex].Cells["appIDDataGridViewTextBoxColumn"].FormattedValue.ToString()));
             }
+            else
+            { }
+        }
+
+        public void Read_all_app()
+        {
+            this.bs_apps.DataSource = BL.Services_appareils.Read_all_app();
         }
     }
 }

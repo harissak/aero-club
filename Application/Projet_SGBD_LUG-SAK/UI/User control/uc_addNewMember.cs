@@ -45,12 +45,36 @@ namespace UI.User_control
                                     Mbr_est_adm = this.cb_Ins_is_admin.Checked,
                                     Mbr_est_pil = this.cb_Ins_is_pilot.Checked
                                 }).ToString();
+                
+                //IF Pilote --> Creation of a blank license in order to keep DB in coherant status
+                if(this.cb_Ins_is_pilot.Checked)
+                {
+                    BL.Services_licenses.Insert_Lic(
+                    new DTO.LIC
+                    {
+                        Lic_num = "00000000",
+                        Lic_obt = new DateTime(1900, 01, 01),
+                        Lic_exp = new DateTime(2100, 01, 01),
+                        Lic_active = false,
+                        Lic_pays = "XXXXXXXX",
+                        Lic_cl1 = false,
+                        Lic_cl2 = false,
+                        Lic_cl3 = false,
+                        Lic_cl4 = false,
+                        Lic_cl5 = false,
+                        Lic_cl6 = false,
+                        LIC_FK_MBR_ID = Int32.Parse(this.tb_Ins_ID.Text)
+                    }
+                    );
+                    MessageBox.Show("You have succesfully registered a new pilot!!" + "\n\n" + "Don't forget to update the License");
+                }
+                else
+                {
+                    MessageBox.Show("You have succesfully registered new member!!");
+                }                   
 
-
-                MessageBox.Show("You have succesfully registered new member!!");
                 refreshMbrList();
                 ResetAllControls(this);
-                
                 
             }
             catch (Exception ex)
