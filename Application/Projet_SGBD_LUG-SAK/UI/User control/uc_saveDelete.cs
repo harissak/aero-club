@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DTO;
+using FluentValidation.Results;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,10 +18,12 @@ namespace UI.User_control
         private int member_id;
         public event delUpdate updateMbr;
         public event delRefresh refreshMbrList;
+        private MBR Mbr_courant;
 
         public uc_saveDelete()
         {
             InitializeComponent();
+            this.Mbr_courant = null;
         }
 
         private void deleteMember_Click(object sender, EventArgs e)
@@ -48,11 +52,17 @@ namespace UI.User_control
 
         public void ReadMember(int Mbr_id)
         {
-            this.bsMember.DataSource = BL.Services_membre.search_member_by_ID(Mbr_id);
+            this.Mbr_courant = BL.Services_membre.search_member_by_ID(Mbr_id);
+            this.bsMember.DataSource = this.Mbr_courant;
+          
         }
 
         private void modify_Click(object sender, EventArgs e)
         {
+         
+
+            if(this.ValidationEncodages()== true)
+            {
 
             try
             {
@@ -84,37 +94,21 @@ namespace UI.User_control
                         BL.Services_licenses.Delete_Lic(Int32.Parse(this.tb_mdf_ID.Text));
                     }
                 }
-               
-                    //modification of the member
-                    BL.Services_membre.Update_member(
-                                 new DTO.MBR
-                                 {
-                                     Mbr_ID = Convert.ToInt32(this.tb_mdf_ID.Text),
-                                     Mbr_nom = this.tb_mdf_Nom.Text,
-                                     Mbr_prenom = this.tb_mdf_Prénom.Text,
-                                     Mbr_sexe = Convert.ToChar(this.cb_mdf_Sex.Text),
-                                     Mbr_naiss = Convert.ToDateTime(this.dt_mdf_Naissance.Text),
-                                     Mbr_adrs = this.tb_mdf_Adresse.Text,
-                                     Mbr_gsm = this.tb_mdf_GSM.Text,
-                                     Mbr_fix_tel = this.tb_mdf_TeleFixe.Text,
-                                     Mbr_cot_valide = Convert.ToDateTime(this.dt_mdf_cot_val.Text),
-                                     Mbr_cp = this.tb_mdf_CP.Text,
-                                     Mbr_loc = this.tb_mdf_Ville.Text,
-                                     Mbr_num_boite = this.tb_mdf_NbrBoite.Text,
-                                     Mbr_mail = this.tb_mdf_Mail.Text,
-                                     Mbr_passw = this.tb_mdf_Password.Text,
-                                     Mbr_est_adm = this.cb_mdf_is_admin.Checked,    
-                                     Mbr_est_pil = this.cb_mdf_is_pilote.Checked    
-                                 }).ToString();
 
-                MessageBox.Show("You have succesfully updated new member infos!!");
+                //modification of the member
+                BL.Services_membre.Update_member(this.Mbr_courant);
+           
+            MessageBox.Show("You have succesfully updated new member infos!!");
                 bsMember.Clear();
                 refreshMbrList();
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
+                }
             }
+
+
         }
 
       
@@ -128,6 +122,31 @@ namespace UI.User_control
         {
 
         }
+
+        private bool ValidationEncodages()
+        {
+
+            ValidationResult résultat = new MBRValidateru().Validate(this.Mbr_courant);
+
+            bool retVal = résultat.IsValid;
+            string message = "";
+
+            if (retVal == false)
+            {
+                foreach (ValidationFailure erreur in résultat.Errors)
+                {
+                    message += "- " + erreur.ErrorMessage + " \n";
+                }
+                MessageBox.Show("A corriger : \n" + message,
+                                "Erreur",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+
+            }
+            return retVal;
+        }
+
+       
     }    
 
 }

@@ -60,6 +60,8 @@ namespace DAL
          return retval;
         }
 
+
+
         public static int Add_new_member(MBR mbr)
         {
             int retVal;
@@ -71,12 +73,31 @@ namespace DAL
             {
                 parameters = new DynamicParameters();
                 parameters.Add("@MBR_ID", dbType: DbType.Int32, direction: ParameterDirection.Output);
-                parameters.AddDynamicParams(mbr);
+
+                parameters.AddDynamicParams(new
+                {
+                    MBR_nom = mbr.Mbr_nom,
+                    MBR_prenom = mbr.Mbr_prenom,
+                    MBR_sexe = mbr.Mbr_sexe,
+                    MBR_naiss = mbr.Mbr_naiss,
+                    MBR_adrs = mbr.Mbr_adrs,
+                    MBR_num_boite = mbr.Mbr_num_boite,
+                    MBR_cp = mbr.Mbr_cp,
+                    MBR_loc = mbr.Mbr_loc,
+                    MBR_mail = mbr.Mbr_mail,
+                    MBR_fix_tel = mbr.Mbr_fix_tel,
+                    MBR_gsm = mbr.Mbr_gsm,
+                    MBR_cot_valide = mbr.Mbr_cot_valide,
+                    MBR_est_pil = mbr.Mbr_est_pil,
+                    MBR_est_adm = mbr.Mbr_est_adm,
+                    MBR_passw = mbr.Mbr_passw,
+                });
                 connection.Execute("sp_insert_new_member",
                                     param: parameters,
                                     commandType: CommandType.StoredProcedure);
 
-                retVal = parameters.Get<int>("@MBR_ID");
+                mbr.Mbr_ID = parameters.Get<int>("@MBR_ID");
+                retVal = mbr.Mbr_ID;
             }
 
             return retVal;

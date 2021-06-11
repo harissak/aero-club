@@ -29,6 +29,7 @@ namespace UI.User_control
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.addNewMember = new System.Windows.Forms.Button();
             this.dt_Ins_cot_val = new System.Windows.Forms.DateTimePicker();
             this.tb_Ins_TeleFixe = new System.Windows.Forms.TextBox();
@@ -62,6 +63,8 @@ namespace UI.User_control
             this.label17 = new System.Windows.Forms.Label();
             this.cb_Ins_is_pilot = new System.Windows.Forms.CheckBox();
             this.cb_Ins_is_admin = new System.Windows.Forms.CheckBox();
+            this.bs_new_member = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bs_new_member)).BeginInit();
             this.SuspendLayout();
             // 
             // addNewMember
@@ -77,6 +80,7 @@ namespace UI.User_control
             // 
             // dt_Ins_cot_val
             // 
+            this.dt_Ins_cot_val.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs_new_member, "Mbr_cot_valide", true));
             this.dt_Ins_cot_val.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dt_Ins_cot_val.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dt_Ins_cot_val.Location = new System.Drawing.Point(165, 580);
@@ -87,6 +91,7 @@ namespace UI.User_control
             // 
             // tb_Ins_TeleFixe
             // 
+            this.tb_Ins_TeleFixe.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs_new_member, "Mbr_fix_tel", true));
             this.tb_Ins_TeleFixe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Ins_TeleFixe.Location = new System.Drawing.Point(165, 466);
             this.tb_Ins_TeleFixe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -97,6 +102,7 @@ namespace UI.User_control
             // 
             // tb_Ins_GSM
             // 
+            this.tb_Ins_GSM.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs_new_member, "Mbr_gsm", true));
             this.tb_Ins_GSM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Ins_GSM.Location = new System.Drawing.Point(165, 430);
             this.tb_Ins_GSM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -107,6 +113,7 @@ namespace UI.User_control
             // 
             // tb_Ins_Password
             // 
+            this.tb_Ins_Password.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs_new_member, "Mbr_passw", true));
             this.tb_Ins_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Ins_Password.Location = new System.Drawing.Point(165, 394);
             this.tb_Ins_Password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -117,6 +124,7 @@ namespace UI.User_control
             // 
             // tb_Ins_Mail
             // 
+            this.tb_Ins_Mail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs_new_member, "Mbr_mail", true));
             this.tb_Ins_Mail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Ins_Mail.Location = new System.Drawing.Point(165, 358);
             this.tb_Ins_Mail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -127,6 +135,7 @@ namespace UI.User_control
             // 
             // tb_Ins_Ville
             // 
+            this.tb_Ins_Ville.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs_new_member, "Mbr_loc", true));
             this.tb_Ins_Ville.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Ins_Ville.Location = new System.Drawing.Point(165, 322);
             this.tb_Ins_Ville.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -137,16 +146,18 @@ namespace UI.User_control
             // 
             // tb_Ins_CP
             // 
+            this.tb_Ins_CP.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs_new_member, "Mbr_cp", true));
             this.tb_Ins_CP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Ins_CP.Location = new System.Drawing.Point(165, 284);
             this.tb_Ins_CP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_Ins_CP.Name = "tb_Ins_CP";
-            this.tb_Ins_CP.Size = new System.Drawing.Size(137, 30);
+            this.tb_Ins_CP.Size = new System.Drawing.Size(200, 30);
             this.tb_Ins_CP.TabIndex = 91;
             this.tb_Ins_CP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_Ins_NbrBoite
             // 
+            this.tb_Ins_NbrBoite.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs_new_member, "Mbr_num_boite", true));
             this.tb_Ins_NbrBoite.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Ins_NbrBoite.Location = new System.Drawing.Point(165, 244);
             this.tb_Ins_NbrBoite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -157,6 +168,7 @@ namespace UI.User_control
             // 
             // tb_Ins_Adresse
             // 
+            this.tb_Ins_Adresse.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs_new_member, "Mbr_adrs", true));
             this.tb_Ins_Adresse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Ins_Adresse.Location = new System.Drawing.Point(165, 203);
             this.tb_Ins_Adresse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -167,6 +179,7 @@ namespace UI.User_control
             // 
             // dt_Ins_Naissance
             // 
+            this.dt_Ins_Naissance.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs_new_member, "Mbr_naiss", true));
             this.dt_Ins_Naissance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dt_Ins_Naissance.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dt_Ins_Naissance.Location = new System.Drawing.Point(165, 162);
@@ -177,6 +190,7 @@ namespace UI.User_control
             // 
             // cb_Ins_Sex
             // 
+            this.cb_Ins_Sex.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs_new_member, "Mbr_sexe", true));
             this.cb_Ins_Sex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Ins_Sex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Ins_Sex.FormattingEnabled = true;
@@ -191,6 +205,7 @@ namespace UI.User_control
             // 
             // tb_Ins_Prénom
             // 
+            this.tb_Ins_Prénom.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs_new_member, "Mbr_prenom", true));
             this.tb_Ins_Prénom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Ins_Prénom.Location = new System.Drawing.Point(165, 85);
             this.tb_Ins_Prénom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -201,6 +216,7 @@ namespace UI.User_control
             // 
             // tb_Ins_Nom
             // 
+            this.tb_Ins_Nom.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs_new_member, "Mbr_nom", true));
             this.tb_Ins_Nom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Ins_Nom.Location = new System.Drawing.Point(165, 46);
             this.tb_Ins_Nom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -383,6 +399,7 @@ namespace UI.User_control
             // cb_Ins_is_pilot
             // 
             this.cb_Ins_is_pilot.AutoSize = true;
+            this.cb_Ins_is_pilot.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bs_new_member, "Mbr_est_pil", true));
             this.cb_Ins_is_pilot.Location = new System.Drawing.Point(165, 512);
             this.cb_Ins_is_pilot.Margin = new System.Windows.Forms.Padding(4);
             this.cb_Ins_is_pilot.Name = "cb_Ins_is_pilot";
@@ -393,12 +410,17 @@ namespace UI.User_control
             // cb_Ins_is_admin
             // 
             this.cb_Ins_is_admin.AutoSize = true;
+            this.cb_Ins_is_admin.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bs_new_member, "Mbr_est_adm", true));
             this.cb_Ins_is_admin.Location = new System.Drawing.Point(165, 548);
             this.cb_Ins_is_admin.Margin = new System.Windows.Forms.Padding(4);
             this.cb_Ins_is_admin.Name = "cb_Ins_is_admin";
             this.cb_Ins_is_admin.Size = new System.Drawing.Size(18, 17);
             this.cb_Ins_is_admin.TabIndex = 100;
             this.cb_Ins_is_admin.UseVisualStyleBackColor = true;
+            // 
+            // bs_new_member
+            // 
+            this.bs_new_member.DataSource = typeof(DTO.MBR);
             // 
             // uc_addNewMember
             // 
@@ -440,7 +462,7 @@ namespace UI.User_control
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "uc_addNewMember";
             this.Size = new System.Drawing.Size(465, 674);
-            this.Load += new System.EventHandler(this.uc_addNewMember_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bs_new_member)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -481,5 +503,6 @@ namespace UI.User_control
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.CheckBox cb_Ins_is_pilot;
         private System.Windows.Forms.CheckBox cb_Ins_is_admin;
+        private System.Windows.Forms.BindingSource bs_new_member;
     }
 }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FluentValidation.Results;
+using DTO;
 
 namespace UI.User_control
 {
@@ -14,10 +16,12 @@ namespace UI.User_control
     {
 
         public event delRefresh refreshList;
+        private RES res_courant;
 
         public uc_md_del_reservation()
         {
             InitializeComponent();
+            this.res_courant = null;
         }
 
         private void Uc_btn_res_modify_Click(object sender, EventArgs e)
@@ -25,13 +29,13 @@ namespace UI.User_control
             int machID = BL.Services_appareils.search_app_by_desc(uc_res_change_machine.Text).APP_ID();
 
 
-            try
+          
+                try
             {
 
                 DateTime jour = Convert.ToDateTime(this.uc_res_change_date.SelectionRange.Start.ToShortDateString());
                 DateTime heurdeb = this.dtp_ch_hour_start.Value;
                 DateTime heurfin = this.dtp_ch_hour_fin.Value;
-
 
 
                 BL.Service_réservation.Update_reservation(
@@ -60,9 +64,7 @@ namespace UI.User_control
                 throw new Exception(ex.Message);
             }
 
-
-
-        }
+    }
 
         private void uc_btn_res_delet_Click(object sender, EventArgs e)
         {
@@ -98,7 +100,8 @@ namespace UI.User_control
             this.uc_res_change_machine.SelectedIndex = uc_res_change_machine.FindStringExact(description);
             this.uc_ch_res_mbr_id.DataSource = BL.Services_membre.LoadPilotOnly();
             this.uc_ch_res_mbr_id.SelectedIndex = uc_ch_res_mbr_id.FindStringExact(mbrID.ToString());
-
+       
         }
+
     }
 }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
+using FluentValidation.Results;
 
 namespace UI.User_control
 {
@@ -14,40 +16,50 @@ namespace UI.User_control
     {
 
         public event delRefresh refreshMbrList;
+        private MBR Mbr_courant;
 
         public uc_addNewMember()
         {
             InitializeComponent();
-           
+            this.Mbr_courant = null;
+            this.Mbr_courant = new MBR();
+            this.bs_new_member.Add(this.Mbr_courant);
+            this.bs_new_member.ResetBindings(true);
+
+
         }
 
         private void addNewMember_Click(object sender, EventArgs e)
         {
+
+            this.bs_new_member.EndEdit();
+
+            if( this.ValidationEncodages() == true) { 
             try
             {
+        
+                    this.tb_Ins_ID.Text = BL.Services_membre.Add_new_member(
+                                   new DTO.MBR
+                                   {
+                                       Mbr_nom = this.tb_Ins_Nom.Text,
+                                       Mbr_prenom = this.tb_Ins_Prénom.Text,
+                                       Mbr_sexe = Convert.ToChar(this.cb_Ins_Sex.Text),
+                                       Mbr_naiss = Convert.ToDateTime(this.dt_Ins_Naissance.Text),
+                                       Mbr_adrs = this.tb_Ins_Adresse.Text,
+                                       Mbr_gsm = this.tb_Ins_GSM.Text,
+                                       Mbr_fix_tel = this.tb_Ins_TeleFixe.Text,
+                                       Mbr_cot_valide = Convert.ToDateTime(this.dt_Ins_cot_val.Text),
+                                       Mbr_cp = this.tb_Ins_CP.Text,
+                                       Mbr_loc = this.tb_Ins_Ville.Text,
+                                       Mbr_num_boite = this.tb_Ins_NbrBoite.Text,
+                                       Mbr_mail = this.tb_Ins_Mail.Text,
+                                       Mbr_passw = this.tb_Ins_Password.Text,
+                                       Mbr_est_adm = this.cb_Ins_is_admin.Checked,
+                                       Mbr_est_pil = this.cb_Ins_is_pilot.Checked
+                                   }).ToString();
 
-                 this.tb_Ins_ID.Text = BL.Services_membre.Add_new_member(
-                                new DTO.MBR
-                                {
-                                    Mbr_nom = this.tb_Ins_Nom.Text,
-                                    Mbr_prenom = this.tb_Ins_Prénom.Text,
-                                    Mbr_sexe = Convert.ToChar(this.cb_Ins_Sex.Text),
-                                    Mbr_naiss = Convert.ToDateTime(this.dt_Ins_Naissance.Text),
-                                    Mbr_adrs = this.tb_Ins_Adresse.Text,
-                                    Mbr_gsm = this.tb_Ins_GSM.Text,
-                                    Mbr_fix_tel = this.tb_Ins_TeleFixe.Text,
-                                    Mbr_cot_valide = Convert.ToDateTime(this.dt_Ins_cot_val.Text),
-                                    Mbr_cp = this.tb_Ins_CP.Text,
-                                    Mbr_loc = this.tb_Ins_Ville.Text,
-                                    Mbr_num_boite = this.tb_Ins_NbrBoite.Text,
-                                    Mbr_mail = this.tb_Ins_Mail.Text,
-                                    Mbr_passw = this.tb_Ins_Password.Text,
-                                    Mbr_est_adm = this.cb_Ins_is_admin.Checked,
-                                    Mbr_est_pil = this.cb_Ins_is_pilot.Checked
-                                }).ToString();
-                
-                //IF Pilote --> Creation of a blank license in order to keep DB in coherant status
-                if(this.cb_Ins_is_pilot.Checked)
+                    //IF Pilote --> Creation of a blank license in order to keep DB in coherant status
+                    if (this.cb_Ins_is_pilot.Checked)
                 {
                     BL.Services_licenses.Insert_Lic(
                     new DTO.LIC
@@ -71,16 +83,20 @@ namespace UI.User_control
                 else
                 {
                     MessageBox.Show("You have succesfully registered new member!!");
-                }                   
+                }
+
 
                 refreshMbrList();
                 ResetAllControls(this);
-                
+
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
+
+            }
+
         }
 
         public static void ResetAllControls(Control form)
@@ -113,5 +129,30 @@ namespace UI.User_control
         {
 
         }
+
+        private bool ValidationEncodages()
+        {
+
+            ValidationResult résultat = new MBRValidateru().Validate(this.Mbr_courant);
+
+            bool retVal = résultat.IsValid;
+            string message = "";
+
+            if (retVal == false)
+            {
+                foreach (ValidationFailure erreur in résultat.Errors)
+                {
+                    message += "- " + erreur.ErrorMessage + " \n";
+                }
+                MessageBox.Show("A corriger : \n" + message,
+                                "Erreur",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+
+            }
+            return retVal;
+        }
+
+
     }
 }

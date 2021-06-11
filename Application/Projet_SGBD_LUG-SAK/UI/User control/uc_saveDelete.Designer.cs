@@ -431,7 +431,7 @@ namespace UI.User_control
             this.cb_mdf_is_pilote.AutoSize = true;
             this.cb_mdf_is_pilote.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bsMember, "Mbr_est_pil", true));
             this.cb_mdf_is_pilote.Location = new System.Drawing.Point(168, 513);
-            this.cb_mdf_is_pilote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_mdf_is_pilote.Margin = new System.Windows.Forms.Padding(4);
             this.cb_mdf_is_pilote.Name = "cb_mdf_is_pilote";
             this.cb_mdf_is_pilote.Size = new System.Drawing.Size(18, 17);
             this.cb_mdf_is_pilote.TabIndex = 131;
@@ -442,7 +442,7 @@ namespace UI.User_control
             this.cb_mdf_is_admin.AutoSize = true;
             this.cb_mdf_is_admin.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bsMember, "Mbr_est_adm", true));
             this.cb_mdf_is_admin.Location = new System.Drawing.Point(168, 548);
-            this.cb_mdf_is_admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_mdf_is_admin.Margin = new System.Windows.Forms.Padding(4);
             this.cb_mdf_is_admin.Name = "cb_mdf_is_admin";
             this.cb_mdf_is_admin.Size = new System.Drawing.Size(18, 17);
             this.cb_mdf_is_admin.TabIndex = 132;
