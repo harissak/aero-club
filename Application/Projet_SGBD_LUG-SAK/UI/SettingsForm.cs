@@ -19,6 +19,9 @@ namespace UI
             InitializeComponent();
         }
 
-       
+        private void setting_uc_licenses_list_SelectLic(int lic_ID)
+        {
+            this.uc_licenses_mod1.Read_lic(lic_ID);
+        }
     }
 }

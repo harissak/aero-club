@@ -33,6 +33,7 @@ namespace UI
             this.tab_settings = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tab_settings_page2 = new System.Windows.Forms.TabPage();
+            this.uc_licenses_mod1 = new UI.User_control.uc_licenses_mod();
             this.setting_uc_licenses_list = new UI.User_control.uc_licenses_list();
             this.panelSettingsScreen.SuspendLayout();
             this.tab_settings.SuspendLayout();
@@ -72,6 +73,7 @@ namespace UI
             // 
             // tab_settings_page2
             // 
+            this.tab_settings_page2.Controls.Add(this.uc_licenses_mod1);
             this.tab_settings_page2.Controls.Add(this.setting_uc_licenses_list);
             this.tab_settings_page2.Location = new System.Drawing.Point(4, 25);
             this.tab_settings_page2.Name = "tab_settings_page2";
@@ -81,13 +83,22 @@ namespace UI
             this.tab_settings_page2.Text = "Flight Licenses Management";
             this.tab_settings_page2.UseVisualStyleBackColor = true;
             // 
+            // uc_licenses_mod1
+            // 
+            this.uc_licenses_mod1.Location = new System.Drawing.Point(677, 39);
+            this.uc_licenses_mod1.Margin = new System.Windows.Forms.Padding(4);
+            this.uc_licenses_mod1.Name = "uc_licenses_mod1";
+            this.uc_licenses_mod1.Size = new System.Drawing.Size(311, 567);
+            this.uc_licenses_mod1.TabIndex = 1;
+            // 
             // setting_uc_licenses_list
             // 
             this.setting_uc_licenses_list.Location = new System.Drawing.Point(0, 7);
             this.setting_uc_licenses_list.Margin = new System.Windows.Forms.Padding(4);
             this.setting_uc_licenses_list.Name = "setting_uc_licenses_list";
-            this.setting_uc_licenses_list.Size = new System.Drawing.Size(982, 599);
+            this.setting_uc_licenses_list.Size = new System.Drawing.Size(682, 599);
             this.setting_uc_licenses_list.TabIndex = 0;
+            this.setting_uc_licenses_list.SelectLic += new UI.delSelectLIC(this.setting_uc_licenses_list_SelectLic);
             // 
             // SettingsForm
             // 
@@ -112,5 +123,6 @@ namespace UI
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tab_settings_page2;
         private User_control.uc_licenses_list setting_uc_licenses_list;
+        private User_control.uc_licenses_mod uc_licenses_mod1;
     }
 }

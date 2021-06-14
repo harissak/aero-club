@@ -82,5 +82,45 @@ namespace DAL
             }
             return retval;
         }
+
+        static public List<LIC> Read_Lic_By_ID(int lic_id)
+        {
+            List<LIC> retval;
+
+            using (IDbConnection connection = DAL.Utilitaire.ConnectionToLocalServer())
+            {
+                retval = connection.Query<LIC>("select_lic_by_id",
+                                                param: new { lic_id = lic_id },
+                                                commandType: CommandType.StoredProcedure).AsList<LIC>();
+            }
+            return retval;
+        }
+
+        static public int Update_Lic(LIC update)
+        {
+            int retval;
+
+            using (IDbConnection connection = DAL.Utilitaire.ConnectionToLocalServer())
+            {
+                retval = connection.Execute("sp_update_lic",
+                                    new
+                                    {
+                                        Lic_ID = update.Lic_ID,
+                                        Lic_num = update.Lic_num,
+                                        Lic_obt = update.Lic_obt,
+                                        Lic_exp = update.Lic_exp,
+                                        Lic_active = update.Lic_active,
+                                        Lic_pays = update.Lic_pays,
+                                        Lic_cl1 = update.Lic_cl1,
+                                        Lic_cl2 = update.Lic_cl2,
+                                        Lic_cl3 = update.Lic_cl3,
+                                        Lic_cl4 = update.Lic_cl4,
+                                        Lic_cl5 = update.Lic_cl5,
+                                        Lic_cl6 = update.Lic_cl6
+                                    },
+                                    commandType: CommandType.StoredProcedure);        
+            }
+            return retval;
+        }
     }
 }

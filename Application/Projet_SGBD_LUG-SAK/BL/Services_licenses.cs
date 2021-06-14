@@ -51,5 +51,24 @@ namespace BL
 
             return retval;
         }
+
+        public static List<LIC> Read_Lic_By_ID(int lic_id)
+        {
+            List<LIC> retval = new List<LIC>();
+
+            retval = DAL.AccesLIC.Read_Lic_By_ID(lic_id);
+
+            return retval;
+        }
+
+        public static int Update_lic(LIC update) 
+        {
+            int retval;
+
+            retval = DAL.AccesLIC.Update_Lic(LIC update);
+
+            return retval;
+        }
+    
     }
 }

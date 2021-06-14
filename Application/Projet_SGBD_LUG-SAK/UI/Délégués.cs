@@ -14,5 +14,6 @@ namespace UI
     public delegate void delSelectApp(int appID);
     public delegate void delRefreshApp();
     public delegate void delSearchLICbyName(string name);
+    public delegate void delSelectLIC(int lic_ID);
 
 }
