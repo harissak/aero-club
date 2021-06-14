@@ -137,6 +137,7 @@ namespace UI
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ReservationsForm";
             this.Text = "ReservationsForm";
+            this.Load += new System.EventHandler(this.ReservationsForm_Load);
             this.panelReservationsScreen.ResumeLayout(false);
             this.tab_reservation.ResumeLayout(false);
             this.tab_Overview.ResumeLayout(false);

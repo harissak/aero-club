@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BL;
 using DTO;
+using Utilitaires;
 
 namespace UI.User_control
 {
@@ -55,10 +56,10 @@ namespace UI.User_control
             }
             catch (Exception ex)
             {
-                MessageBox.Show((ex.Message),
-                        "Warning",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
+                MessageBox.Show(Utilitaires.Règles.DécodeMessage(ContexteErreur.APP, ex.Message),
+                               "Avertissement",
+                               MessageBoxButtons.OK
+                               , MessageBoxIcon.Error);
             }
 
         }

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Utilitaires;
 
 namespace UI.User_control
 {
@@ -28,6 +29,10 @@ namespace UI.User_control
 
         private void deleteMember_Click(object sender, EventArgs e)
         {
+
+            try
+            {
+
             //delete License if present to keep db coherent
             if(BL.Services_membre.search_member_by_ID(member_id).Mbr_est_pil == true)
                 BL.Services_licenses.Delete_Lic(member_id);
@@ -37,6 +42,16 @@ namespace UI.User_control
             MessageBox.Show("You have successfuly deleted member with MEMBER ID = " + member_id.ToString());
             bsMember.Clear();
             refreshMbrList();
+
+
+            } catch (Exception ex)
+            {
+                MessageBox.Show(Utilitaires.Règles.DécodeMessage(ContexteErreur.MBR, ex.Message),
+                               "Avertissement",
+                               MessageBoxButtons.OK
+                               , MessageBoxIcon.Error);
+
+            }
 
         }
 

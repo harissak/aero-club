@@ -14,6 +14,12 @@ namespace Utilitaires
 
         static Règles()
         {
+            Règles.dic = new Dictionary<ContexteErreur, Dictionary<String, String>>();
+
+            Règles.AjouterRègle(ContexteErreur.APP, "BL_APP_CHECK_RULE_1", "Imma can't be empty");
+            Règles.AjouterRègle(ContexteErreur.APP, "BL_APP_CHECK_RULE_2", "Impossible to delete A/C classe while reservation(s) are active");
+            Règles.AjouterRègle(ContexteErreur.APP, "BL_APP_CHECK_RULE_3", "Impossible to modify A/C classe while reservation(s) are active");
+            Règles.AjouterRègle(ContexteErreur.MBR, "BL_RES_CHECK_RULE_1", "Impossible to delete member while reservation(s) are active");
 
         }
 

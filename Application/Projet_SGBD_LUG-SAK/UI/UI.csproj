@@ -191,6 +191,10 @@
       <Project>{99c213ca-bf41-4b0f-9ab6-af564f508141}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Utilitaires\Utilitaires.csproj">
+      <Project>{e3a8ab6e-2024-4c7d-b429-4140f9fd534d}</Project>
+      <Name>Utilitaires</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AiroplaneForm.resx">

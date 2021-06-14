@@ -21,6 +21,24 @@ namespace BL
 
         }
 
+
+        public static void DeleteOldReservations(DateTime today)
+        {
+
+            List<RES> allReservations = new List<RES>();
+
+            allReservations = DAL.AccesRÉS.Read_all_reservations();
+
+            foreach (RES reservation in allReservations)
+            {
+                if (reservation.Res_date < today)
+                    DAL.AccesRÉS.Delete_reservation(reservation.Res_ID);
+            }
+
+        }
+
+
+
         public static int Add_new_reservation(RES reservation)
         {
             return DAL.AccesRÉS.Add_new_reservation(reservation);

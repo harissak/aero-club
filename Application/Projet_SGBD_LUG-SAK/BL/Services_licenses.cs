@@ -65,7 +65,7 @@ namespace BL
         {
             int retval;
 
-            retval = DAL.AccesLIC.Update_Lic(LIC update);
+            retval = DAL.AccesLIC.Update_Lic(update);
 
             return retval;
         }

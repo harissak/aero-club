@@ -28,6 +28,10 @@ namespace BL
 
             //TO ADD: CHECK IF MBR HAS OPEN RESERVATION -FLO-
 
+
+            if (DAL.AccesRÉS.CheckIFRunningResByMbrId(MBR_ID) > 0)
+                throw new Exception("BL_RES_CHECK_RULE_1");
+
             retval = DAL.AccesMBR.Delete_MBR(MBR_ID);
 
             return retval;
@@ -38,9 +42,6 @@ namespace BL
             //TO ADD: can't remove pilot if there is a running config -FLO-
             int retval = 0;
 
-
-            // I dont know and can not figure out why this funkcion doesnt work
-            // just to test MODIFY METHOD i put it in comment
 
             MBR current = mbr;//DAL.AccesMBR.Read_MBR_BY_ID(mbr.Mbr_ID);
 

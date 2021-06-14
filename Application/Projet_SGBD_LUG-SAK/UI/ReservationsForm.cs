@@ -16,6 +16,8 @@ namespace UI
         {
             InitializeComponent();
             this.tab_mdf_reservation.Enabled = false;
+            DeleteOldReservations();
+
 
         }
         private void SelectReservationID(int resID, int mbrID, int machineID)
@@ -28,6 +30,19 @@ namespace UI
         {
             this.cherche_reservations.RefreshAllReservation();
             this.tab_reservation.SelectTab("tab_Overview");
+        }
+
+        private void ReservationsForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteOldReservations()
+        {
+            DateTime today = DateTime.Now.AddDays(-2);
+            BL.Service_réservation.DeleteOldReservations(today);
+
+
         }
 
     }

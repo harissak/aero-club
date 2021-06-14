@@ -24,33 +24,49 @@ namespace UI.User_control
 
         private void uc_btn_add_res_Click(object sender, EventArgs e)
         {
-            try
+            DateTime today = DateTime.Now;
+            DateTime jour = Convert.ToDateTime(this.dt_uc_res_aj_date.SelectionRange.Start.ToShortDateString());
+
+            //Maybe we should check this in sql as constraints
+            if (jour >= today.AddDays(-1))
             {
 
-                DateTime jour = Convert.ToDateTime(this.dt_uc_res_aj_date.SelectionRange.Start.ToShortDateString());
-                DateTime heurdeb = this.dtp_hour_start.Value;
-                DateTime heurfin = this.dtp_hour_end.Value;
+                try
+                {
 
-                BL.Service_réservation.Add_new_reservation(
-                                 new DTO.RES
-                                 {
-                                     Res_FK_Mbr_ID = Convert.ToInt32(this.cb_uc_res_aj_id.Text),
-                                     Res_date = jour,
-                                     Res_hr_deb = new DateTime(jour.Year,jour.Month,jour.Day,heurdeb.Hour,heurdeb.Minute,0),
-                                     Res_hr_fin = new DateTime(jour.Year, jour.Month, jour.Day,heurfin.Hour,heurfin.Minute,0),
-                                     Res_est_annule = false,
-                                     Res_est_prevenu = false,
-                                     Res_FK_App_ID = app_id
-                                 }).ToString();
 
-                MessageBox.Show("You have succesfully made new reservation!!");
-                ResetAllControls(this);
-                refreshList();
+                    DateTime heurdeb = this.dtp_hour_start.Value;
+                    DateTime heurfin = this.dtp_hour_end.Value;
+
+                    BL.Service_réservation.Add_new_reservation(
+                                     new DTO.RES
+                                     {
+                                         Res_FK_Mbr_ID = Convert.ToInt32(this.cb_uc_res_aj_id.Text),
+                                         Res_date = jour,
+                                         Res_hr_deb = new DateTime(jour.Year, jour.Month, jour.Day, heurdeb.Hour, heurdeb.Minute, 0),
+                                         Res_hr_fin = new DateTime(jour.Year, jour.Month, jour.Day, heurfin.Hour, heurfin.Minute, 0),
+                                         Res_est_annule = false,
+                                         Res_est_prevenu = false,
+                                         Res_FK_App_ID = app_id
+                                     }).ToString();
+
+                    MessageBox.Show("You have succesfully made new reservation!!");
+                    ResetAllControls(this);
+                    refreshList();
+
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
 
             }
-            catch (Exception ex)
+            else
             {
-                throw new Exception(ex.Message);
+                MessageBox.Show("You cannot choose date older than todays date.",
+                                       "Information",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Warning);
             }
         }
 
