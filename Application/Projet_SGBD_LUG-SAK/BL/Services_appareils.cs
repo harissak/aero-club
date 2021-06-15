@@ -95,5 +95,22 @@ namespace BL
 
             return retval;
         }
+
+       public static List<APP> Get_Authorized_planes_by_PilotID(int pilot_id)
+        {
+            List<APP> retval = new List<APP>();
+            List<APP> all_app = BL.Services_appareils.Read_all_app();
+            List<int> list_class;
+
+            list_class = BL.Services_licenses.Get_Lic_Class_active_By_mbrID(pilot_id);
+
+            foreach (APP aircraft in all_app)
+            {
+                if (list_class.Contains(Int32.Parse(aircraft.App_classe)))
+                    retval.Add(aircraft);
+            }
+
+            return retval;
+        }
     }
 }

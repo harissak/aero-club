@@ -19,6 +19,10 @@ namespace UI.User_control
         public uc_add_new_reservation()
         {
             InitializeComponent();
+            this.dtp_hour_end.Value = this.dtp_hour_start.Value.AddMinutes(60);
+            this.dtp_hour_end.MinDate = this.dtp_hour_start.Value.AddMinutes(60); //min 1 hour
+            this.dtp_hour_end.MaxDate = this.dtp_hour_start.Value.AddMinutes(360); //max 6 hour
+
         }
 
 
@@ -33,18 +37,25 @@ namespace UI.User_control
 
                 try
                 {
-
-
                     DateTime heurdeb = this.dtp_hour_start.Value;
                     DateTime heurfin = this.dtp_hour_end.Value;
+                    DateTime full_hr_deb = new DateTime(jour.Year, jour.Month, jour.Day, heurdeb.Hour, heurdeb.Minute, 0);
+                    DateTime full_hr_fin = new DateTime(jour.Year, jour.Month, jour.Day, heurfin.Hour, heurfin.Minute, 0);
+
+                    BL.Service_réservation.Res_Check_ThreeMonthDelay(today, jour);                              //check if reservation is less than 3 months  in future
+                    BL.Service_réservation.Res_Check_Pilot_Lic(Convert.ToInt32(this.cb_uc_res_aj_id.Text),jour);
+                    BL.Service_réservation.Res_check_cotisation_status(Int32.Parse(this.cb_uc_res_aj_id.Text)); //check if cotisation is up to date
+                    BL.Service_réservation.Res_Check_APP_Break_Time(app_id,jour, full_hr_deb, full_hr_fin);     //Check if reservation respect 15 min break between a other reservation
+                    
+                    
 
                     BL.Service_réservation.Add_new_reservation(
                                      new DTO.RES
                                      {
                                          Res_FK_Mbr_ID = Convert.ToInt32(this.cb_uc_res_aj_id.Text),
                                          Res_date = jour,
-                                         Res_hr_deb = new DateTime(jour.Year, jour.Month, jour.Day, heurdeb.Hour, heurdeb.Minute, 0),
-                                         Res_hr_fin = new DateTime(jour.Year, jour.Month, jour.Day, heurfin.Hour, heurfin.Minute, 0),
+                                         Res_hr_deb = full_hr_deb,
+                                         Res_hr_fin = full_hr_fin,
                                          Res_est_annule = false,
                                          Res_est_prevenu = false,
                                          Res_FK_App_ID = app_id
@@ -57,7 +68,10 @@ namespace UI.User_control
                 }
                 catch (Exception ex)
                 {
-                    throw new Exception(ex.Message);
+                    MessageBox.Show((ex.Message),
+                           "Warning",
+                           MessageBoxButtons.OK,
+                           MessageBoxIcon.Error);
                 }
 
             }
@@ -74,13 +88,18 @@ namespace UI.User_control
         {
             
             this.cb_uc_res_aj_id.DataSource = BL.Services_membre.LoadPilotOnly();
-            this.cb_uc_res_aj_machine.DataSource = BL.Services_appareils.Read_all_app();
+          //  this.cb_uc_res_aj_machine.DataSource = BL.Services_appareils.Read_all_app(); //loading of the CB (ALL) - TO DELETE IF LOAD A/C per ID is working - FLO-
 
         }
 
         private void MbrIDValueChanged(object sender, EventArgs e)
         {
-            this.tb_uc_res_aj_nom.Text= BL.Services_membre.search_member_by_ID(Convert.ToInt32(this.cb_uc_res_aj_id.Text)).getNomPrenom();   
+            this.tb_uc_res_aj_nom.Text= BL.Services_membre.search_member_by_ID(Convert.ToInt32(this.cb_uc_res_aj_id.Text)).getNomPrenom();
+
+            //load only authorised A/C
+            this.cb_uc_res_aj_machine.Text = ""; 
+            this.cb_uc_res_aj_machine.DataSource = BL.Services_appareils.Get_Authorized_planes_by_PilotID(Int32.Parse(this.cb_uc_res_aj_id.Text));
+
         }
 
         private void machine_SelectedIndexChanged(object sender, EventArgs e)
@@ -117,10 +136,13 @@ namespace UI.User_control
                     MonthCalendar monthCalendar = (MonthCalendar)control;
                     monthCalendar.TodayDate = DateTime.Now;
                 }
-
             }
         }
 
-
+        private void dtp_hour_start_ValueChanged(object sender, EventArgs e)
+        {
+            this.dtp_hour_end.MinDate = this.dtp_hour_start.Value.AddMinutes(60); //min 1 hour
+            this.dtp_hour_end.MaxDate = this.dtp_hour_start.Value.AddMinutes(360); //max 6 hour
+        }
     }
 }
