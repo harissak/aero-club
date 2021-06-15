@@ -26,11 +26,8 @@ namespace BL
         {
             int retval = 0;
 
-            //TO ADD: CHECK IF MBR HAS OPEN RESERVATION -FLO-
-
-
-            if (DAL.AccesRÉS.CheckIFRunningResByMbrId(MBR_ID) > 0)
-                throw new Exception("BL_RES_CHECK_RULE_1");
+            if (DAL.AccesRÉS.CheckIFRunningResByMbrId(MBR_ID) > 0) //check if mbr has running reservation
+                throw new Exception("BL_MBR_CHECK_RULE_1");        //if yes cannot delete, delete reservation first
 
             retval = DAL.AccesMBR.Delete_MBR(MBR_ID);
 
@@ -108,7 +105,19 @@ namespace BL
             
         }
 
+        public static bool Check_cotisation_status(int mbr_id)
+        {
+            bool retval = true;
+            DateTime current_date = DateTime.Now;
+            DateTime cotisation_val;
 
+            cotisation_val = (DAL.AccesMBR.Read_MBR_BY_ID(mbr_id)).Mbr_cot_valide;
+
+            if (cotisation_val < current_date)
+                retval = false;
+
+            return retval;   
+        }
 
         //test
         //public static string TranslateIDToName(string id)

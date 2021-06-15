@@ -69,6 +69,28 @@ namespace BL
 
             return retval;
         }
-    
+
+        public static List<int> Get_Lic_Class_active_By_mbrID(int mbr_id)
+        {
+            List<int> retval = new List<int>(); ;
+            LIC license;
+
+            license = DAL.AccesLIC.Read_Lic_By_FK_MBRID(mbr_id);
+
+            if (license.Lic_cl1 == true)
+                retval.Add(1);
+            if (license.Lic_cl2 == true)
+                retval.Add(2);
+            if (license.Lic_cl3 == true)
+                retval.Add(3);
+            if (license.Lic_cl4 == true)
+                retval.Add(4);
+            if (license.Lic_cl5 == true)
+                retval.Add(5);
+            if (license.Lic_cl6 == true)
+                retval.Add(6);
+
+            return retval;
+        }
     }
 }
