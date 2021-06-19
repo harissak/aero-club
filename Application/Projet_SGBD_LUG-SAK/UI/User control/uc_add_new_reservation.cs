@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Utilitaires;
 
 namespace UI.User_control
 {
@@ -25,6 +26,8 @@ namespace UI.User_control
 
         }
 
+      
+
 
         private void uc_btn_add_res_Click(object sender, EventArgs e)
         {
@@ -42,28 +45,27 @@ namespace UI.User_control
                     DateTime full_hr_deb = new DateTime(jour.Year, jour.Month, jour.Day, heurdeb.Hour, heurdeb.Minute, 0);
                     DateTime full_hr_fin = new DateTime(jour.Year, jour.Month, jour.Day, heurfin.Hour, heurfin.Minute, 0);
 
-                    BL.Service_réservation.Res_Check_ThreeMonthDelay(today, jour);                              //check if reservation is less than 3 months  in future
-                    BL.Service_réservation.Res_Check_Pilot_Lic(Convert.ToInt32(this.cb_uc_res_aj_id.Text),jour);
-                    BL.Service_réservation.Res_check_cotisation_status(Int32.Parse(this.cb_uc_res_aj_id.Text)); //check if cotisation is up to date
-                    BL.Service_réservation.Res_Check_APP_Break_Time(app_id,jour, full_hr_deb, full_hr_fin);     //Check if reservation respect 15 min break between a other reservation
+                    if (Check_rules(today, jour, Int32.Parse(this.cb_uc_res_aj_id.Text), app_id, full_hr_deb,full_hr_fin))
+                    { 
                     
+                        BL.Service_réservation.Add_new_reservation(
+                                         new DTO.RES
+                                         {
+                                             Res_FK_Mbr_ID = Convert.ToInt32(this.cb_uc_res_aj_id.Text),
+                                             Res_date = jour,
+                                             Res_hr_deb = full_hr_deb,
+                                             Res_hr_fin = full_hr_fin,
+                                             Res_est_annule = false,
+                                             Res_est_prevenu = false,
+                                             Res_FK_App_ID = app_id
+                                         }).ToString();
+
+
+                            MessageBox.Show("You have succesfully made new reservation!!");
+                            refreshList();
+                            ResetAllControls(this);
                     
-
-                    BL.Service_réservation.Add_new_reservation(
-                                     new DTO.RES
-                                     {
-                                         Res_FK_Mbr_ID = Convert.ToInt32(this.cb_uc_res_aj_id.Text),
-                                         Res_date = jour,
-                                         Res_hr_deb = full_hr_deb,
-                                         Res_hr_fin = full_hr_fin,
-                                         Res_est_annule = false,
-                                         Res_est_prevenu = false,
-                                         Res_FK_App_ID = app_id
-                                     }).ToString();
-
-                    MessageBox.Show("You have succesfully made new reservation!!");
-                    ResetAllControls(this);
-                    refreshList();
+                    }
 
                 }
                 catch (Exception ex)
@@ -143,6 +145,32 @@ namespace UI.User_control
         {
             this.dtp_hour_end.MinDate = this.dtp_hour_start.Value.AddMinutes(60); //min 1 hour
             this.dtp_hour_end.MaxDate = this.dtp_hour_start.Value.AddMinutes(360); //max 6 hour
+        }
+
+        private bool Check_rules(DateTime today, DateTime jour, int mbr_id, int app_id, DateTime full_hr_deb, DateTime full_hr_fin)
+        {
+            bool retVal = false;
+
+            try
+            {
+                BL.Service_réservation.Res_Check_ThreeMonthDelay(today, jour);                              //check if reservation is less than 3 months  in future
+                BL.Service_réservation.Res_Check_Pilot_Lic(mbr_id, jour);
+                BL.Service_réservation.Res_check_cotisation_status(mbr_id);                                   //check if cotisation is up to date
+                BL.Service_réservation.Res_Check_APP_Break_Time(app_id, jour, full_hr_deb, full_hr_fin);     //Check if reservation respect 15 min break between a other reservation
+                BL.Service_réservation.Pilot_has_another_reservation(mbr_id, jour, full_hr_deb, full_hr_fin); // Checke does pilot has another reservation at same time
+
+                retVal = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(Utilitaires.Règles.DécodeMessage(ContexteErreur.RES, ex.Message),
+                           "Warning",
+                           MessageBoxButtons.OK,
+                           MessageBoxIcon.Error);
+            }
+
+            return retVal;
+
         }
     }
 }

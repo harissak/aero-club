@@ -17,8 +17,8 @@ namespace DAL
 
             //lpt flo: new SqlConnection(@"Data source=laptop-rud1s1fu\sqlexpress; Initial catalog=Projet_SGBD_LUG-SAK; Integrated Security =True"); 
             //desktop flo: new SqlConnection(@"Data source=desktop-08pcs13\sqlexpress; Initial catalog=Projet_SGBD_LUG-SAK; Integrated Security =True"); 
-           // return new SqlConnection(@"Data Source=DESKTOP-PR1OB8V\SQLEXPRESS;Initial Catalog=ULM_SGBD_LUG-SAK;Integrated Security=True");
-           return new SqlConnection(@"Data Source=DESKTOP-08PCS13\SQLEXPRESS; Initial catalog=ULM_SGBD_LUG-SAK; Integrated Security =True");
+            return new SqlConnection(@"Data Source=DESKTOP-PR1OB8V\SQLEXPRESS;Initial Catalog=ULM_SGBD_LUG-SAK;Integrated Security=True");
+           //return new SqlConnection(@"Data Source=DESKTOP-08PCS13\SQLEXPRESS; Initial catalog=ULM_SGBD_LUG-SAK; Integrated Security =True");
 
 
         }

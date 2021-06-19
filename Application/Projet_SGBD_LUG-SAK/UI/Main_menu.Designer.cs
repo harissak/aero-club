@@ -92,7 +92,7 @@ namespace UI
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(250, 60);
             this.btnSettings.TabIndex = 3;
-            this.btnSettings.Text = "SETTINGS";
+            this.btnSettings.Text = "LICENCE";
             this.btnSettings.UseVisualStyleBackColor = false;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 

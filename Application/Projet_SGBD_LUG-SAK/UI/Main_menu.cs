@@ -52,7 +52,7 @@ namespace UI
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            this.OpenNewWindow(new SettingsForm());
+            this.OpenNewWindow(new LicenceForm());
             this.lblTitle.Text = "SETTINGS";
             this.btnSettings.BackColor = Color.FromArgb(93, 173, 226);
             this.panelTitleBar.BackColor = Color.FromArgb(93, 173, 226);

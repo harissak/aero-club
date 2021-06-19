@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace UI
 {
-    public partial class SettingsForm : Form
+    public partial class LicenceForm : Form
     {
         public event delSearchLICbyName SearchLICbyName;
 
-        public SettingsForm()
+        public LicenceForm()
         {
             InitializeComponent();
         }

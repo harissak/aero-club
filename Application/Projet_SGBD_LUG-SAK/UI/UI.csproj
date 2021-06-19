@@ -105,11 +105,11 @@
     <Compile Include="ReservationsForm.Designer.cs">
       <DependentUpon>ReservationsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SettingsForm.cs">
+    <Compile Include="LicenceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SettingsForm.Designer.cs">
-      <DependentUpon>SettingsForm.cs</DependentUpon>
+    <Compile Include="LicenceForm.Designer.cs">
+      <DependentUpon>LicenceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="User control\uc_add_aircraft.cs">
       <SubType>UserControl</SubType>
@@ -220,8 +220,8 @@
     <EmbeddedResource Include="ReservationsForm.resx">
       <DependentUpon>ReservationsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SettingsForm.resx">
-      <DependentUpon>SettingsForm.cs</DependentUpon>
+    <EmbeddedResource Include="LicenceForm.resx">
+      <DependentUpon>LicenceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User control\uc_add_aircraft.resx">
       <DependentUpon>uc_add_aircraft.cs</DependentUpon>

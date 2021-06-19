@@ -77,5 +77,33 @@ namespace BL
                     throw new Exception("BL_RES_CHECK_RULE_4");                 //reservation is not under the licesence expiration + 1 month
 
         }
+
+
+
+
+        public static void Pilot_has_another_reservation (int mbr_id, DateTime date, DateTime hr_deb, DateTime hr_fin)
+        {
+            List<RES> allReservations = new List<RES>();
+            allReservations = DAL.AccesRÉS.Read_all_reservations();
+            bool isOk = true;
+
+            foreach (RES reservation in allReservations)
+            {
+             
+                if (reservation.Res_FK_Mbr_ID == mbr_id && reservation.Res_date == date)
+                {
+                    if((hr_deb >= reservation.Res_hr_deb && hr_deb <= reservation.Res_hr_fin)
+                     || hr_fin >= reservation.Res_hr_deb && hr_fin <= reservation.Res_hr_fin ) {
+
+                        throw new Exception("BL_RES_CHECK_RULE_5"); //Same member had already made reservation at same time
+                    } 
+
+
+                }
+
+            }
+
+           
+        }
     }
 }
