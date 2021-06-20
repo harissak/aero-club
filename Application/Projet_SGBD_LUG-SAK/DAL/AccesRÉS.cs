@@ -189,28 +189,20 @@ namespace DAL
 
                 return retval;
         }
+            static public List <RES> Read_reservation_by_app_id(int app_id)
+        {
+            RES retval;
+            List<RES> liste=new List<RES>();
 
-       //public static int CheckIFRunningResByApp(int app_id,DateTime now)
-       // {
-       //     int retval;
-       //     DynamicParameters parameters;
 
-        //     using (IDbConnection connection = DAL.Utilitaire.ConnectionToLocalServer())
-        //     {
-        //         connection.Open();
-        //         parameters = new DynamicParameters();
-        //         parameters.Add("@RES_FK_APP_ID", app_id, DbType.Int32, direction: ParameterDirection.Input);
-        //         parameters.Add("@RES_date_now", now, DbType.DateTime, direction: ParameterDirection.Input);
-        //         parameters.Add("@count", 0, DbType.Int32, direction: ParameterDirection.Output);
+            using (IDbConnection connection = DAL.Utilitaire.ConnectionToLocalServer())
+            {
+                liste = connection.Query<RES>("sp_select_reservation_by_app_id",
+                                                param: new { app_id = app_id },
+                                                commandType: CommandType.StoredProcedure).AsList<RES>();
 
-        //         connection.Execute("sp_select_running_res_by_app",     
-        //                            param: parameters,
-        //                            commandType: CommandType.StoredProcedure);
-
-        //         retval = parameters.Get<int>("@count");
-        //     }
-
-        //     return retval;
-        // }
+            }
+            return liste;
+        }
     }
 }

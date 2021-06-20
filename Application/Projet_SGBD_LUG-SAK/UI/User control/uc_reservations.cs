@@ -17,11 +17,27 @@ namespace UI.User_control
         private void LoadAllReservation(object sender, EventArgs e)
         {
             RefreshAllReservation();
+            this.cb_uc_rechercher_aeronef.DataSource = BL.Services_appareils.Read_all_app();
         }
 
         private void bt_uc_res_search_Click(object sender, EventArgs e)
         {
-            this.bs_reservation_list.DataSource = BL.Service_réservation.Read_reservation_by_ID(Convert.ToInt32(this.tb_uc_recherch_res_id.Text));
+            if (this.tb_uc_recherch_res_id.Text != "") 
+            {
+                this.bs_reservation_list.DataSource = BL.Service_réservation.Read_reservation_by_ID(Convert.ToInt32(this.tb_uc_recherch_res_id.Text));
+
+            } 
+            else if (this.cb_uc_rechercher_aeronef.Text != "")
+            {
+                int appID = BL.Services_appareils.search_app_by_desc(this.cb_uc_rechercher_aeronef.Text).APP_ID();
+
+                this.bs_reservation_list.DataSource = BL.Service_réservation.Read_reservations_by_app_id(appID);
+
+            }
+            else
+            {
+                this.bs_reservation_list.DataSource = BL.Service_réservation.Read_all_reservations();
+            }
         }
 
         private void Reservation_clicked(object sender, DataGridViewCellEventArgs e)
@@ -49,6 +65,11 @@ namespace UI.User_control
         public void RefreshAllReservation()
         {
             this.bs_reservation_list.DataSource = BL.Service_réservation.Read_all_reservations();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

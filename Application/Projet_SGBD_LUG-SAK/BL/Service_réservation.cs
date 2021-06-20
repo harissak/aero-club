@@ -102,8 +102,12 @@ namespace BL
                 }
 
             }
-
            
+        }
+
+        public static List<RES> Read_reservations_by_app_id(int app_id)
+        {
+            return DAL.AccesRÉS.Read_reservation_by_app_id(app_id);
         }
     }
 }
