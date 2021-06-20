@@ -31,6 +31,7 @@ namespace UI.User_control
         {
             this.components = new System.ComponentModel.Container();
             this.dgv_licenses = new System.Windows.Forms.DataGridView();
+            this.bs_licenses = new System.Windows.Forms.BindingSource(this.components);
             this.bt_search_mat = new System.Windows.Forms.Button();
             this.lb_mat_club = new System.Windows.Forms.Label();
             this.tb_search_mat = new System.Windows.Forms.TextBox();
@@ -50,7 +51,6 @@ namespace UI.User_control
             this.liccl4DataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.liccl5DataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.liccl6DataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.bs_licenses = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_licenses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs_licenses)).BeginInit();
             this.SuspendLayout();
@@ -79,6 +79,10 @@ namespace UI.User_control
             this.dgv_licenses.Size = new System.Drawing.Size(495, 373);
             this.dgv_licenses.TabIndex = 0;
             this.dgv_licenses.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_licenses_CellClick);
+            // 
+            // bs_licenses
+            // 
+            this.bs_licenses.DataSource = typeof(DTO.LIC);
             // 
             // bt_search_mat
             // 
@@ -136,6 +140,7 @@ namespace UI.User_control
             this.lICFKMBRIDDataGridViewTextBoxColumn.DataPropertyName = "LIC_FK_MBR_ID";
             this.lICFKMBRIDDataGridViewTextBoxColumn.HeaderText = "Member Mat. Club";
             this.lICFKMBRIDDataGridViewTextBoxColumn.Name = "lICFKMBRIDDataGridViewTextBoxColumn";
+            this.lICFKMBRIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.lICFKMBRIDDataGridViewTextBoxColumn.Width = 60;
             // 
             // licIDDataGridViewTextBoxColumn
@@ -143,6 +148,7 @@ namespace UI.User_control
             this.licIDDataGridViewTextBoxColumn.DataPropertyName = "Lic_ID";
             this.licIDDataGridViewTextBoxColumn.HeaderText = "Mat. Club Lic";
             this.licIDDataGridViewTextBoxColumn.Name = "licIDDataGridViewTextBoxColumn";
+            this.licIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.licIDDataGridViewTextBoxColumn.Width = 50;
             // 
             // licnumDataGridViewTextBoxColumn
@@ -150,24 +156,28 @@ namespace UI.User_control
             this.licnumDataGridViewTextBoxColumn.DataPropertyName = "Lic_num";
             this.licnumDataGridViewTextBoxColumn.HeaderText = "Licence Number";
             this.licnumDataGridViewTextBoxColumn.Name = "licnumDataGridViewTextBoxColumn";
+            this.licnumDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // licobtDataGridViewTextBoxColumn
             // 
             this.licobtDataGridViewTextBoxColumn.DataPropertyName = "Lic_obt";
             this.licobtDataGridViewTextBoxColumn.HeaderText = "Obtention Date";
             this.licobtDataGridViewTextBoxColumn.Name = "licobtDataGridViewTextBoxColumn";
+            this.licobtDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // licexpDataGridViewTextBoxColumn
             // 
             this.licexpDataGridViewTextBoxColumn.DataPropertyName = "Lic_exp";
             this.licexpDataGridViewTextBoxColumn.HeaderText = "Expiration date";
             this.licexpDataGridViewTextBoxColumn.Name = "licexpDataGridViewTextBoxColumn";
+            this.licexpDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // licactiveDataGridViewCheckBoxColumn
             // 
             this.licactiveDataGridViewCheckBoxColumn.DataPropertyName = "Lic_active";
             this.licactiveDataGridViewCheckBoxColumn.HeaderText = "Is active";
             this.licactiveDataGridViewCheckBoxColumn.Name = "licactiveDataGridViewCheckBoxColumn";
+            this.licactiveDataGridViewCheckBoxColumn.ReadOnly = true;
             this.licactiveDataGridViewCheckBoxColumn.Width = 50;
             // 
             // licpaysDataGridViewTextBoxColumn
@@ -175,12 +185,14 @@ namespace UI.User_control
             this.licpaysDataGridViewTextBoxColumn.DataPropertyName = "Lic_pays";
             this.licpaysDataGridViewTextBoxColumn.HeaderText = "Delivery country";
             this.licpaysDataGridViewTextBoxColumn.Name = "licpaysDataGridViewTextBoxColumn";
+            this.licpaysDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // liccl1DataGridViewCheckBoxColumn
             // 
             this.liccl1DataGridViewCheckBoxColumn.DataPropertyName = "Lic_cl1";
             this.liccl1DataGridViewCheckBoxColumn.HeaderText = "Class     1";
             this.liccl1DataGridViewCheckBoxColumn.Name = "liccl1DataGridViewCheckBoxColumn";
+            this.liccl1DataGridViewCheckBoxColumn.ReadOnly = true;
             this.liccl1DataGridViewCheckBoxColumn.Width = 50;
             // 
             // liccl2DataGridViewCheckBoxColumn
@@ -188,6 +200,7 @@ namespace UI.User_control
             this.liccl2DataGridViewCheckBoxColumn.DataPropertyName = "Lic_cl2";
             this.liccl2DataGridViewCheckBoxColumn.HeaderText = "Class     2";
             this.liccl2DataGridViewCheckBoxColumn.Name = "liccl2DataGridViewCheckBoxColumn";
+            this.liccl2DataGridViewCheckBoxColumn.ReadOnly = true;
             this.liccl2DataGridViewCheckBoxColumn.Width = 50;
             // 
             // liccl3DataGridViewCheckBoxColumn
@@ -195,6 +208,7 @@ namespace UI.User_control
             this.liccl3DataGridViewCheckBoxColumn.DataPropertyName = "Lic_cl3";
             this.liccl3DataGridViewCheckBoxColumn.HeaderText = "Class     3";
             this.liccl3DataGridViewCheckBoxColumn.Name = "liccl3DataGridViewCheckBoxColumn";
+            this.liccl3DataGridViewCheckBoxColumn.ReadOnly = true;
             this.liccl3DataGridViewCheckBoxColumn.Width = 50;
             // 
             // liccl4DataGridViewCheckBoxColumn
@@ -202,6 +216,7 @@ namespace UI.User_control
             this.liccl4DataGridViewCheckBoxColumn.DataPropertyName = "Lic_cl4";
             this.liccl4DataGridViewCheckBoxColumn.HeaderText = "Class     4";
             this.liccl4DataGridViewCheckBoxColumn.Name = "liccl4DataGridViewCheckBoxColumn";
+            this.liccl4DataGridViewCheckBoxColumn.ReadOnly = true;
             this.liccl4DataGridViewCheckBoxColumn.Width = 50;
             // 
             // liccl5DataGridViewCheckBoxColumn
@@ -209,6 +224,7 @@ namespace UI.User_control
             this.liccl5DataGridViewCheckBoxColumn.DataPropertyName = "Lic_cl5";
             this.liccl5DataGridViewCheckBoxColumn.HeaderText = "Class     5";
             this.liccl5DataGridViewCheckBoxColumn.Name = "liccl5DataGridViewCheckBoxColumn";
+            this.liccl5DataGridViewCheckBoxColumn.ReadOnly = true;
             this.liccl5DataGridViewCheckBoxColumn.Width = 50;
             // 
             // liccl6DataGridViewCheckBoxColumn
@@ -216,11 +232,8 @@ namespace UI.User_control
             this.liccl6DataGridViewCheckBoxColumn.DataPropertyName = "Lic_cl6";
             this.liccl6DataGridViewCheckBoxColumn.HeaderText = "Class     6";
             this.liccl6DataGridViewCheckBoxColumn.Name = "liccl6DataGridViewCheckBoxColumn";
+            this.liccl6DataGridViewCheckBoxColumn.ReadOnly = true;
             this.liccl6DataGridViewCheckBoxColumn.Width = 50;
-            // 
-            // bs_licenses
-            // 
-            this.bs_licenses.DataSource = typeof(DTO.LIC);
             // 
             // uc_licenses_list
             // 

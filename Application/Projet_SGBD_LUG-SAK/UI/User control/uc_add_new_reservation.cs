@@ -127,7 +127,7 @@ namespace UI.User_control
                         comboBox.SelectedIndex = 0;
                 }
 
-                if (control is DateTimePicker)
+                if (control is DateTimePicker && control.Name == "dtp_hour_start")
                 {
                     DateTimePicker dateTimePicker = (DateTimePicker)control;
                     dateTimePicker.Value = DateTime.Now;

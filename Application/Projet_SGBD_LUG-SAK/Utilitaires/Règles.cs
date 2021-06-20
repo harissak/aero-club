@@ -21,9 +21,9 @@ namespace Utilitaires
             Règles.AjouterRègle(ContexteErreur.APP, "BL_APP_CHECK_RULE_3", "Impossible to modify A/C classe while reservation(s) are active");
             Règles.AjouterRègle(ContexteErreur.MBR, "BL_MBR_CHECK_RULE_1", "Impossible to delete member while reservation(s) are active");
             Règles.AjouterRègle(ContexteErreur.RES, "BL_RES_CHECK_RULE_1", "Pilot can't do the reservation, cotisation is not valid anymore");
-            Règles.AjouterRègle(ContexteErreur.RES, "BL_RES_CHECK_RULE_2", "Break time of 15 min btw reservation is not resepcted");
-            Règles.AjouterRègle(ContexteErreur.RES, "BL_RES_CHECK_RULE_3", "reservation is more than 3 month in future");
-            Règles.AjouterRègle(ContexteErreur.RES, "BL_RES_CHECK_RULE_4", "reservation is not under the licesence expiration + 1 month");
+            Règles.AjouterRègle(ContexteErreur.RES, "BL_RES_CHECK_RULE_2", "Break time of 15 min btw reservation is not respected");
+            Règles.AjouterRègle(ContexteErreur.RES, "BL_RES_CHECK_RULE_3", "Reservation is more than 3 month in future");
+            Règles.AjouterRègle(ContexteErreur.RES, "BL_RES_CHECK_RULE_4", "Reservation is not under the licence expiration + 1 month");
             Règles.AjouterRègle(ContexteErreur.RES, "BL_RES_CHECK_RULE_5", "It is not possible to make two or more reservation in same time");
 
         }
