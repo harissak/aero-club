@@ -65,7 +65,7 @@ namespace UI.User_control
         private void dgv_app_list_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            if (e.RowIndex != -1) //if header is clicked, do nothing
+            if (e.RowIndex != -1 && e.ColumnIndex != -1) //if header is clicked, do nothing
             {
                 if (this.dgv_app_list.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {

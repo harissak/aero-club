@@ -42,19 +42,25 @@ namespace UI.User_control
 
         private void Reservation_clicked(object sender, DataGridViewCellEventArgs e)
         {
-            if (this.dgv_running_reserv.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            int test = e.ColumnIndex;
+            int test2 = e.RowIndex;
+            if (e.RowIndex != -1 && e.ColumnIndex != -1)
             {
-                this.dgv_running_reserv.CurrentRow.Selected = true;    
-                
-                this.SelectReservation(Int32.Parse(this.dgv_running_reserv.Rows[e.RowIndex].Cells["Res_ID"].FormattedValue.ToString()),
-                                        Int32.Parse(this.dgv_running_reserv.Rows[e.RowIndex].Cells["mbr_id"].FormattedValue.ToString()),
-                                        Int32.Parse(this.dgv_running_reserv.Rows[e.RowIndex].Cells["app_id"].FormattedValue.ToString()));
-               
-            }
-            else
-            {
+                if (this.dgv_running_reserv.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)//
+                {
+                    this.dgv_running_reserv.CurrentRow.Selected = true;
 
+                    this.SelectReservation(Int32.Parse(this.dgv_running_reserv.Rows[e.RowIndex].Cells["Res_ID"].FormattedValue.ToString()),
+                                            Int32.Parse(this.dgv_running_reserv.Rows[e.RowIndex].Cells["mbr_id"].FormattedValue.ToString()),
+                                            Int32.Parse(this.dgv_running_reserv.Rows[e.RowIndex].Cells["app_id"].FormattedValue.ToString()));
+
+                }
+                else
+                {
+
+                }
             }
+                
         }
 
         private void dgv_running_reserv_CellContentClick(object sender, DataGridViewCellEventArgs e)

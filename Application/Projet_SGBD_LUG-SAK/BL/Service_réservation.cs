@@ -78,9 +78,6 @@ namespace BL
 
         }
 
-
-
-
         public static void Pilot_has_another_reservation (int mbr_id, DateTime date, DateTime hr_deb, DateTime hr_fin)
         {
             List<RES> allReservations = new List<RES>();
@@ -96,18 +93,20 @@ namespace BL
                      || hr_fin >= reservation.Res_hr_deb && hr_fin <= reservation.Res_hr_fin ) {
 
                         throw new Exception("BL_RES_CHECK_RULE_5"); //Same member had already made reservation at same time
-                    } 
-
-
+                    }
                 }
-
-            }
-           
+            } 
         }
 
         public static List<RES> Read_reservations_by_app_id(int app_id)
         {
             return DAL.AccesRÉS.Read_reservation_by_app_id(app_id);
+        }
+
+        public static void Res_Check_APP_Indisp(int app_id, DateTime start, DateTime end)
+        {
+            if (BL.Services_indisponibilité.Check_if_APP_has_indisp(app_id, start, end) == true)
+                throw new Exception("BL_RES_CHECK_RULE_6");
         }
     }
 }

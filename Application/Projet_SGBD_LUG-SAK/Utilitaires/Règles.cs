@@ -16,15 +16,16 @@ namespace Utilitaires
         {
             Règles.dic = new Dictionary<ContexteErreur, Dictionary<String, String>>();
 
-            Règles.AjouterRègle(ContexteErreur.APP, "BL_APP_CHECK_RULE_1", "Imma can't be empty");
-            Règles.AjouterRègle(ContexteErreur.APP, "BL_APP_CHECK_RULE_2", "Impossible to delete A/C classe while reservation(s) are active");
-            Règles.AjouterRègle(ContexteErreur.APP, "BL_APP_CHECK_RULE_3", "Impossible to modify A/C classe while reservation(s) are active");
-            Règles.AjouterRègle(ContexteErreur.MBR, "BL_MBR_CHECK_RULE_1", "Impossible to delete member while reservation(s) are active");
-            Règles.AjouterRègle(ContexteErreur.RES, "BL_RES_CHECK_RULE_1", "Pilot can't do the reservation, cotisation is not valid anymore");
-            Règles.AjouterRègle(ContexteErreur.RES, "BL_RES_CHECK_RULE_2", "Break time of 15 min btw reservation is not respected");
-            Règles.AjouterRègle(ContexteErreur.RES, "BL_RES_CHECK_RULE_3", "Reservation is more than 3 month in future");
-            Règles.AjouterRègle(ContexteErreur.RES, "BL_RES_CHECK_RULE_4", "Reservation is not under the licence expiration + 1 month");
-            Règles.AjouterRègle(ContexteErreur.RES, "BL_RES_CHECK_RULE_5", "It is not possible to make two or more reservation in same time");
+            Règles.AjouterRègle(ContexteErreur.APP, "BL_APP_CHECK_RULE_1", "L'immatriculation de l'appareil doit etre remplie");
+            Règles.AjouterRègle(ContexteErreur.APP, "BL_APP_CHECK_RULE_2", "Impossible de suprimmer l'appareil, une reservation est en cours");
+            Règles.AjouterRègle(ContexteErreur.APP, "BL_APP_CHECK_RULE_3", "Impossible de modifier les classes de l'appareil, une reservation est en cours");
+            Règles.AjouterRègle(ContexteErreur.MBR, "BL_MBR_CHECK_RULE_1", "Impossible de supprimer un membre pilote  qui à au moin une reservation active");
+            Règles.AjouterRègle(ContexteErreur.RES, "BL_RES_CHECK_RULE_1", "Impossible de proceder à la reservation, cotisation périmée");
+            Règles.AjouterRègle(ContexteErreur.RES, "BL_RES_CHECK_RULE_2", "Temps de repos de 15 minutes avant le decollage et/ou apres l'aterissage n'est pas respecté");
+            Règles.AjouterRègle(ContexteErreur.RES, "BL_RES_CHECK_RULE_3", "La reservation est dans plus de trois mois");
+            Règles.AjouterRègle(ContexteErreur.RES, "BL_RES_CHECK_RULE_4", "Impossible de proceder à la reservation, licence périmée");
+            Règles.AjouterRègle(ContexteErreur.RES, "BL_RES_CHECK_RULE_5", "Impossible de proceder à la reservation en même temp qu'une autre");
+            Règles.AjouterRègle(ContexteErreur.RES, "BL_RES_CHECK_RULE_6", "Impossible de proceder à la reservation, appareil indisponible à la periode souhaitée");
 
         }
 

@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesApp.cs" />
+    <Compile Include="AccesIndisp.cs" />
     <Compile Include="AccesLIC.cs" />
     <Compile Include="AccesMBR.cs" />
     <Compile Include="AccesRÉS.cs" />

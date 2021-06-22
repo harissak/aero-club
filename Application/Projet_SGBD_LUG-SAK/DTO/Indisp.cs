@@ -14,6 +14,7 @@ namespace DTO
         public DateTime Indisp_heure_deb { get; set; }
         public DateTime Indisp_jour_fin { get; set; }
         public DateTime dateTime { get; set; }
+        public DateTime Indisp_heure_fin { get; set; }
         public int Indisp_FK_App_ID { get; set; }
     }
 }

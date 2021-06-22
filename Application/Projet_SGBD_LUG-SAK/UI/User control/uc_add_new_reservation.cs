@@ -157,7 +157,8 @@ namespace UI.User_control
                 BL.Service_réservation.Res_Check_Pilot_Lic(mbr_id, jour);
                 BL.Service_réservation.Res_check_cotisation_status(mbr_id);                                   //check if cotisation is up to date
                 BL.Service_réservation.Res_Check_APP_Break_Time(app_id, jour, full_hr_deb, full_hr_fin);     //Check if reservation respect 15 min break between a other reservation
-                BL.Service_réservation.Pilot_has_another_reservation(mbr_id, jour, full_hr_deb, full_hr_fin); // Checke does pilot has another reservation at same time
+                BL.Service_réservation.Pilot_has_another_reservation(mbr_id, jour, full_hr_deb, full_hr_fin); // Check does pilot has another reservation at same time
+                BL.Service_réservation.Res_Check_APP_Indisp(app_id,full_hr_deb,full_hr_fin);                                                 //check if app is under an indisponibility
 
                 retVal = true;
             }

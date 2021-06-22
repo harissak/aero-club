@@ -42,14 +42,18 @@ namespace UI.User_control
             ///in video prof is using LIST VIEW and hier we have DATAGRIDVIEW and method to get ID is different
             /// we can decide to use this one or to change to LISTVIEW
             /// DATAGRIDVIEW doesn't have option "SELECTED INDEX CHANGED"
-
-            if (dgvMbrList.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            if (e.RowIndex != -1 && e.ColumnIndex != -1)
             {
-                dgvMbrList.CurrentRow.Selected = true;
+                if (dgvMbrList.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    dgvMbrList.CurrentRow.Selected = true;
 
-                this.SelectMbr(Int32.Parse( dgvMbrList.Rows[e.RowIndex].Cells["Mbr_ID"].FormattedValue.ToString()));
-                
+                    this.SelectMbr(Int32.Parse(dgvMbrList.Rows[e.RowIndex].Cells["Mbr_ID"].FormattedValue.ToString()));
+
+                }
             }
+
+            
         }
 
         private void dgvMbrList_CellContentClick(object sender, DataGridViewCellEventArgs e)
