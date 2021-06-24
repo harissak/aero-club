@@ -58,8 +58,9 @@ namespace UI
             this.panelMenu.Controls.Add(this.panelHome);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(250, 867);
+            this.panelMenu.Size = new System.Drawing.Size(188, 711);
             this.panelMenu.TabIndex = 0;
             // 
             // btnManual
@@ -71,9 +72,10 @@ namespace UI
             this.btnManual.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnManual.Image = ((System.Drawing.Image)(resources.GetObject("btnManual.Image")));
             this.btnManual.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManual.Location = new System.Drawing.Point(0, 325);
+            this.btnManual.Location = new System.Drawing.Point(0, 265);
+            this.btnManual.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnManual.Name = "btnManual";
-            this.btnManual.Size = new System.Drawing.Size(250, 60);
+            this.btnManual.Size = new System.Drawing.Size(188, 49);
             this.btnManual.TabIndex = 4;
             this.btnManual.Text = "MANUAL";
             this.btnManual.UseVisualStyleBackColor = false;
@@ -88,11 +90,12 @@ namespace UI
             this.btnSettings.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
             this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSettings.Location = new System.Drawing.Point(0, 265);
+            this.btnSettings.Location = new System.Drawing.Point(0, 216);
+            this.btnSettings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(250, 60);
+            this.btnSettings.Size = new System.Drawing.Size(188, 49);
             this.btnSettings.TabIndex = 3;
-            this.btnSettings.Text = "LICENCE";
+            this.btnSettings.Text = "LICENCES";
             this.btnSettings.UseVisualStyleBackColor = false;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
@@ -105,11 +108,12 @@ namespace UI
             this.btnAiroPlane.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAiroPlane.Image = ((System.Drawing.Image)(resources.GetObject("btnAiroPlane.Image")));
             this.btnAiroPlane.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAiroPlane.Location = new System.Drawing.Point(0, 205);
+            this.btnAiroPlane.Location = new System.Drawing.Point(0, 167);
+            this.btnAiroPlane.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAiroPlane.Name = "btnAiroPlane";
-            this.btnAiroPlane.Size = new System.Drawing.Size(250, 60);
+            this.btnAiroPlane.Size = new System.Drawing.Size(188, 49);
             this.btnAiroPlane.TabIndex = 2;
-            this.btnAiroPlane.Text = "AIRPLANE";
+            this.btnAiroPlane.Text = "AIRCRAFTS";
             this.btnAiroPlane.UseVisualStyleBackColor = false;
             this.btnAiroPlane.Click += new System.EventHandler(this.btnAiroPlane_Click);
             // 
@@ -122,11 +126,12 @@ namespace UI
             this.btnReservation.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnReservation.Image = ((System.Drawing.Image)(resources.GetObject("btnReservation.Image")));
             this.btnReservation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReservation.Location = new System.Drawing.Point(0, 145);
+            this.btnReservation.Location = new System.Drawing.Point(0, 118);
+            this.btnReservation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReservation.Name = "btnReservation";
-            this.btnReservation.Size = new System.Drawing.Size(250, 60);
+            this.btnReservation.Size = new System.Drawing.Size(188, 49);
             this.btnReservation.TabIndex = 1;
-            this.btnReservation.Text = "RESERVATION";
+            this.btnReservation.Text = "RESERVATIONS";
             this.btnReservation.UseVisualStyleBackColor = false;
             this.btnReservation.Click += new System.EventHandler(this.btnReservation_Click);
             // 
@@ -139,9 +144,10 @@ namespace UI
             this.btnMembers.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnMembers.Image = ((System.Drawing.Image)(resources.GetObject("btnMembers.Image")));
             this.btnMembers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMembers.Location = new System.Drawing.Point(0, 85);
+            this.btnMembers.Location = new System.Drawing.Point(0, 69);
+            this.btnMembers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMembers.Name = "btnMembers";
-            this.btnMembers.Size = new System.Drawing.Size(250, 60);
+            this.btnMembers.Size = new System.Drawing.Size(188, 49);
             this.btnMembers.TabIndex = 0;
             this.btnMembers.Text = "MEMBERS";
             this.btnMembers.UseVisualStyleBackColor = false;
@@ -153,8 +159,9 @@ namespace UI
             this.panelHome.Controls.Add(this.lblAirClub);
             this.panelHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHome.Location = new System.Drawing.Point(0, 0);
+            this.panelHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelHome.Name = "panelHome";
-            this.panelHome.Size = new System.Drawing.Size(250, 85);
+            this.panelHome.Size = new System.Drawing.Size(188, 69);
             this.panelHome.TabIndex = 0;
             this.panelHome.Click += new System.EventHandler(this.panelHome_click);
             // 
@@ -163,11 +170,12 @@ namespace UI
             this.lblAirClub.AutoSize = true;
             this.lblAirClub.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAirClub.ForeColor = System.Drawing.Color.White;
-            this.lblAirClub.Location = new System.Drawing.Point(33, 23);
+            this.lblAirClub.Location = new System.Drawing.Point(28, 19);
+            this.lblAirClub.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAirClub.Name = "lblAirClub";
-            this.lblAirClub.Size = new System.Drawing.Size(171, 29);
+            this.lblAirClub.Size = new System.Drawing.Size(108, 25);
             this.lblAirClub.TabIndex = 0;
-            this.lblAirClub.Text = "AirClub Name";
+            this.lblAirClub.Text = "ULM EFPL";
             this.lblAirClub.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblAirClub.Click += new System.EventHandler(this.panelHome_click);
             // 
@@ -189,9 +197,10 @@ namespace UI
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(179)))), ((int)(((byte)(213)))));
             this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(250, 0);
+            this.panelTitleBar.Location = new System.Drawing.Point(188, 0);
+            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1378, 85);
+            this.panelTitleBar.Size = new System.Drawing.Size(1034, 69);
             this.panelTitleBar.TabIndex = 1;
             // 
             // lblTitle
@@ -199,9 +208,10 @@ namespace UI
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(492, 23);
+            this.lblTitle.Location = new System.Drawing.Point(369, 19);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(150, 48);
+            this.lblTitle.Size = new System.Drawing.Size(123, 39);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "HOME";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -210,20 +220,22 @@ namespace UI
             // 
             this.panelHomeScreen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelHomeScreen.BackgroundImage")));
             this.panelHomeScreen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelHomeScreen.Location = new System.Drawing.Point(250, 85);
+            this.panelHomeScreen.Location = new System.Drawing.Point(188, 69);
+            this.panelHomeScreen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelHomeScreen.Name = "panelHomeScreen";
-            this.panelHomeScreen.Size = new System.Drawing.Size(1378, 782);
+            this.panelHomeScreen.Size = new System.Drawing.Size(1034, 642);
             this.panelHomeScreen.TabIndex = 2;
             // 
             // Main_menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1628, 867);
+            this.ClientSize = new System.Drawing.Size(1222, 711);
             this.Controls.Add(this.panelHomeScreen);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
-            this.MinimumSize = new System.Drawing.Size(1646, 914);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(1238, 750);
             this.Name = "Main_menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main_menu";

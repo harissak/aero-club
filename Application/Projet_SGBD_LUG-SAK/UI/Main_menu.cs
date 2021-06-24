@@ -44,7 +44,7 @@ namespace UI
         private void btnAiroPlane_Click(object sender, EventArgs e)
         {
             this.OpenNewWindow(new AiroplaneForm());
-            this.lblTitle.Text = "AIROPLANE";
+            this.lblTitle.Text = "AIRCRAFTS";
             this.btnAiroPlane.BackColor = Color.FromArgb(88, 214, 141);
             this.panelTitleBar.BackColor = Color.FromArgb(88, 214, 141);
             btnColors(this.btnReservation, this.btnSettings, this.btnManual, this.btnMembers, this.btnReservation);
@@ -53,7 +53,7 @@ namespace UI
         private void btnSettings_Click(object sender, EventArgs e)
         {
             this.OpenNewWindow(new LicenceForm());
-            this.lblTitle.Text = "SETTINGS";
+            this.lblTitle.Text = "LICENCES";
             this.btnSettings.BackColor = Color.FromArgb(93, 173, 226);
             this.panelTitleBar.BackColor = Color.FromArgb(93, 173, 226);
             btnColors(this.btnReservation, this.btnMembers, this.btnManual, this.btnAiroPlane, this.btnReservation);
@@ -63,7 +63,7 @@ namespace UI
         private void btnManual_Click(object sender, EventArgs e)
         {
             this.OpenNewWindow(new ManualForm());
-            this.lblTitle.Text = "MANUEL";
+            this.lblTitle.Text = "MANUAL";
             this.btnManual.BackColor = Color.FromArgb(165, 105, 189);
             this.panelTitleBar.BackColor = Color.FromArgb(165, 105, 189);
             btnColors(this.btnReservation, this.btnSettings, this.btnMembers, this.btnAiroPlane, this.btnReservation);

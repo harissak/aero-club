@@ -12,6 +12,7 @@ namespace UI
 {
     public partial class AiroplaneForm : Form
     {
+       
         public AiroplaneForm()
         {
             InitializeComponent();
@@ -43,14 +44,12 @@ namespace UI
             this.uc_modify_aircraft1.ReadSelectedAircraft(appID);
         }
 
-        private void AiroplaneForm_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void uc_modify_aircraft1_RefreshApp()
         {
             this.uc_appList1.Read_all_app();
         }
+
+       
     }
 }

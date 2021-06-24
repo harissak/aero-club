@@ -52,7 +52,7 @@ namespace DAL
                 liste = connection.Query<MBR>("select_mbr_by_id",
                                         param: new { mbr_id = mbr_id},
                                         commandType: CommandType.StoredProcedure).AsList<MBR>();
-                
+                if(liste.Count > 0)
                     retval = liste[0];
 
             }
