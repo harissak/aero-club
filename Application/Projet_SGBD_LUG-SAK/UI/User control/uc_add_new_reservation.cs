@@ -173,5 +173,10 @@ namespace UI.User_control
             return retVal;
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

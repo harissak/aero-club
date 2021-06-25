@@ -17,6 +17,8 @@ namespace UI
         {
             InitializeComponent();
             this.uc_add_aircraft1.Visible = false;
+            
+
         }
 
         private void uc_appList1_Load(object sender, EventArgs e)
@@ -28,14 +30,11 @@ namespace UI
         {
             this.uc_add_aircraft1.Visible = true;
             this.uc_add_aircraft1.Enabled = true;
-            this.bt_cancel_add.Visible = true;
-            this.uc_modify_aircraft1.Visible = false;
         }
 
         private void bt_cancel_add_Click(object sender, EventArgs e)
         {
             this.uc_add_aircraft1.Visible = false;
-            this.bt_cancel_add.Visible = false;
             this.uc_modify_aircraft1.Visible = true;
         }
 
@@ -50,6 +49,14 @@ namespace UI
             this.uc_appList1.Read_all_app();
         }
 
-       
+        private void AiroplaneForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uc_add_aircraft1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

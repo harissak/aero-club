@@ -31,11 +31,6 @@ namespace UI.User_control
         {
             this.components = new System.ComponentModel.Container();
             this.dgvMbrList = new System.Windows.Forms.DataGridView();
-            this.bs_members_list = new System.Windows.Forms.BindingSource(this.components);
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.tbMemberID = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tbMemberName = new System.Windows.Forms.TextBox();
             this.Mbr_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mbrnomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mbrprenomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +47,11 @@ namespace UI.User_control
             this.mbrestpilDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.mbrestadmDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.mbrpasswDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bs_members_list = new System.Windows.Forms.BindingSource(this.components);
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.tbMemberID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbMemberName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMbrList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs_members_list)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +59,7 @@ namespace UI.User_control
             // dgvMbrList
             // 
             this.dgvMbrList.AutoGenerateColumns = false;
+            this.dgvMbrList.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvMbrList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMbrList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Mbr_ID,
@@ -78,57 +79,15 @@ namespace UI.User_control
             this.mbrestadmDataGridViewCheckBoxColumn,
             this.mbrpasswDataGridViewTextBoxColumn});
             this.dgvMbrList.DataSource = this.bs_members_list;
-            this.dgvMbrList.Location = new System.Drawing.Point(4, 95);
-            this.dgvMbrList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvMbrList.Location = new System.Drawing.Point(5, 117);
+            this.dgvMbrList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvMbrList.Name = "dgvMbrList";
             this.dgvMbrList.RowHeadersWidth = 51;
             this.dgvMbrList.RowTemplate.Height = 24;
-            this.dgvMbrList.Size = new System.Drawing.Size(640, 495);
+            this.dgvMbrList.Size = new System.Drawing.Size(853, 609);
             this.dgvMbrList.TabIndex = 0;
             this.dgvMbrList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemCliked);
             this.dgvMbrList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMbrList_CellContentClick);
-            // 
-            // bs_members_list
-            // 
-            this.bs_members_list.DataSource = typeof(DTO.MBR);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(324, 26);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(87, 26);
-            this.btnSearch.TabIndex = 12;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // tbMemberID
-            // 
-            this.tbMemberID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMemberID.Location = new System.Drawing.Point(140, 46);
-            this.tbMemberID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tbMemberID.Name = "tbMemberID";
-            this.tbMemberID.Size = new System.Drawing.Size(160, 23);
-            this.tbMemberID.TabIndex = 16;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(102, 39);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 11;
-            // 
-            // tbMemberName
-            // 
-            this.tbMemberName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMemberName.Location = new System.Drawing.Point(140, 11);
-            this.tbMemberName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tbMemberName.Name = "tbMemberName";
-            this.tbMemberName.Size = new System.Drawing.Size(160, 23);
-            this.tbMemberName.TabIndex = 15;
             // 
             // Mbr_ID
             // 
@@ -259,18 +218,63 @@ namespace UI.User_control
             this.mbrpasswDataGridViewTextBoxColumn.Visible = false;
             this.mbrpasswDataGridViewTextBoxColumn.Width = 125;
             // 
+            // bs_members_list
+            // 
+            this.bs_members_list.DataSource = typeof(DTO.MBR);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearch.Font = new System.Drawing.Font("Tempus Sans ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSearch.Location = new System.Drawing.Point(506, 28);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(124, 37);
+            this.btnSearch.TabIndex = 12;
+            this.btnSearch.Text = "SEARCH";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // tbMemberID
+            // 
+            this.tbMemberID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMemberID.Location = new System.Drawing.Point(187, 57);
+            this.tbMemberID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbMemberID.Name = "tbMemberID";
+            this.tbMemberID.Size = new System.Drawing.Size(212, 26);
+            this.tbMemberID.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(136, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 17);
+            this.label1.TabIndex = 11;
+            // 
+            // tbMemberName
+            // 
+            this.tbMemberName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMemberName.Location = new System.Drawing.Point(187, 14);
+            this.tbMemberName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbMemberName.Name = "tbMemberName";
+            this.tbMemberName.Size = new System.Drawing.Size(212, 26);
+            this.tbMemberName.TabIndex = 15;
+            // 
             // uc_mbrList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.tbMemberID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbMemberName);
             this.Controls.Add(this.dgvMbrList);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "uc_mbrList";
-            this.Size = new System.Drawing.Size(646, 593);
+            this.Size = new System.Drawing.Size(861, 730);
             this.Load += new System.EventHandler(this.ucRech_mbr);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMbrList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs_members_list)).EndInit();

@@ -103,5 +103,9 @@ namespace UI.User_control
        
         }
 
+        private void uc_md_del_reservation_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

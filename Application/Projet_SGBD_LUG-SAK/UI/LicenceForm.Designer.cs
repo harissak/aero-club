@@ -30,13 +30,13 @@ namespace UI
         private void InitializeComponent()
         {
             this.panelSettingsScreen = new System.Windows.Forms.Panel();
-            this.tab_settings_page2 = new System.Windows.Forms.TabPage();
-            this.setting_uc_licenses_list = new UI.User_control.uc_licenses_list();
-            this.uc_licenses_mod1 = new UI.User_control.uc_licenses_mod();
             this.tab_settings = new System.Windows.Forms.TabControl();
+            this.tab_settings_page2 = new System.Windows.Forms.TabPage();
+            this.uc_licenses_mod1 = new UI.User_control.uc_licenses_mod();
+            this.setting_uc_licenses_list = new UI.User_control.uc_licenses_list();
             this.panelSettingsScreen.SuspendLayout();
-            this.tab_settings_page2.SuspendLayout();
             this.tab_settings.SuspendLayout();
+            this.tab_settings_page2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSettingsScreen
@@ -48,6 +48,17 @@ namespace UI
             this.panelSettingsScreen.Name = "panelSettingsScreen";
             this.panelSettingsScreen.Size = new System.Drawing.Size(1357, 847);
             this.panelSettingsScreen.TabIndex = 0;
+            // 
+            // tab_settings
+            // 
+            this.tab_settings.Controls.Add(this.tab_settings_page2);
+            this.tab_settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tab_settings.Location = new System.Drawing.Point(5, 0);
+            this.tab_settings.Margin = new System.Windows.Forms.Padding(4);
+            this.tab_settings.Name = "tab_settings";
+            this.tab_settings.SelectedIndex = 0;
+            this.tab_settings.Size = new System.Drawing.Size(1352, 832);
+            this.tab_settings.TabIndex = 0;
             // 
             // tab_settings_page2
             // 
@@ -62,46 +73,35 @@ namespace UI
             this.tab_settings_page2.Text = "Flight Licenses Management";
             this.tab_settings_page2.UseVisualStyleBackColor = true;
             // 
+            // uc_licenses_mod1
+            // 
+            this.uc_licenses_mod1.Location = new System.Drawing.Point(834, 5);
+            this.uc_licenses_mod1.Margin = new System.Windows.Forms.Padding(5);
+            this.uc_licenses_mod1.Name = "uc_licenses_mod1";
+            this.uc_licenses_mod1.Size = new System.Drawing.Size(486, 763);
+            this.uc_licenses_mod1.TabIndex = 1;
+            // 
             // setting_uc_licenses_list
             // 
             this.setting_uc_licenses_list.Location = new System.Drawing.Point(0, 9);
             this.setting_uc_licenses_list.Margin = new System.Windows.Forms.Padding(5);
             this.setting_uc_licenses_list.Name = "setting_uc_licenses_list";
-            this.setting_uc_licenses_list.Size = new System.Drawing.Size(909, 737);
+            this.setting_uc_licenses_list.Size = new System.Drawing.Size(802, 737);
             this.setting_uc_licenses_list.TabIndex = 0;
             this.setting_uc_licenses_list.SelectLic += new UI.delSelectLIC(this.setting_uc_licenses_list_SelectLic);
             // 
-            // uc_licenses_mod1
-            // 
-            this.uc_licenses_mod1.Location = new System.Drawing.Point(903, 48);
-            this.uc_licenses_mod1.Margin = new System.Windows.Forms.Padding(5);
-            this.uc_licenses_mod1.Name = "uc_licenses_mod1";
-            this.uc_licenses_mod1.Size = new System.Drawing.Size(415, 698);
-            this.uc_licenses_mod1.TabIndex = 1;
-            // 
-            // tab_settings
-            // 
-            this.tab_settings.Controls.Add(this.tab_settings_page2);
-            this.tab_settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tab_settings.Location = new System.Drawing.Point(5, 0);
-            this.tab_settings.Margin = new System.Windows.Forms.Padding(4);
-            this.tab_settings.Name = "tab_settings";
-            this.tab_settings.SelectedIndex = 0;
-            this.tab_settings.Size = new System.Drawing.Size(1352, 832);
-            this.tab_settings.TabIndex = 0;
-            // 
-            // SettingsForm
+            // LicenceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1357, 847);
             this.Controls.Add(this.panelSettingsScreen);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "SettingsForm";
+            this.Name = "LicenceForm";
             this.Text = "SettingsForm";
             this.panelSettingsScreen.ResumeLayout(false);
-            this.tab_settings_page2.ResumeLayout(false);
             this.tab_settings.ResumeLayout(false);
+            this.tab_settings_page2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

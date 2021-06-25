@@ -80,5 +80,7 @@ namespace UI.User_control
         {
             this.bs_apps.DataSource = BL.Services_appareils.Read_all_app();
         }
+
+       
     }
 }

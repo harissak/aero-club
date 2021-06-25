@@ -80,10 +80,10 @@ namespace UI
             // 
             // cherche_reservations
             // 
-            this.cherche_reservations.Location = new System.Drawing.Point(4, 4);
+            this.cherche_reservations.Location = new System.Drawing.Point(45, 20);
             this.cherche_reservations.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.cherche_reservations.Name = "cherche_reservations";
-            this.cherche_reservations.Size = new System.Drawing.Size(707, 671);
+            this.cherche_reservations.Size = new System.Drawing.Size(1124, 685);
             this.cherche_reservations.TabIndex = 2;
             this.cherche_reservations.SelectReservation += new UI.delSelectReservation(this.SelectReservationID);
             // 
@@ -101,10 +101,10 @@ namespace UI
             // 
             // uc_add_new_reservation1
             // 
-            this.uc_add_new_reservation1.Location = new System.Drawing.Point(7, 6);
+            this.uc_add_new_reservation1.Location = new System.Drawing.Point(118, 56);
             this.uc_add_new_reservation1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uc_add_new_reservation1.Name = "uc_add_new_reservation1";
-            this.uc_add_new_reservation1.Size = new System.Drawing.Size(444, 508);
+            this.uc_add_new_reservation1.Size = new System.Drawing.Size(852, 558);
             this.uc_add_new_reservation1.TabIndex = 5;
             this.uc_add_new_reservation1.refreshList += new UI.delRefresh(this.RefreschReservationList);
             // 
@@ -121,10 +121,10 @@ namespace UI
             // 
             // md_del_reservation
             // 
-            this.md_del_reservation.Location = new System.Drawing.Point(0, 0);
+            this.md_del_reservation.Location = new System.Drawing.Point(77, 5);
             this.md_del_reservation.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.md_del_reservation.Name = "md_del_reservation";
-            this.md_del_reservation.Size = new System.Drawing.Size(467, 740);
+            this.md_del_reservation.Size = new System.Drawing.Size(995, 740);
             this.md_del_reservation.TabIndex = 0;
             this.md_del_reservation.refreshList += new UI.delRefresh(this.RefreschReservationList);
             // 

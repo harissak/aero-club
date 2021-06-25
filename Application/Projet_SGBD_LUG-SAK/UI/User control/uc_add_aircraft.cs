@@ -79,5 +79,10 @@ namespace UI.User_control
             this.cb_add_app_class.SelectedIndex = 0;
             this.tb_add_app_descr.Text = "";
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+        }
     }
 }

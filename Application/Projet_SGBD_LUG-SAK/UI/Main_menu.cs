@@ -74,7 +74,7 @@ namespace UI
         {
             if (this.currentForm != null)
                 this.currentForm.Close();
-            this.lblTitle.Text = "HOME";
+            this.lblTitle.Text = "ULM EFPL";
             this.panelTitleBar.BackColor = Color.FromArgb(127, 179, 213);
             btnColors(this.btnReservation, this.btnSettings, this.btnManual, this.btnAiroPlane, this.btnMembers);
 
@@ -111,6 +111,11 @@ namespace UI
         }
 
         private void Main_menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelHome_Paint(object sender, PaintEventArgs e)
         {
 
         }

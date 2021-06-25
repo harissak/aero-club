@@ -32,6 +32,7 @@ namespace UI.User_control
             this.components = new System.ComponentModel.Container();
             this.addNewMember = new System.Windows.Forms.Button();
             this.dt_Ins_cot_val = new System.Windows.Forms.DateTimePicker();
+            this.bs_new_member = new System.Windows.Forms.BindingSource(this.components);
             this.tb_Ins_TeleFixe = new System.Windows.Forms.TextBox();
             this.tb_Ins_GSM = new System.Windows.Forms.TextBox();
             this.tb_Ins_Password = new System.Windows.Forms.TextBox();
@@ -63,19 +64,22 @@ namespace UI.User_control
             this.label17 = new System.Windows.Forms.Label();
             this.cb_Ins_is_pilot = new System.Windows.Forms.CheckBox();
             this.cb_Ins_is_admin = new System.Windows.Forms.CheckBox();
-            this.bs_new_member = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bs_new_member)).BeginInit();
             this.SuspendLayout();
             // 
             // addNewMember
             // 
-            this.addNewMember.Location = new System.Drawing.Point(131, 639);
+            this.addNewMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.addNewMember.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.addNewMember.Font = new System.Drawing.Font("Tempus Sans ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addNewMember.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.addNewMember.Location = new System.Drawing.Point(130, 635);
             this.addNewMember.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addNewMember.Name = "addNewMember";
-            this.addNewMember.Size = new System.Drawing.Size(201, 33);
+            this.addNewMember.Size = new System.Drawing.Size(209, 37);
             this.addNewMember.TabIndex = 98;
-            this.addNewMember.Text = "ADD NEW MEMBER";
-            this.addNewMember.UseVisualStyleBackColor = true;
+            this.addNewMember.Text = "Add new member";
+            this.addNewMember.UseVisualStyleBackColor = false;
             this.addNewMember.Click += new System.EventHandler(this.addNewMember_Click);
             // 
             // dt_Ins_cot_val
@@ -88,6 +92,10 @@ namespace UI.User_control
             this.dt_Ins_cot_val.Name = "dt_Ins_cot_val";
             this.dt_Ins_cot_val.Size = new System.Drawing.Size(137, 30);
             this.dt_Ins_cot_val.TabIndex = 97;
+            // 
+            // bs_new_member
+            // 
+            this.bs_new_member.DataSource = typeof(DTO.MBR);
             // 
             // tb_Ins_TeleFixe
             // 
@@ -417,10 +425,6 @@ namespace UI.User_control
             this.cb_Ins_is_admin.Size = new System.Drawing.Size(18, 17);
             this.cb_Ins_is_admin.TabIndex = 100;
             this.cb_Ins_is_admin.UseVisualStyleBackColor = true;
-            // 
-            // bs_new_member
-            // 
-            this.bs_new_member.DataSource = typeof(DTO.MBR);
             // 
             // uc_addNewMember
             // 

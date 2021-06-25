@@ -35,72 +35,75 @@ namespace UI.User_control
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_running_reserv = new System.Windows.Forms.DataGridView();
+            this.cb_uc_rechercher_aeronef = new System.Windows.Forms.ComboBox();
             this.Res_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reshrdebDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reshrfinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name_of_mbr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mbr_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.app_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resestannuleDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.resestprevenuDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.bs_reservation_list = new System.Windows.Forms.BindingSource(this.components);
-            this.cb_uc_rechercher_aeronef = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_running_reserv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs_reservation_list)).BeginInit();
             this.SuspendLayout();
             // 
             // tb_uc_recherch_res_id
             // 
-            this.tb_uc_recherch_res_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_uc_recherch_res_id.Location = new System.Drawing.Point(281, 25);
+            this.tb_uc_recherch_res_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_uc_recherch_res_id.Location = new System.Drawing.Point(292, 20);
             this.tb_uc_recherch_res_id.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tb_uc_recherch_res_id.Name = "tb_uc_recherch_res_id";
-            this.tb_uc_recherch_res_id.Size = new System.Drawing.Size(100, 26);
+            this.tb_uc_recherch_res_id.Size = new System.Drawing.Size(127, 30);
             this.tb_uc_recherch_res_id.TabIndex = 1;
             // 
             // bt_uc_res_search
             // 
-            this.bt_uc_res_search.Location = new System.Drawing.Point(549, 2);
+            this.bt_uc_res_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.bt_uc_res_search.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bt_uc_res_search.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_uc_res_search.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.bt_uc_res_search.Location = new System.Drawing.Point(683, 37);
             this.bt_uc_res_search.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.bt_uc_res_search.Name = "bt_uc_res_search";
             this.bt_uc_res_search.Size = new System.Drawing.Size(145, 38);
             this.bt_uc_res_search.TabIndex = 3;
             this.bt_uc_res_search.Text = "SEARCH";
-            this.bt_uc_res_search.UseVisualStyleBackColor = true;
+            this.bt_uc_res_search.UseVisualStyleBackColor = false;
             this.bt_uc_res_search.Click += new System.EventHandler(this.bt_uc_res_search_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 62);
+            this.label1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 73);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 25);
+            this.label1.Size = new System.Drawing.Size(126, 28);
             this.label1.TabIndex = 4;
             this.label1.Text = "AÉRONEF:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(20, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 41);
+            this.label2.Size = new System.Drawing.Size(183, 52);
             this.label2.TabIndex = 5;
             this.label2.Text = "NUMMERO DE RÉSÉRVATION:";
             // 
             // dgv_running_reserv
             // 
             this.dgv_running_reserv.AutoGenerateColumns = false;
+            this.dgv_running_reserv.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgv_running_reserv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_running_reserv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Res_ID,
             this.resdateDataGridViewTextBoxColumn,
             this.reshrdebDataGridViewTextBoxColumn,
             this.reshrfinDataGridViewTextBoxColumn,
-            this.name_of_mbr,
             this.mbr_id,
             this.app_id,
             this.resestannuleDataGridViewCheckBoxColumn,
@@ -112,10 +115,19 @@ namespace UI.User_control
             this.dgv_running_reserv.Name = "dgv_running_reserv";
             this.dgv_running_reserv.RowHeadersWidth = 51;
             this.dgv_running_reserv.RowTemplate.Height = 24;
-            this.dgv_running_reserv.Size = new System.Drawing.Size(689, 616);
+            this.dgv_running_reserv.Size = new System.Drawing.Size(1078, 533);
             this.dgv_running_reserv.TabIndex = 6;
             this.dgv_running_reserv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Reservation_clicked);
             this.dgv_running_reserv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_running_reserv_CellContentClick);
+            // 
+            // cb_uc_rechercher_aeronef
+            // 
+            this.cb_uc_rechercher_aeronef.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_uc_rechercher_aeronef.FormattingEnabled = true;
+            this.cb_uc_rechercher_aeronef.Location = new System.Drawing.Point(292, 72);
+            this.cb_uc_rechercher_aeronef.Name = "cb_uc_rechercher_aeronef";
+            this.cb_uc_rechercher_aeronef.Size = new System.Drawing.Size(206, 33);
+            this.cb_uc_rechercher_aeronef.TabIndex = 7;
             // 
             // Res_ID
             // 
@@ -153,18 +165,10 @@ namespace UI.User_control
             this.reshrfinDataGridViewTextBoxColumn.ReadOnly = true;
             this.reshrfinDataGridViewTextBoxColumn.Width = 125;
             // 
-            // name_of_mbr
-            // 
-            this.name_of_mbr.HeaderText = "Nom Prénom";
-            this.name_of_mbr.MinimumWidth = 6;
-            this.name_of_mbr.Name = "name_of_mbr";
-            this.name_of_mbr.ReadOnly = true;
-            this.name_of_mbr.Width = 125;
-            // 
             // mbr_id
             // 
             this.mbr_id.DataPropertyName = "Res_FK_Mbr_ID";
-            this.mbr_id.HeaderText = "Res_FK_Mbr_ID";
+            this.mbr_id.HeaderText = "Member ID";
             this.mbr_id.MinimumWidth = 6;
             this.mbr_id.Name = "mbr_id";
             this.mbr_id.Width = 125;
@@ -172,7 +176,7 @@ namespace UI.User_control
             // app_id
             // 
             this.app_id.DataPropertyName = "Res_FK_App_ID";
-            this.app_id.HeaderText = "Res_FK_App_ID";
+            this.app_id.HeaderText = "APP ID";
             this.app_id.MinimumWidth = 6;
             this.app_id.Name = "app_id";
             this.app_id.Width = 125;
@@ -199,14 +203,6 @@ namespace UI.User_control
             // 
             this.bs_reservation_list.DataSource = typeof(DTO.RES);
             // 
-            // cb_uc_rechercher_aeronef
-            // 
-            this.cb_uc_rechercher_aeronef.FormattingEnabled = true;
-            this.cb_uc_rechercher_aeronef.Location = new System.Drawing.Point(281, 62);
-            this.cb_uc_rechercher_aeronef.Name = "cb_uc_rechercher_aeronef";
-            this.cb_uc_rechercher_aeronef.Size = new System.Drawing.Size(206, 24);
-            this.cb_uc_rechercher_aeronef.TabIndex = 7;
-            // 
             // uc_reservations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -219,7 +215,7 @@ namespace UI.User_control
             this.Controls.Add(this.tb_uc_recherch_res_id);
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "uc_reservations";
-            this.Size = new System.Drawing.Size(697, 741);
+            this.Size = new System.Drawing.Size(1091, 723);
             this.Load += new System.EventHandler(this.LoadAllReservation);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_running_reserv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs_reservation_list)).EndInit();
@@ -235,15 +231,14 @@ namespace UI.User_control
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgv_running_reserv;
         private System.Windows.Forms.BindingSource bs_reservation_list;
+        private System.Windows.Forms.ComboBox cb_uc_rechercher_aeronef;
         private System.Windows.Forms.DataGridViewTextBoxColumn Res_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn resdateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn reshrdebDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn reshrfinDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name_of_mbr;
         private System.Windows.Forms.DataGridViewTextBoxColumn mbr_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn app_id;
         private System.Windows.Forms.DataGridViewCheckBoxColumn resestannuleDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn resestprevenuDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.ComboBox cb_uc_rechercher_aeronef;
     }
 }
