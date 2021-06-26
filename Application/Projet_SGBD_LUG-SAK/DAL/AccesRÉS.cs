@@ -26,7 +26,8 @@ namespace DAL
                                                 param: new { reservation_id = RES_ID },
                                                 commandType: CommandType.StoredProcedure).AsList<RES>();
 
-                retval = liste[0];
+                if(liste.Count > 0)
+                    retval = liste[0];
             }
             return retval;
         }

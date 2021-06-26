@@ -42,19 +42,19 @@ namespace UI
 
             RuleFor(mbr => mbr.Mbr_adrs).
                 NotEmpty().
-                WithMessage("L'adresse n'est pas correcte");
+                WithMessage("L'adresse est obligatoire");
 
             RuleFor(mbr => mbr.Mbr_gsm).
                 Must(TextChanged).
-                WithMessage("Only numbers are allowed").
+                WithMessage("GSM : Only numbers are allowed").
                 Length(9,25).
-                WithMessage("Not correct format");
+                WithMessage("GSM: Not correct format");
 
             RuleFor(mbr => mbr.Mbr_fix_tel).
               Must(TextChanged).
-              WithMessage("Only numbers are allowed").
-                Length(9, 25).
-                WithMessage("Not correct format");
+              WithMessage("Phone: Only numbers are allowed").
+                Length(0, 25).
+                WithMessage("Phone: Not correct format");
 
             RuleFor(mbr => mbr.Mbr_naiss).
               Must(ValidationDateDeNaissance).

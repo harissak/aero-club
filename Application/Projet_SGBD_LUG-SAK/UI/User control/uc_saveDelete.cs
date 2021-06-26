@@ -29,29 +29,37 @@ namespace UI.User_control
 
         private void deleteMember_Click(object sender, EventArgs e)
         {
-
-            try
+            if (MessageBox.Show("Vous confirmez la suppression ? ",
+                               "Confirmation",
+                                MessageBoxButtons.OKCancel,
+                                MessageBoxIcon.Question) == DialogResult.OK)
             {
+                try
+                {
 
-            //delete License if present to keep db coherent
-            if(BL.Services_membre.search_member_by_ID(member_id).Mbr_est_pil == true)
-                BL.Services_licenses.Delete_Lic(member_id);
+                    //delete License if present to keep db coherent
+                    if (BL.Services_membre.search_member_by_ID(member_id).Mbr_est_pil == true)
+                        BL.Services_licenses.Delete_Lic(member_id);
 
-            BL.Services_membre.Delete_member(member_id);
-            
-            MessageBox.Show("You have successfuly deleted member with MEMBER ID = " + member_id.ToString());
-            bsMember.Clear();
-            refreshMbrList();
+                    BL.Services_membre.Delete_member(member_id);
+
+                    MessageBox.Show("You have successfuly deleted member with MEMBER ID = " + member_id.ToString());
+                    bsMember.Clear();
+                    refreshMbrList();
 
 
-            } catch (Exception ex)
-            {
-                MessageBox.Show(Utilitaires.Règles.DécodeMessage(ContexteErreur.MBR, ex.Message),
-                               "Avertissement",
-                               MessageBoxButtons.OK
-                               , MessageBoxIcon.Error);
-
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(Utilitaires.Règles.DécodeMessage(ContexteErreur.MBR, ex.Message),
+                                   "Avertissement",
+                                   MessageBoxButtons.OK
+                                   , MessageBoxIcon.Error);
+                }
             }
+
+
+            
 
         }
 

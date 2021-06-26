@@ -125,16 +125,21 @@ namespace DAL
 
         static public LIC Read_Lic_By_FK_MBRID(int mbr_id)
         {
-            List<LIC> retval;
+            List<LIC> liste;
+            LIC retval = new LIC();
+            
 
             using (IDbConnection connection = DAL.Utilitaire.ConnectionToLocalServer())
             {
-                retval = connection.Query<LIC>("sp_select_lic_by_id_owner",
+                liste = connection.Query<LIC>("sp_select_lic_by_id_owner",
                                                 param: new { LIC_FK_MBR = mbr_id },
                                                 commandType: CommandType.StoredProcedure).AsList<LIC>();
-            }
 
-            return retval[0];
+                if (liste.Count > 0)
+                    retval = liste[0];
+            }
+            
+            return retval;
         }
     }
 }

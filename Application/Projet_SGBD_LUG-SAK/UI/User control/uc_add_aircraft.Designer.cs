@@ -41,23 +41,31 @@ namespace UI.User_control
             lb_add_app_class = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
+            // lb_add_app_class
+            // 
+            lb_add_app_class.AutoSize = true;
+            lb_add_app_class.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lb_add_app_class.Location = new System.Drawing.Point(2, 76);
+            lb_add_app_class.Name = "lb_add_app_class";
+            lb_add_app_class.Size = new System.Drawing.Size(74, 23);
+            lb_add_app_class.TabIndex = 3;
+            lb_add_app_class.Text = "Classe:";
+            // 
             // tb_add_app_imma
             // 
             this.tb_add_app_imma.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_add_app_imma.Location = new System.Drawing.Point(220, 4);
-            this.tb_add_app_imma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_add_app_imma.Location = new System.Drawing.Point(165, 3);
             this.tb_add_app_imma.Name = "tb_add_app_imma";
-            this.tb_add_app_imma.Size = new System.Drawing.Size(132, 30);
+            this.tb_add_app_imma.Size = new System.Drawing.Size(100, 26);
             this.tb_add_app_imma.TabIndex = 0;
             // 
             // lb_add_app_imma
             // 
             this.lb_add_app_imma.AutoSize = true;
             this.lb_add_app_imma.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_add_app_imma.Location = new System.Drawing.Point(2, 4);
-            this.lb_add_app_imma.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_add_app_imma.Location = new System.Drawing.Point(2, 3);
             this.lb_add_app_imma.Name = "lb_add_app_imma";
-            this.lb_add_app_imma.Size = new System.Drawing.Size(193, 28);
+            this.lb_add_app_imma.Size = new System.Drawing.Size(155, 23);
             this.lb_add_app_imma.TabIndex = 1;
             this.lb_add_app_imma.Text = "Immatriculation:";
             // 
@@ -66,42 +74,28 @@ namespace UI.User_control
             this.cb_add_app_class.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_add_app_class.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_add_app_class.FormattingEnabled = true;
-            this.cb_add_app_class.Location = new System.Drawing.Point(222, 92);
-            this.cb_add_app_class.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_add_app_class.Location = new System.Drawing.Point(166, 75);
             this.cb_add_app_class.Name = "cb_add_app_class";
-            this.cb_add_app_class.Size = new System.Drawing.Size(202, 33);
+            this.cb_add_app_class.Size = new System.Drawing.Size(152, 28);
             this.cb_add_app_class.TabIndex = 2;
             this.cb_add_app_class.SelectedIndexChanged += new System.EventHandler(this.cb_add_app_class_SelectedIndexChanged);
-            // 
-            // lb_add_app_class
-            // 
-            lb_add_app_class.AutoSize = true;
-            lb_add_app_class.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lb_add_app_class.Location = new System.Drawing.Point(2, 93);
-            lb_add_app_class.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            lb_add_app_class.Name = "lb_add_app_class";
-            lb_add_app_class.Size = new System.Drawing.Size(92, 28);
-            lb_add_app_class.TabIndex = 3;
-            lb_add_app_class.Text = "Classe:";
             // 
             // tb_add_app_descr
             // 
             this.tb_add_app_descr.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_add_app_descr.Location = new System.Drawing.Point(222, 142);
-            this.tb_add_app_descr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_add_app_descr.Location = new System.Drawing.Point(166, 115);
             this.tb_add_app_descr.Multiline = true;
             this.tb_add_app_descr.Name = "tb_add_app_descr";
-            this.tb_add_app_descr.Size = new System.Drawing.Size(250, 133);
+            this.tb_add_app_descr.Size = new System.Drawing.Size(188, 109);
             this.tb_add_app_descr.TabIndex = 4;
             // 
             // lb_add_app_descr
             // 
             this.lb_add_app_descr.AutoSize = true;
             this.lb_add_app_descr.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_add_app_descr.Location = new System.Drawing.Point(4, 142);
-            this.lb_add_app_descr.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_add_app_descr.Location = new System.Drawing.Point(3, 115);
             this.lb_add_app_descr.Name = "lb_add_app_descr";
-            this.lb_add_app_descr.Size = new System.Drawing.Size(144, 28);
+            this.lb_add_app_descr.Size = new System.Drawing.Size(116, 23);
             this.lb_add_app_descr.TabIndex = 5;
             this.lb_add_app_descr.Text = "Description:";
             // 
@@ -111,10 +105,9 @@ namespace UI.User_control
             this.bt_add_app.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bt_add_app.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_add_app.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bt_add_app.Location = new System.Drawing.Point(51, 297);
-            this.bt_add_app.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_add_app.Location = new System.Drawing.Point(38, 241);
             this.bt_add_app.Name = "bt_add_app";
-            this.bt_add_app.Size = new System.Drawing.Size(157, 39);
+            this.bt_add_app.Size = new System.Drawing.Size(118, 32);
             this.bt_add_app.TabIndex = 6;
             this.bt_add_app.Text = "Add new A/C";
             this.bt_add_app.UseVisualStyleBackColor = false;
@@ -123,11 +116,10 @@ namespace UI.User_control
             // lb_add_app_classInfo
             // 
             this.lb_add_app_classInfo.AutoSize = true;
-            this.lb_add_app_classInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_add_app_classInfo.Location = new System.Drawing.Point(223, 56);
-            this.lb_add_app_classInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_add_app_classInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
+            this.lb_add_app_classInfo.Location = new System.Drawing.Point(167, 46);
             this.lb_add_app_classInfo.Name = "lb_add_app_classInfo";
-            this.lb_add_app_classInfo.Size = new System.Drawing.Size(0, 20);
+            this.lb_add_app_classInfo.Size = new System.Drawing.Size(0, 18);
             this.lb_add_app_classInfo.TabIndex = 7;
             // 
             // button1
@@ -136,10 +128,9 @@ namespace UI.User_control
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(250, 297);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(188, 241);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 39);
+            this.button1.Size = new System.Drawing.Size(118, 32);
             this.button1.TabIndex = 8;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = false;
@@ -147,7 +138,7 @@ namespace UI.User_control
             // 
             // uc_add_aircraft
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lb_add_app_classInfo);
@@ -158,9 +149,8 @@ namespace UI.User_control
             this.Controls.Add(this.cb_add_app_class);
             this.Controls.Add(this.lb_add_app_imma);
             this.Controls.Add(this.tb_add_app_imma);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "uc_add_aircraft";
-            this.Size = new System.Drawing.Size(476, 357);
+            this.Size = new System.Drawing.Size(357, 290);
             this.ResumeLayout(false);
             this.PerformLayout();
 

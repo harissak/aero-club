@@ -77,5 +77,11 @@ namespace UI.User_control
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RefreshAllReservation();
+            this.tb_uc_recherch_res_id.Text = "";
+        }
     }
 }

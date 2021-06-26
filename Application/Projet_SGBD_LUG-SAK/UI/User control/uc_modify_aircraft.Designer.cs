@@ -171,7 +171,6 @@ namespace UI.User_control
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "uc_modify_aircraft";
             this.Size = new System.Drawing.Size(474, 333);
-            this.Click += new System.EventHandler(this.bt_mod_save_Click);
             ((System.ComponentModel.ISupportInitialize)(this.bs_mod_app)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
