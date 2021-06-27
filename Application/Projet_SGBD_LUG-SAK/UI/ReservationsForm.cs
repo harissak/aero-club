@@ -32,10 +32,6 @@ namespace UI
             this.tab_reservation.SelectTab("tab_Overview");
         }
 
-        private void ReservationsForm_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void DeleteOldReservations()
         {

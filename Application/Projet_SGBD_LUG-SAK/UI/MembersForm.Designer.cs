@@ -80,7 +80,6 @@ namespace UI
             this.saveDeleteMember.Size = new System.Drawing.Size(476, 684);
             this.saveDeleteMember.TabIndex = 17;
             this.saveDeleteMember.refreshMbrList += new UI.delRefresh(this.refreshMembersList);
-            this.saveDeleteMember.Load += new System.EventHandler(this.saveDeleteMember_Load);
             // 
             // addNewMember
             // 
@@ -99,7 +98,6 @@ namespace UI
             this.mbrList.Size = new System.Drawing.Size(867, 730);
             this.mbrList.TabIndex = 1;
             this.mbrList.SelectMbr += new UI.delSelect(this.recherce_Mbr);
-            this.mbrList.Load += new System.EventHandler(this.mbrList_Load);
             // 
             // MembersForm
             // 
@@ -111,7 +109,6 @@ namespace UI
             this.Name = "MembersForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MembersForm";
-            this.Load += new System.EventHandler(this.MembersForm_Load_1);
             this.panelMembersScreen.ResumeLayout(false);
             this.panelMembersScreen.PerformLayout();
             this.ResumeLayout(false);

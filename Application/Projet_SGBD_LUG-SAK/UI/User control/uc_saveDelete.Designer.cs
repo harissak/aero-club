@@ -302,7 +302,6 @@ namespace UI.User_control
             this.label14.Size = new System.Drawing.Size(84, 20);
             this.label14.TabIndex = 112;
             this.label14.Text = "Est pilote:";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // label13
             // 
@@ -502,7 +501,6 @@ namespace UI.User_control
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "uc_saveDelete";
             this.Size = new System.Drawing.Size(471, 671);
-            this.Load += new System.EventHandler(this.uc_saveDelete_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bsMember)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

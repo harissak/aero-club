@@ -21,11 +21,6 @@ namespace UI
 
         }
 
-        private void uc_appList1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void bt_add_aircraft_Click(object sender, EventArgs e)
         {
             this.uc_add_aircraft1.Visible = true;
@@ -49,14 +44,5 @@ namespace UI
             this.uc_appList1.Read_all_app();
         }
 
-        private void AiroplaneForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void uc_add_aircraft1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -38,29 +38,10 @@ namespace BL
             return DAL.AccesApp.Read_all();
         }
 
-        //public static List <APP> Read_app_imm_by_des (string desc_app)
-        //{
-        //    List<APP> retVal = new List<APP>();
-
-        //   retVal.Add(DAL.AccesApp.Read_app_imm_by_desc(desc_app));
-
-        //    return retVal;
-
-        //}
-        //public static APP Read_app_by_desc(string app_des)
-        //{
-        //    return DAL.AccesApp.Read_app_by_desc(app_des);
-        //}
 
         public static APP search_app_by_desc(string app_desc)
         {
-
-            
-
             return DAL.AccesApp.Read_app_by_desc(app_desc);
-
-           
-
         }
 
         public static int Delete_app(int app_id)

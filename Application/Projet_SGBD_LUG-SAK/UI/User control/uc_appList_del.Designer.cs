@@ -69,7 +69,6 @@ namespace UI.User_control
             this.dgv_app_list.Size = new System.Drawing.Size(648, 433);
             this.dgv_app_list.TabIndex = 0;
             this.dgv_app_list.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_app_list_CellClick);
-            this.dgv_app_list.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_app_list_CellContentClick);
             // 
             // bt_app_delete
             // 
@@ -136,7 +135,6 @@ namespace UI.User_control
             // bs_apps
             // 
             this.bs_apps.DataSource = typeof(DTO.APP);
-            this.bs_apps.CurrentChanged += new System.EventHandler(this.bs_apps_CurrentChanged);
             // 
             // uc_appList_del
             // 

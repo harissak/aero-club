@@ -31,6 +31,7 @@ namespace UI.User_control
         {
             this.components = new System.ComponentModel.Container();
             this.tb_modif_Lic_num = new System.Windows.Forms.TextBox();
+            this.bs_modif_lic = new System.Windows.Forms.BindingSource(this.components);
             this.lb_modif_lic_num = new System.Windows.Forms.Label();
             this.dtp_mod_lic_obt = new System.Windows.Forms.DateTimePicker();
             this.lb_modif_lic_obt = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@ namespace UI.User_control
             this.bt_modif_lic_save = new System.Windows.Forms.Button();
             this.tb_modif_lic_ID = new System.Windows.Forms.TextBox();
             this.lb_modif_lic_id = new System.Windows.Forms.Label();
-            this.bs_modif_lic = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bs_modif_lic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,10 +64,14 @@ namespace UI.User_control
             this.tb_modif_Lic_num.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs_modif_lic, "Lic_num", true));
             this.tb_modif_Lic_num.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_modif_Lic_num.Location = new System.Drawing.Point(217, 45);
-            this.tb_modif_Lic_num.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_modif_Lic_num.Margin = new System.Windows.Forms.Padding(4);
             this.tb_modif_Lic_num.Name = "tb_modif_Lic_num";
             this.tb_modif_Lic_num.Size = new System.Drawing.Size(144, 30);
             this.tb_modif_Lic_num.TabIndex = 0;
+            // 
+            // bs_modif_lic
+            // 
+            this.bs_modif_lic.DataSource = typeof(DTO.LIC);
             // 
             // lb_modif_lic_num
             // 
@@ -86,7 +90,7 @@ namespace UI.User_control
             this.dtp_mod_lic_obt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_mod_lic_obt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_mod_lic_obt.Location = new System.Drawing.Point(217, 93);
-            this.dtp_mod_lic_obt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_mod_lic_obt.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_mod_lic_obt.Name = "dtp_mod_lic_obt";
             this.dtp_mod_lic_obt.Size = new System.Drawing.Size(144, 30);
             this.dtp_mod_lic_obt.TabIndex = 2;
@@ -108,7 +112,7 @@ namespace UI.User_control
             this.dtp_modif_lix_exp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_modif_lix_exp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_modif_lix_exp.Location = new System.Drawing.Point(217, 128);
-            this.dtp_modif_lix_exp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_modif_lix_exp.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_modif_lix_exp.Name = "dtp_modif_lix_exp";
             this.dtp_modif_lix_exp.Size = new System.Drawing.Size(144, 30);
             this.dtp_modif_lix_exp.TabIndex = 4;
@@ -130,7 +134,7 @@ namespace UI.User_control
             this.cb_modif_lic_active.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bs_modif_lic, "Lic_active", true));
             this.cb_modif_lic_active.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_modif_lic_active.Location = new System.Drawing.Point(217, 181);
-            this.cb_modif_lic_active.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_modif_lic_active.Margin = new System.Windows.Forms.Padding(4);
             this.cb_modif_lic_active.Name = "cb_modif_lic_active";
             this.cb_modif_lic_active.Size = new System.Drawing.Size(18, 17);
             this.cb_modif_lic_active.TabIndex = 6;
@@ -152,7 +156,7 @@ namespace UI.User_control
             this.tb_modif_lic_country.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs_modif_lic, "Lic_pays", true));
             this.tb_modif_lic_country.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_modif_lic_country.Location = new System.Drawing.Point(217, 206);
-            this.tb_modif_lic_country.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_modif_lic_country.Margin = new System.Windows.Forms.Padding(4);
             this.tb_modif_lic_country.Name = "tb_modif_lic_country";
             this.tb_modif_lic_country.Size = new System.Drawing.Size(144, 30);
             this.tb_modif_lic_country.TabIndex = 8;
@@ -239,7 +243,7 @@ namespace UI.User_control
             this.cb_modif_lic_cl1.AutoSize = true;
             this.cb_modif_lic_cl1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bs_modif_lic, "Lic_cl1", true));
             this.cb_modif_lic_cl1.Location = new System.Drawing.Point(160, 289);
-            this.cb_modif_lic_cl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_modif_lic_cl1.Margin = new System.Windows.Forms.Padding(4);
             this.cb_modif_lic_cl1.Name = "cb_modif_lic_cl1";
             this.cb_modif_lic_cl1.Size = new System.Drawing.Size(18, 17);
             this.cb_modif_lic_cl1.TabIndex = 16;
@@ -250,7 +254,7 @@ namespace UI.User_control
             this.cb_modif_lic_cl2.AutoSize = true;
             this.cb_modif_lic_cl2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bs_modif_lic, "Lic_cl2", true));
             this.cb_modif_lic_cl2.Location = new System.Drawing.Point(160, 324);
-            this.cb_modif_lic_cl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_modif_lic_cl2.Margin = new System.Windows.Forms.Padding(4);
             this.cb_modif_lic_cl2.Name = "cb_modif_lic_cl2";
             this.cb_modif_lic_cl2.Size = new System.Drawing.Size(18, 17);
             this.cb_modif_lic_cl2.TabIndex = 17;
@@ -261,7 +265,7 @@ namespace UI.User_control
             this.cb_modif_lic_cl3.AutoSize = true;
             this.cb_modif_lic_cl3.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bs_modif_lic, "Lic_cl3", true));
             this.cb_modif_lic_cl3.Location = new System.Drawing.Point(160, 360);
-            this.cb_modif_lic_cl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_modif_lic_cl3.Margin = new System.Windows.Forms.Padding(4);
             this.cb_modif_lic_cl3.Name = "cb_modif_lic_cl3";
             this.cb_modif_lic_cl3.Size = new System.Drawing.Size(18, 17);
             this.cb_modif_lic_cl3.TabIndex = 18;
@@ -272,7 +276,7 @@ namespace UI.User_control
             this.cb_modif_lic_cl4.AutoSize = true;
             this.cb_modif_lic_cl4.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bs_modif_lic, "Lic_cl4", true));
             this.cb_modif_lic_cl4.Location = new System.Drawing.Point(160, 396);
-            this.cb_modif_lic_cl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_modif_lic_cl4.Margin = new System.Windows.Forms.Padding(4);
             this.cb_modif_lic_cl4.Name = "cb_modif_lic_cl4";
             this.cb_modif_lic_cl4.Size = new System.Drawing.Size(18, 17);
             this.cb_modif_lic_cl4.TabIndex = 19;
@@ -283,7 +287,7 @@ namespace UI.User_control
             this.cb_modif_lic_cl5.AutoSize = true;
             this.cb_modif_lic_cl5.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bs_modif_lic, "Lic_cl5", true));
             this.cb_modif_lic_cl5.Location = new System.Drawing.Point(160, 432);
-            this.cb_modif_lic_cl5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_modif_lic_cl5.Margin = new System.Windows.Forms.Padding(4);
             this.cb_modif_lic_cl5.Name = "cb_modif_lic_cl5";
             this.cb_modif_lic_cl5.Size = new System.Drawing.Size(18, 17);
             this.cb_modif_lic_cl5.TabIndex = 20;
@@ -294,7 +298,7 @@ namespace UI.User_control
             this.cb_modif_lic_cl6.AutoSize = true;
             this.cb_modif_lic_cl6.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bs_modif_lic, "Lic_cl6", true));
             this.cb_modif_lic_cl6.Location = new System.Drawing.Point(160, 467);
-            this.cb_modif_lic_cl6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_modif_lic_cl6.Margin = new System.Windows.Forms.Padding(4);
             this.cb_modif_lic_cl6.Name = "cb_modif_lic_cl6";
             this.cb_modif_lic_cl6.Size = new System.Drawing.Size(18, 17);
             this.cb_modif_lic_cl6.TabIndex = 21;
@@ -307,7 +311,7 @@ namespace UI.User_control
             this.bt_modif_lic_save.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_modif_lic_save.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.bt_modif_lic_save.Location = new System.Drawing.Point(119, 521);
-            this.bt_modif_lic_save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_modif_lic_save.Margin = new System.Windows.Forms.Padding(4);
             this.bt_modif_lic_save.Name = "bt_modif_lic_save";
             this.bt_modif_lic_save.Size = new System.Drawing.Size(132, 33);
             this.bt_modif_lic_save.TabIndex = 22;
@@ -320,7 +324,7 @@ namespace UI.User_control
             this.tb_modif_lic_ID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs_modif_lic, "Lic_ID", true));
             this.tb_modif_lic_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_modif_lic_ID.Location = new System.Drawing.Point(217, 0);
-            this.tb_modif_lic_ID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_modif_lic_ID.Margin = new System.Windows.Forms.Padding(4);
             this.tb_modif_lic_ID.Name = "tb_modif_lic_ID";
             this.tb_modif_lic_ID.ReadOnly = true;
             this.tb_modif_lic_ID.Size = new System.Drawing.Size(144, 30);
@@ -336,10 +340,6 @@ namespace UI.User_control
             this.lb_modif_lic_id.Size = new System.Drawing.Size(163, 28);
             this.lb_modif_lic_id.TabIndex = 24;
             this.lb_modif_lic_id.Text = "Mat. Lic Club:";
-            // 
-            // bs_modif_lic
-            // 
-            this.bs_modif_lic.DataSource = typeof(DTO.LIC);
             // 
             // uc_licenses_mod
             // 
@@ -370,7 +370,7 @@ namespace UI.User_control
             this.Controls.Add(this.dtp_mod_lic_obt);
             this.Controls.Add(this.lb_modif_lic_num);
             this.Controls.Add(this.tb_modif_Lic_num);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "uc_licenses_mod";
             this.Size = new System.Drawing.Size(399, 594);
             ((System.ComponentModel.ISupportInitialize)(this.bs_modif_lic)).EndInit();

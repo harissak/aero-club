@@ -22,38 +22,12 @@ namespace UI
             this.saveDeleteMember.del_member_ID(Mbr_id);
 
         }
-
-
-        private void updateMember(int Mbr_ID)
-        {
-            //this.saveDeleteMember.updateMember(Mbr_ID);
-
-        }
-
-        private void MembersForm_Load(object sender, EventArgs e)
-        {
-           
-
-        }
+  
         
         private void refreshMembersList()
         {
             this.mbrList.RefreshMemberList();
         }
 
-        private void MembersForm_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void saveDeleteMember_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mbrList_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

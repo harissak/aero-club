@@ -174,9 +174,5 @@ namespace UI.User_control
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

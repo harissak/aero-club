@@ -32,6 +32,7 @@ namespace UI.User_control
             this.components = new System.ComponentModel.Container();
             this.lb_mod_app_descr = new System.Windows.Forms.Label();
             this.tb_mod_app_descr = new System.Windows.Forms.TextBox();
+            this.bs_mod_app = new System.Windows.Forms.BindingSource(this.components);
             this.lb_mod_app_class = new System.Windows.Forms.Label();
             this.cb_mod_app_class = new System.Windows.Forms.ComboBox();
             this.lb_mod_app_imma = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@ namespace UI.User_control
             this.bt_mod_save = new System.Windows.Forms.Button();
             this.tb_mod_app_ID = new System.Windows.Forms.TextBox();
             this.lb_mod_app_id = new System.Windows.Forms.Label();
-            this.bs_mod_app = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bs_mod_app)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,11 +58,15 @@ namespace UI.User_control
             // 
             this.tb_mod_app_descr.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs_mod_app, "App_descr", true));
             this.tb_mod_app_descr.Location = new System.Drawing.Point(217, 125);
-            this.tb_mod_app_descr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_mod_app_descr.Margin = new System.Windows.Forms.Padding(4);
             this.tb_mod_app_descr.Multiline = true;
             this.tb_mod_app_descr.Name = "tb_mod_app_descr";
             this.tb_mod_app_descr.Size = new System.Drawing.Size(251, 126);
             this.tb_mod_app_descr.TabIndex = 10;
+            // 
+            // bs_mod_app
+            // 
+            this.bs_mod_app.DataSource = typeof(DTO.APP);
             // 
             // lb_mod_app_class
             // 
@@ -88,7 +92,7 @@ namespace UI.User_control
             "5",
             "6"});
             this.cb_mod_app_class.Location = new System.Drawing.Point(217, 80);
-            this.cb_mod_app_class.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_mod_app_class.Margin = new System.Windows.Forms.Padding(4);
             this.cb_mod_app_class.Name = "cb_mod_app_class";
             this.cb_mod_app_class.Size = new System.Drawing.Size(51, 33);
             this.cb_mod_app_class.TabIndex = 8;
@@ -109,7 +113,7 @@ namespace UI.User_control
             this.tb_mod_app_imma.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs_mod_app, "App_imma", true));
             this.tb_mod_app_imma.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_mod_app_imma.Location = new System.Drawing.Point(217, 42);
-            this.tb_mod_app_imma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_mod_app_imma.Margin = new System.Windows.Forms.Padding(4);
             this.tb_mod_app_imma.Name = "tb_mod_app_imma";
             this.tb_mod_app_imma.Size = new System.Drawing.Size(132, 30);
             this.tb_mod_app_imma.TabIndex = 6;
@@ -121,7 +125,7 @@ namespace UI.User_control
             this.bt_mod_save.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_mod_save.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.bt_mod_save.Location = new System.Drawing.Point(114, 275);
-            this.bt_mod_save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_mod_save.Margin = new System.Windows.Forms.Padding(4);
             this.bt_mod_save.Name = "bt_mod_save";
             this.bt_mod_save.Size = new System.Drawing.Size(225, 37);
             this.bt_mod_save.TabIndex = 12;
@@ -134,7 +138,7 @@ namespace UI.User_control
             this.tb_mod_app_ID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs_mod_app, "App_ID", true));
             this.tb_mod_app_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_mod_app_ID.Location = new System.Drawing.Point(217, 4);
-            this.tb_mod_app_ID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_mod_app_ID.Margin = new System.Windows.Forms.Padding(4);
             this.tb_mod_app_ID.Name = "tb_mod_app_ID";
             this.tb_mod_app_ID.ReadOnly = true;
             this.tb_mod_app_ID.Size = new System.Drawing.Size(51, 30);
@@ -151,10 +155,6 @@ namespace UI.User_control
             this.lb_mod_app_id.TabIndex = 14;
             this.lb_mod_app_id.Text = "Mat. club:";
             // 
-            // bs_mod_app
-            // 
-            this.bs_mod_app.DataSource = typeof(DTO.APP);
-            // 
             // uc_modify_aircraft
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -168,7 +168,7 @@ namespace UI.User_control
             this.Controls.Add(this.cb_mod_app_class);
             this.Controls.Add(this.lb_mod_app_imma);
             this.Controls.Add(this.tb_mod_app_imma);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "uc_modify_aircraft";
             this.Size = new System.Drawing.Size(474, 333);
             ((System.ComponentModel.ISupportInitialize)(this.bs_mod_app)).EndInit();

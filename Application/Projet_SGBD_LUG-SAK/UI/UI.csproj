@@ -62,12 +62,6 @@
     <Compile Include="AiroplaneForm.Designer.cs">
       <DependentUpon>AiroplaneForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BasicDBReadTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BasicDBReadTest.Designer.cs">
-      <DependentUpon>BasicDBReadTest.cs</DependentUpon>
-    </Compile>
     <Compile Include="Délégués.cs" />
     <Compile Include="Main_menu.cs">
       <SubType>Form</SubType>
@@ -199,9 +193,6 @@
   <ItemGroup>
     <EmbeddedResource Include="AiroplaneForm.resx">
       <DependentUpon>AiroplaneForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BasicDBReadTest.resx">
-      <DependentUpon>BasicDBReadTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_menu.resx">
       <DependentUpon>Main_menu.cs</DependentUpon>

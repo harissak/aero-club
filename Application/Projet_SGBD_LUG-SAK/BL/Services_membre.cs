@@ -40,10 +40,9 @@ namespace BL
             int retval = 0;
 
 
-            MBR current = mbr;//DAL.AccesMBR.Read_MBR_BY_ID(mbr.Mbr_ID);
-
-            if (current != null)
-                retval = DAL.AccesMBR.Update_MBR(current);
+       
+            if (mbr != null)
+                retval = DAL.AccesMBR.Update_MBR(mbr);
 
             return retval;
         }
@@ -118,20 +117,6 @@ namespace BL
 
             return retval;   
         }
-
-        //test
-        //public static string TranslateIDToName(string id)
-        //{
-        //    return DAL.AccesMBR.TranslateIDTOName(Int32.Parse(id));
-        //}
-
-        //public static List<MBR> LoadPilotOnly()
-        //{
-        //    List<MBR> retval = new List<MBR>();
-        //    List<MBR> allmbr = new List<MBR>();
-
-        //    allmbr = DAL.AccesMBR.Read_MBR_BY_START_NAME("");
-        //}
 
     }
 

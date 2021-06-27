@@ -56,11 +56,6 @@ namespace UI.User_control
             
         }
 
-        private void dgvMbrList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         public void RefreshMemberList()
         {
             this.bs_members_list.DataSource = BL.Services_membre.search_member_by_name(tbMemberName.Text);

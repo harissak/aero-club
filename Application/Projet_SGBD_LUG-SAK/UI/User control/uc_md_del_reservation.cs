@@ -117,10 +117,6 @@ namespace UI.User_control
        
         }
 
-        private void uc_md_del_reservation_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private bool Check_rules(DateTime today, DateTime jour, int mbr_id, int app_id, DateTime full_hr_deb, DateTime full_hr_fin)
         {

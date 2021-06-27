@@ -125,10 +125,7 @@ namespace UI.User_control
             }
         }
 
-        private void uc_addNewMember_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private bool ValidationEncodages()
         {
@@ -152,7 +149,6 @@ namespace UI.User_control
             }
             return retVal;
         }
-
 
     }
 }

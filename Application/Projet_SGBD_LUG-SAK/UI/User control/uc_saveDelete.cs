@@ -134,15 +134,6 @@ namespace UI.User_control
 
         }
 
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void uc_saveDelete_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private bool ValidationEncodages()
         {

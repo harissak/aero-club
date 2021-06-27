@@ -73,10 +73,6 @@ namespace UI.User_control
             this.bs_reservation_list.DataSource = BL.Service_réservation.Read_all_reservations();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {

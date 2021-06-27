@@ -364,7 +364,6 @@ namespace UI.User_control
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "uc_md_del_reservation";
             this.Size = new System.Drawing.Size(770, 576);
-            this.Load += new System.EventHandler(this.uc_md_del_reservation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.res_binding_source)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

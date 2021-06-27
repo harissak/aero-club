@@ -22,15 +22,6 @@ namespace UI.User_control
             InitializeComponent();
         }
 
-        private void dgv_app_list_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void bs_apps_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void bt_app_delete_Click(object sender, EventArgs e)
         {

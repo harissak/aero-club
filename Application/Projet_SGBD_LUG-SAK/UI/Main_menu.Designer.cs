@@ -164,7 +164,6 @@ namespace UI
             this.panelHome.Size = new System.Drawing.Size(251, 85);
             this.panelHome.TabIndex = 0;
             this.panelHome.Click += new System.EventHandler(this.panelHome_click);
-            this.panelHome.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHome_Paint);
             // 
             // lblAirClub
             // 
@@ -233,12 +232,12 @@ namespace UI
             this.Controls.Add(this.panelHomeScreen);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(1645, 912);
             this.Name = "Main_menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main_menu";
-            this.Load += new System.EventHandler(this.Main_menu_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelHome.ResumeLayout(false);
             this.panelHome.PerformLayout();

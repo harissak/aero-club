@@ -105,19 +105,6 @@ namespace UI
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Main_menu_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelHome_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }
