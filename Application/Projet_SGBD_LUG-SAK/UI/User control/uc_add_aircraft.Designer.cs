@@ -161,7 +161,6 @@ namespace UI.User_control
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "uc_add_aircraft";
             this.Size = new System.Drawing.Size(476, 357);
-            this.Load += new System.EventHandler(this.uc_add_aircraft_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

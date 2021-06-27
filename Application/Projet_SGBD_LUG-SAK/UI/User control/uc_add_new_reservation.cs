@@ -26,8 +26,7 @@ namespace UI.User_control
 
         }
 
-      
-
+  
 
         private void uc_btn_add_res_Click(object sender, EventArgs e)
         {

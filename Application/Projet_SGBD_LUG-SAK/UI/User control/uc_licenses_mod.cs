@@ -42,6 +42,10 @@ namespace UI.User_control
                         Lic_cl5 = this.cb_modif_lic_cl5.Checked,
                         Lic_cl6 = this.cb_modif_lic_cl6.Checked
                     });
+
+                MessageBox.Show("Modification(s) done with sucess!",
+                             "Sucess!",
+                             MessageBoxButtons.OK);
             }
             catch (Exception ex)
             {

@@ -14,6 +14,13 @@ namespace BL
             return DAL.AccesLIC.Read_all_Lic();
         }
 
+        public static List<LIC> Get_Lic_ByID_Owner(int id_owner)
+        {
+            List<int> liste = new List<int>();
+            liste.Add(id_owner);
+            return DAL.AccesLIC.Get_Lic_ByID_Owner(liste);
+        }
+
         public static List<LIC> Get_Lic_ByName_Owner(string name)
         {
             List<LIC> retval = new List<LIC>();
@@ -29,7 +36,7 @@ namespace BL
                 }
             }
 
-            retval = DAL.AccesLIC.Get_Lic_ByName_Owner(fk_id);
+            retval = DAL.AccesLIC.Get_Lic_ByID_Owner(fk_id);
 
             return retval;
         }

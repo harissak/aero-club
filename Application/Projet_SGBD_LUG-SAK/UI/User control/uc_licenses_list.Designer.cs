@@ -31,6 +31,7 @@ namespace UI.User_control
         {
             this.components = new System.ComponentModel.Container();
             this.dgv_licenses = new System.Windows.Forms.DataGridView();
+            this.bs_licenses = new System.Windows.Forms.BindingSource(this.components);
             this.bt_search_mat = new System.Windows.Forms.Button();
             this.lb_mat_club = new System.Windows.Forms.Label();
             this.tb_search_mat = new System.Windows.Forms.TextBox();
@@ -50,7 +51,7 @@ namespace UI.User_control
             this.liccl4DataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.liccl5DataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.liccl6DataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.bs_licenses = new System.Windows.Forms.BindingSource(this.components);
+            this.btn_reloiad_dgv = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_licenses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs_licenses)).BeginInit();
             this.SuspendLayout();
@@ -75,13 +76,16 @@ namespace UI.User_control
             this.liccl5DataGridViewCheckBoxColumn,
             this.liccl6DataGridViewCheckBoxColumn});
             this.dgv_licenses.DataSource = this.bs_licenses;
-            this.dgv_licenses.Location = new System.Drawing.Point(4, 119);
-            this.dgv_licenses.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_licenses.Location = new System.Drawing.Point(3, 97);
             this.dgv_licenses.Name = "dgv_licenses";
             this.dgv_licenses.RowHeadersWidth = 51;
-            this.dgv_licenses.Size = new System.Drawing.Size(589, 459);
+            this.dgv_licenses.Size = new System.Drawing.Size(442, 373);
             this.dgv_licenses.TabIndex = 0;
             this.dgv_licenses.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_licenses_CellClick);
+            // 
+            // bs_licenses
+            // 
+            this.bs_licenses.DataSource = typeof(DTO.LIC);
             // 
             // bt_search_mat
             // 
@@ -89,32 +93,30 @@ namespace UI.User_control
             this.bt_search_mat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bt_search_mat.Font = new System.Drawing.Font("Tempus Sans ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_search_mat.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bt_search_mat.Location = new System.Drawing.Point(373, 48);
-            this.bt_search_mat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_search_mat.Location = new System.Drawing.Point(280, 39);
             this.bt_search_mat.Name = "bt_search_mat";
-            this.bt_search_mat.Size = new System.Drawing.Size(195, 28);
+            this.bt_search_mat.Size = new System.Drawing.Size(146, 23);
             this.bt_search_mat.TabIndex = 12;
             this.bt_search_mat.Text = "Search by Mat. Owner";
             this.bt_search_mat.UseVisualStyleBackColor = false;
+            this.bt_search_mat.Click += new System.EventHandler(this.bt_search_mat_Click);
             // 
             // lb_mat_club
             // 
             this.lb_mat_club.AutoSize = true;
             this.lb_mat_club.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_mat_club.Location = new System.Drawing.Point(9, 45);
-            this.lb_mat_club.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_mat_club.Location = new System.Drawing.Point(7, 37);
             this.lb_mat_club.Name = "lb_mat_club";
-            this.lb_mat_club.Size = new System.Drawing.Size(124, 24);
+            this.lb_mat_club.Size = new System.Drawing.Size(102, 19);
             this.lb_mat_club.TabIndex = 11;
             this.lb_mat_club.Text = "Mat. Owner:";
             // 
             // tb_search_mat
             // 
             this.tb_search_mat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_search_mat.Location = new System.Drawing.Point(150, 48);
-            this.tb_search_mat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_search_mat.Location = new System.Drawing.Point(123, 41);
             this.tb_search_mat.Name = "tb_search_mat";
-            this.tb_search_mat.Size = new System.Drawing.Size(173, 30);
+            this.tb_search_mat.Size = new System.Drawing.Size(131, 26);
             this.tb_search_mat.TabIndex = 10;
             // 
             // bt_search_name
@@ -123,10 +125,9 @@ namespace UI.User_control
             this.bt_search_name.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bt_search_name.Font = new System.Drawing.Font("Tempus Sans ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_search_name.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bt_search_name.Location = new System.Drawing.Point(373, 11);
-            this.bt_search_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_search_name.Location = new System.Drawing.Point(280, 9);
             this.bt_search_name.Name = "bt_search_name";
-            this.bt_search_name.Size = new System.Drawing.Size(195, 28);
+            this.bt_search_name.Size = new System.Drawing.Size(146, 23);
             this.bt_search_name.TabIndex = 9;
             this.bt_search_name.Text = "Search by name";
             this.bt_search_name.UseVisualStyleBackColor = false;
@@ -136,20 +137,18 @@ namespace UI.User_control
             // 
             this.lb_name.AutoSize = true;
             this.lb_name.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_name.Location = new System.Drawing.Point(9, 9);
-            this.lb_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_name.Location = new System.Drawing.Point(7, 7);
             this.lb_name.Name = "lb_name";
-            this.lb_name.Size = new System.Drawing.Size(133, 24);
+            this.lb_name.Size = new System.Drawing.Size(110, 19);
             this.lb_name.TabIndex = 8;
             this.lb_name.Text = "Name owner:";
             // 
             // tb_search_name
             // 
             this.tb_search_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_search_name.Location = new System.Drawing.Point(150, 11);
-            this.tb_search_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_search_name.Location = new System.Drawing.Point(123, 9);
             this.tb_search_name.Name = "tb_search_name";
-            this.tb_search_name.Size = new System.Drawing.Size(173, 30);
+            this.tb_search_name.Size = new System.Drawing.Size(131, 26);
             this.tb_search_name.TabIndex = 7;
             // 
             // lICFKMBRIDDataGridViewTextBoxColumn
@@ -186,7 +185,6 @@ namespace UI.User_control
             this.licobtDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.licobtDataGridViewTextBoxColumn.Name = "licobtDataGridViewTextBoxColumn";
             this.licobtDataGridViewTextBoxColumn.ReadOnly = true;
-            this.licobtDataGridViewTextBoxColumn.Width = 125;
             // 
             // licexpDataGridViewTextBoxColumn
             // 
@@ -195,7 +193,6 @@ namespace UI.User_control
             this.licexpDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.licexpDataGridViewTextBoxColumn.Name = "licexpDataGridViewTextBoxColumn";
             this.licexpDataGridViewTextBoxColumn.ReadOnly = true;
-            this.licexpDataGridViewTextBoxColumn.Width = 125;
             // 
             // licactiveDataGridViewCheckBoxColumn
             // 
@@ -213,7 +210,7 @@ namespace UI.User_control
             this.licpaysDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.licpaysDataGridViewTextBoxColumn.Name = "licpaysDataGridViewTextBoxColumn";
             this.licpaysDataGridViewTextBoxColumn.ReadOnly = true;
-            this.licpaysDataGridViewTextBoxColumn.Width = 125;
+            this.licpaysDataGridViewTextBoxColumn.Width = 75;
             // 
             // liccl1DataGridViewCheckBoxColumn
             // 
@@ -269,14 +266,25 @@ namespace UI.User_control
             this.liccl6DataGridViewCheckBoxColumn.ReadOnly = true;
             this.liccl6DataGridViewCheckBoxColumn.Width = 50;
             // 
-            // bs_licenses
+            // btn_reloiad_dgv
             // 
-            this.bs_licenses.DataSource = typeof(DTO.LIC);
+            this.btn_reloiad_dgv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_reloiad_dgv.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_reloiad_dgv.Font = new System.Drawing.Font("Tempus Sans ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reloiad_dgv.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_reloiad_dgv.Location = new System.Drawing.Point(123, 73);
+            this.btn_reloiad_dgv.Name = "btn_reloiad_dgv";
+            this.btn_reloiad_dgv.Size = new System.Drawing.Size(131, 23);
+            this.btn_reloiad_dgv.TabIndex = 13;
+            this.btn_reloiad_dgv.Text = "Reload All";
+            this.btn_reloiad_dgv.UseVisualStyleBackColor = false;
+            this.btn_reloiad_dgv.Click += new System.EventHandler(this.btn_reloiad_dgv_Click);
             // 
             // uc_licenses_list
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_reloiad_dgv);
             this.Controls.Add(this.bt_search_mat);
             this.Controls.Add(this.lb_mat_club);
             this.Controls.Add(this.tb_search_mat);
@@ -284,9 +292,8 @@ namespace UI.User_control
             this.Controls.Add(this.lb_name);
             this.Controls.Add(this.tb_search_name);
             this.Controls.Add(this.dgv_licenses);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "uc_licenses_list";
-            this.Size = new System.Drawing.Size(680, 582);
+            this.Size = new System.Drawing.Size(510, 473);
             this.Load += new System.EventHandler(this.uc_licenses_list_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_licenses)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs_licenses)).EndInit();
@@ -318,5 +325,6 @@ namespace UI.User_control
         private System.Windows.Forms.DataGridViewCheckBoxColumn liccl4DataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn liccl5DataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn liccl6DataGridViewCheckBoxColumn;
+        private System.Windows.Forms.Button btn_reloiad_dgv;
     }
 }

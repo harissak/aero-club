@@ -25,8 +25,6 @@ namespace UI.User_control
             this.Mbr_courant = new MBR();
             this.bs_new_member.Add(this.Mbr_courant);
             this.bs_new_member.ResetBindings(true);
-
-
         }
 
         private void addNewMember_Click(object sender, EventArgs e)
@@ -91,10 +89,9 @@ namespace UI.User_control
 
             }
             catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-
+                {
+                    throw new Exception(ex.Message);
+                }
             }
 
         }
@@ -124,8 +121,6 @@ namespace UI.User_control
 
             }
         }
-
-       
 
         private bool ValidationEncodages()
         {

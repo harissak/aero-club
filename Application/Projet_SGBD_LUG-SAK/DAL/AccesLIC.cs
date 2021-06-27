@@ -23,7 +23,7 @@ namespace DAL
             return retval;
         }
 
-        static public List<LIC> Get_Lic_ByName_Owner(List<int> liste_ID_owners)
+        static public List<LIC> Get_Lic_ByID_Owner(List<int> liste_ID_owners)
         {
             List<LIC> retval = new List<LIC>();
             List<LIC> current = new List<LIC>();
@@ -35,9 +35,15 @@ namespace DAL
                     current = connection.Query<LIC>("sp_select_lic_by_id_owner",
                                                  param: new { @LIC_FK_MBR = id}, 
                                                 commandType: CommandType.StoredProcedure).AsList<LIC>();
-
-                    retval.Add(current[0]);
-                    current.Clear();
+                    if(current.Count <= 0)
+                    {
+                    }
+                    else
+                    {
+                        retval.Add(current[0]);
+                        current.Clear();
+                    }
+                   
                 }
             }
             return retval;

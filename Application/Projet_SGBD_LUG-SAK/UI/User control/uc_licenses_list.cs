@@ -41,8 +41,26 @@ namespace UI.User_control
                     this.SelectLic(Int32.Parse(this.dgv_licenses.Rows[e.RowIndex].Cells["licIDDataGridViewTextBoxColumn"].FormattedValue.ToString()));
                 }
             }
+        }
 
-            
+        private void btn_reloiad_dgv_Click(object sender, EventArgs e)
+        {
+            this.bs_licenses.DataSource = BL.Services_licenses.Read_all_lic();
+        }
+
+        private void bt_search_mat_Click(object sender, EventArgs e)
+        {
+            int id_owner;
+            if (Int32.TryParse(this.tb_search_mat.Text, out id_owner) == true)
+                this.bs_licenses.DataSource = BL.Services_licenses.Get_Lic_ByID_Owner(id_owner);
+            else
+            {
+                MessageBox.Show("Impossible to search the entered value, is the format correct or the cell empty?",
+                             "Error!",
+                             MessageBoxButtons.OK,
+                             MessageBoxIcon.Error);
+            }
+
         }
     }
 }

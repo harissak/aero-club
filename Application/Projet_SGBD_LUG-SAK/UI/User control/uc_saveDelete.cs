@@ -130,8 +130,6 @@ namespace UI.User_control
                 throw new Exception(ex.Message);
                 }
             }
-
-
         }
 
 

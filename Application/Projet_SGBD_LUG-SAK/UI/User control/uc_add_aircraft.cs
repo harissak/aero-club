@@ -84,10 +84,5 @@ namespace UI.User_control
         {
             this.Visible = false;
         }
-
-        private void uc_add_aircraft_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
